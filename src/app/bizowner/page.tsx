@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 /* メインCV：公式LINE追加。全CTAの遷移先 */
-const LINE_URL = "https://utage-system.com/line/open/YWF9a1li6ut7";
+const LINE_URL = "https://utage-system.com/line/open/yjGgUvxEA3oy";
 
 /* ── CTA Banner (variation A - full width) ── */
 function CtaBannerFull() {

@@ -98,6 +98,6 @@
 
 ## 🕐 最終更新
 
-- **更新日時**：2026-05-09
-- **更新者**：Claude（UTAGE-Zoom自動連携を不採用に決定・運営チームが公式LINEから手動でURL送付する運用へ）
+- **更新日時**：2026-07-25
+- **更新者**：Cursor秘書（全LPのLINE登録URLを `https://utage-system.com/line/open/yjGgUvxEA3oy` に統一）
 - **直近のログ**：[log.md](./log.md) の最新エントリ参照

@@ -9,6 +9,23 @@
 
 ---
 
+## 2026-07-25（土）
+
+### 🎯 全LP：LINE登録URLを統一
+- 全LINE登録CTAの遷移先を `https://utage-system.com/line/open/yjGgUvxEA3oy` に統一
+  - BizOwner LP：`LINE_URL` を旧UTAGE URL（`YWF9a1li6ut7`）から差し替え
+  - Zeroichi Home：`LINE_URL` を旧 `lin.ee/6siBqPz` から差し替え
+  - SARUDEMO LP：ハードコードの `line.me/...@532ikyxa`（4箇所）を `LINE_URL` 定数化して差し替え
+  - `LpNav`：`href="#"` だったLINE CTA（スマホメニュー／デスクトップ）も同URLに紐付け
+
+### ✅ 確定した決定事項
+- 全サービス共通で同じUTAGE LINE URLを使用
+
+### 📌 次回再開ポイント
+- ブラウザで各LPのCTAをクリックし、正しいLINE追加画面に飛ぶか確認
+
+---
+
 ## 2026-06-05（木）
 
 ### 🎯 株式会社WOWNER HP：お問い合わせフォームのメール送信【保留中】

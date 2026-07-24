@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import LineIcon from "@/components/LineIcon";
 
+const LINE_URL = "https://utage-system.com/line/open/yjGgUvxEA3oy";
+
 export default function LpNav({
   brand,
   brandAccent = ".",
@@ -48,7 +50,9 @@ export default function LpNav({
         <Link href="/services" onClick={() => setMenuOpen(false)}>サービス一覧</Link>
         <Link href="/#contact" onClick={() => setMenuOpen(false)}>お問い合わせ</Link>
         <a
-          href="#"
+          href={LINE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={() => setMenuOpen(false)}
           className="inline-flex items-center gap-3 bg-[#06C755] !text-white text-[18px] px-8 py-4 rounded-full shadow-md mt-4"
         >
@@ -78,7 +82,9 @@ export default function LpNav({
           <div className="flex items-center gap-4">
             {/* Desktop CTA */}
             <a
-              href="#"
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`hidden md:inline-flex items-center gap-2 text-[12px] font-bold px-5 py-2.5 rounded-full transition-all ${
                 scrolled
                   ? "bg-[#06C755] text-white shadow-sm hover:shadow-md"

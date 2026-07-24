@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "SARUDEMO｜猿でも出来る起業のファストパス",
 };
 
+/* メインCV：公式LINE追加。全CTAの遷移先 */
+const LINE_URL = "https://utage-system.com/line/open/yjGgUvxEA3oy";
+
 /* ── CTA Banner (variation A - dark premium) ── */
 function CtaBannerPremium() {
   return (
@@ -21,7 +24,7 @@ function CtaBannerPremium() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#D4AF37]/15 rounded-full blur-[100px]" />
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10 flex flex-col items-center">
         <p className="text-[#D4AF37]/60 text-[13px] font-bold mb-4 tracking-wider">＼ 起業への第一歩を踏み出す ／</p>
-        <a href="https://line.me/R/ti/p/@532ikyxa" target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] px-10 py-5">
+        <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] px-10 py-5">
           <LineIcon className="w-6 h-6" />
           1ヶ月無料でLINE登録する
         </a>
@@ -40,7 +43,7 @@ function CtaBannerCard() {
           <div className="bg-white py-8 px-6 md:px-10 text-center">
             <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2">まずは無料で話を聞いてみませんか？</p>
             <p className="text-text-light text-[13px] mb-6">LINE登録後、担当者とのセッションにてSARUDEMOの全貌を丁寧に説明致します。</p>
-            <a href="https://line.me/R/ti/p/@532ikyxa" target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[15px] md:text-[16px] px-8 py-4">
+            <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[15px] md:text-[16px] px-8 py-4">
               <LineIcon className="w-5 h-5" />
               LINE登録して詳細を見る
             </a>
@@ -126,7 +129,7 @@ export default function SarudemoPage() {
               </FadeSlide>
               <FadeSlide direction="up" delay={700}>
                 <div className="flex flex-col items-center lg:items-start gap-4">
-                  <a href="https://line.me/R/ti/p/@532ikyxa" target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] w-full md:w-auto px-10 py-5 justify-center">
+                  <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] w-full md:w-auto px-10 py-5 justify-center">
                     <LineIcon className="w-6 h-6" />
                     1ヶ月無料でLINE登録する
                   </a>
@@ -692,7 +695,7 @@ export default function SarudemoPage() {
               <br className="hidden md:block" />
               まずはLINE登録して、SARUDEMOの全貌をご確認ください。
             </p>
-            <a href="https://line.me/R/ti/p/@532ikyxa" target="_blank" rel="noopener noreferrer" className="cta-btn lp-shine text-[18px] md:text-[22px] px-12 md:px-16 py-6 md:py-7 shadow-[0_0_40px_rgba(232,93,47,0.4)] hover:shadow-[0_0_60px_rgba(232,93,47,0.6)] hover:scale-105 transition-all">
+            <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn lp-shine text-[18px] md:text-[22px] px-12 md:px-16 py-6 md:py-7 shadow-[0_0_40px_rgba(232,93,47,0.4)] hover:shadow-[0_0_60px_rgba(232,93,47,0.6)] hover:scale-105 transition-all">
               <LineIcon className="w-7 h-7 md:w-8 md:h-8" />
               1ヶ月無料でLINE登録する
             </a>
