@@ -151,7 +151,7 @@ export default function BizOwnerPage() {
                 {/* Floating stats */}
                 <div className="absolute -bottom-4 right-3 md:right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">月額費用</p>
-                  <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥11,000<span className="text-[11px] text-text-light font-normal">/月</span></p>
+                  <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥50,000<span className="text-[11px] text-text-light font-normal">/月</span></p>
                 </div>
                 <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">初月</p>
@@ -162,25 +162,6 @@ export default function BizOwnerPage() {
           </div>
         </div>
 
-        {/* Trust numbers bar */}
-        <FadeSlide direction="up" delay={900}>
-          <div className="absolute bottom-0 left-0 right-0 bg-white/80 backdrop-blur-sm border-t border-gray-100 py-6 z-20">
-            <div className="max-w-[900px] mx-auto px-6 lp-trust-bar">
-              <div className="lp-trust-item">
-                <p className="lp-trust-number"><CountUp end={50} />+</p>
-                <p className="text-[11px] text-text-light font-medium mt-1">サポート企業数</p>
-              </div>
-              <div className="lp-trust-item">
-                <p className="lp-trust-number"><CountUp end={98} />%</p>
-                <p className="text-[11px] text-text-light font-medium mt-1">会員継続率</p>
-              </div>
-              <div className="lp-trust-item">
-                <p className="lp-trust-number"><CountUp end={6} /></p>
-                <p className="text-[11px] text-text-light font-medium mt-1">多彩な案件カテゴリ</p>
-              </div>
-            </div>
-          </div>
-        </FadeSlide>
 
         <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
           <span className="text-[10px] font-[Inter] tracking-[0.2em] font-bold text-lp">SCROLL</span>

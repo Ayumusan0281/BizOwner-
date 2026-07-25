@@ -164,25 +164,6 @@ export default function SarudemoPage() {
           </div>
         </div>
 
-        {/* Trust numbers bar */}
-        <FadeSlide direction="up" delay={900}>
-          <div className="absolute bottom-0 left-0 right-0 bg-white/80 backdrop-blur-sm border-t border-gray-100 py-6 z-20">
-            <div className="max-w-[900px] mx-auto px-6 lp-trust-bar">
-              <div className="lp-trust-item">
-                <p className="lp-trust-number"><CountUp end={1} /></p>
-                <p className="text-[11px] text-text-light font-medium mt-1">年以内に社長へ</p>
-              </div>
-              <div className="lp-trust-item">
-                <p className="lp-trust-number"><CountUp end={50} />+</p>
-                <p className="text-[11px] text-text-light font-medium mt-1">指導企業数</p>
-              </div>
-              <div className="lp-trust-item">
-                <p className="lp-trust-number"><CountUp end={100} /><span className="text-[20px]">万</span></p>
-                <p className="text-[11px] text-text-light font-medium mt-1">権利収入/月 目安</p>
-              </div>
-            </div>
-          </div>
-        </FadeSlide>
 
         <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
           <span className="font-[Inter] text-[10px] font-bold tracking-[0.2em] text-lp">SCROLL</span>
