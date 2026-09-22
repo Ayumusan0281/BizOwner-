@@ -25,6 +25,21 @@
 - COMON'S公式LINE URL発行後、`src/app/comons/page.tsx` の `LINE_URL` を差し替え
 - HitoHoshi・KaneHoshiの本LP制作（`/hitohoshi` `/kanehoshi` は現在準備中ページのみ）
 
+### 🎯 HitoHoshi本LP制作（準備中ページを置き換え）
+- `src/app/hitohoshi/page.tsx` を準備中プレースホルダーから本LPへ全面差し替え。`src/app/comons/page.tsx` と同一のコンポーネント構成（FadeSlide/StaggerChildren/TiltCard/LineDivider/LineIcon）・Tailwindテーマをそのまま踏襲し、トンマナを統一
+- 文面は全て実際の最終営業資料（`HitoHoshi_営業資料.pdf`、全10ページ）をpdfplumberでテキスト抽出のうえ、その記載どおりに作成（料金は「サービス利用料 月額10,000円のみ・初期費用0円」の単一プライシング、ROUTE A/Bの職業紹介許可に関する注記も資料の文言をそのまま反映）
+- ロゴは既存の `public/lp/hitohoshi-logo.png`（オーナー確認済みの公式ロゴ：セリフ体の二重Hモノグラム＋"HitoHoshi"ワードマーク）をそのまま使用、変更なし
+- 構成：Hero→マーキー→01課題(3カード)→CTA→02 WHAT WE DO(2本柱)→CTA→03 SERVICE01採用代行詳細(運/調/応/進の4項目)→04 SERVICE02再活用スキーム(ROUTE A/B)→CTA→05料金(単一¥10,000/月+成果報酬)→06 WHY HITOHOSHI(4メリット)→運営体制(5サービスの並び、HitoHoshiをハイライト)→07導入フロー→CONTACT(公式LINE+メール`main@business-manabiya.com`)→footer。資料に存在しないFAQ・比較表・顧問紹介等は設けていない
+- サービス一覧（`/services`）の「HitoHoshi」VIEW LPボタンは元々`/hitohoshi`にリンク済みだったため、ページ差し替えのみでボタン→本LP遷移が完成
+- ローカル動作確認済み（`http://localhost:3010/hitohoshi` にて get_page_text で全セクションの文言を確認、`/services`からの導線も確認）
+
+### ✅ 確定した決定事項
+- HitoHoshi公式LINEのURLは未発行のため、`hitohoshi/page.tsx` の `LINE_URL` はCOMON'Sと同様に仮で `"#contact"`（コード内にTODOコメントあり）
+
+### 📌 次回再開ポイント
+- HitoHoshi公式LINE URL発行後、`src/app/hitohoshi/page.tsx` の `LINE_URL` を差し替え
+- KaneHoshiの本LP制作（`/kanehoshi` は現在準備中ページのみ）
+
 ---
 
 ## 2026-07-25（土）
