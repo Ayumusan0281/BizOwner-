@@ -4,6 +4,7 @@ import Link from "next/link";
 import FadeSlide from "@/components/manabiya/FadeSlide";
 import StaggerChildren, { StaggerItem } from "@/components/manabiya/StaggerChildren";
 import TiltCard from "@/components/manabiya/TiltCard";
+import ImageReveal from "@/components/lp/ImageReveal";
 import LineDivider from "@/components/lp/LineDivider";
 import LineIcon from "@/components/LineIcon";
 
@@ -143,37 +144,14 @@ export default function ComonsPage() {
             <FadeSlide direction="right" delay={400}>
               <div className="flex justify-center relative">
                 <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-tr from-lp-accent to-lp rounded-2xl rotate-3 scale-[1.02] opacity-10" />
-                <div
-                  className="w-[260px] md:w-[400px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10 p-8 md:p-10"
-                  style={{ background: "linear-gradient(160deg, #0e3358 0%, #0b2a4a 55%, #0a2038 100%)" }}
-                >
-                  <div className="absolute inset-0 lp-dots-pattern opacity-10 pointer-events-none" />
-                  <div className="relative z-10">
-                    <p className="text-[11px] tracking-[0.25em] font-bold text-white/55 uppercase">Advisory Team</p>
-                    <p className="text-white font-bold text-[18px] md:text-[20px] leading-[1.7] mt-3">
-                      分野を問わず、
-                      <br />
-                      好きな顧問を自由に選べる。
-                    </p>
-                    <div className="flex justify-center gap-4 my-7">
-                      {[
-                        { label: "経営", d: "M3 13.5l3-9 3 9M3 13.5a3 3 0 006 0M3 13.5h6M15 13.5l3-9 3 9m-6 0a3 3 0 006 0m-6 0h6M12 3v18" },
-                        { label: "IT・AI", d: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
-                        { label: "法務", d: "M12 3v2m0 0c-2.5 0-4.5 1.5-6 4.5h12c-1.5-3-3.5-4.5-6-4.5zM3 9.5l3 6a3 3 0 006 0l-3-6M15 9.5l3 6a3 3 0 006 0l-3-6M9 21h6" },
-                      ].map((it) => (
-                        <div key={it.label} className="w-16 h-16 rounded-2xl bg-white/8 border border-white/20 flex flex-col items-center justify-center gap-1">
-                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={it.d} /></svg>
-                          <span className="text-[10px] text-white/70 font-semibold">{it.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between border-t border-white/15 pt-4">
-                      <span className="text-[11px] text-white/55">顧問1名あたり</span>
-                      <span className="text-white font-bold text-[22px]">¥30,000<span className="text-[12px] font-normal">/月〜</span></span>
-                    </div>
-                  </div>
-                </div>
+                <ImageReveal immediate direction="right" className="w-[220px] h-[280px] md:w-[360px] md:h-[450px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
+                  <Image src="/lp/comons-hero.jpg" alt="COMON'S" width={1920} height={1080} className="w-full h-full object-cover" priority />
+                </ImageReveal>
                 {/* Floating stats */}
+                <div className="absolute -bottom-4 right-3 md:right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
+                  <p className="text-[10px] text-text-light font-medium">顧問1名あたり</p>
+                  <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥30,000<span className="text-[11px] text-text-light font-normal">/月〜</span></p>
+                </div>
                 <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">人数上限</p>
                   <p className="font-bold text-cta text-[18px] md:text-[22px]">なし</p>
