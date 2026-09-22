@@ -145,7 +145,7 @@ export default function HitoHoshiPage() {
             <FadeSlide direction="right" delay={400}>
               <div className="flex justify-center relative">
                 <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-tr from-lp-accent to-lp rounded-2xl rotate-3 scale-[1.02] opacity-10" />
-                <ImageReveal immediate direction="right" className="w-[220px] h-[280px] md:w-[360px] md:h-[450px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
+                <ImageReveal immediate direction="right" className="w-[260px] h-[260px] md:w-[400px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
                   <Image src="/lp/hitohoshi-hero.jpg" alt="HitoHoshi" width={1920} height={1080} className="w-full h-full object-cover" priority />
                 </ImageReveal>
                 {/* Floating stats */}
