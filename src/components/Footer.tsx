@@ -41,10 +41,26 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/zeroichi-home"
+                    href="/comons"
                     className="hover:text-primary transition-colors"
                   >
-                    Zeroichi Home
+                    COMON&apos;S
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/hitohoshi"
+                    className="hover:text-primary transition-colors"
+                  >
+                    HitoHoshi
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/kanehoshi"
+                    className="hover:text-primary transition-colors"
+                  >
+                    KaneHoshi
                   </Link>
                 </li>
               </ul>

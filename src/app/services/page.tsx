@@ -169,7 +169,7 @@ export default function ServicesPage() {
             </p>
           </FadeUp>
           <FadeUp>
-            <div className="grid md:grid-cols-3 gap-5">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
                 {
                   href: "/bizowner",
@@ -196,16 +196,40 @@ export default function ServicesPage() {
                   bg: "linear-gradient(160deg,#003a4a 0%,#006e87 60%,#00a3b8 100%)",
                 },
                 {
-                  href: "/zeroichi-home",
-                  logo: "/zeroichi-home-logo.png",
-                  alt: "Zeroichi Home ロゴ",
-                  eyebrow: "COMMUNITY",
-                  badge: "総合コミュニティ",
-                  title: "Zeroichi Home",
+                  href: "/comons",
+                  logo: "/lp/comons-logo.png",
+                  alt: "COMON'S ロゴ",
+                  eyebrow: "ADVISORY",
+                  badge: "一人社長向け",
+                  title: "COMON'S",
                   titleFont: "font-[Josefin_Sans]",
-                  desc: "全国起業家協会が提供する総合コミュニティ。仲間と学び成長する場。",
-                  tags: ["全国起業家協会", "学び合い", "イベント"],
-                  bg: "linear-gradient(160deg,#003d52 0%,#0088a8 60%,#0fb1c4 100%)",
+                  desc: "法人を、ひとりで背負わない。厳選な審査を通過した顧問チームで経営を伴走。",
+                  tags: ["月額30,000円〜", "顧問1名から", "分野不問"],
+                  bg: "linear-gradient(160deg,#0b2a4a 0%,#2e6fa8 60%,#4a9bd9 100%)",
+                },
+                {
+                  href: "/hitohoshi",
+                  logo: "/lp/hitohoshi-logo.png",
+                  alt: "HitoHoshi ロゴ",
+                  eyebrow: "HR SUPPORT",
+                  badge: "既存法人向け",
+                  title: "HitoHoshi",
+                  titleFont: "font-[Josefin_Sans]",
+                  desc: "採用アカウント運用代行と人材再活用で、企業の「ヒト」を支える。",
+                  tags: ["採用代行", "人材再活用"],
+                  bg: "linear-gradient(160deg,#1a2e1a 0%,#2f6b3f 60%,#4a9b5c 100%)",
+                },
+                {
+                  href: "/kanehoshi",
+                  logo: "/lp/kanehoshi-logo.png",
+                  alt: "KaneHoshi ロゴ",
+                  eyebrow: "EC SUPPORT",
+                  badge: "既存法人向け",
+                  title: "KaneHoshi",
+                  titleFont: "font-[Josefin_Sans]",
+                  desc: "ECアカウント運用代行で売上実績を積み上げ、企業の「カネ」を支える。",
+                  tags: ["ECアカウント運用代行", "融資・補助金対策"],
+                  bg: "linear-gradient(160deg,#3a2a0b 0%,#8a5f2e 60%,#d4a94a 100%)",
                 },
               ].map((s) => (
                 <Link

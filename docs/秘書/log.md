@@ -9,6 +9,24 @@
 
 ---
 
+## 2026-09-22（火）
+
+### 🎯 新サービスLP追加：COMON'S、HitoHoshi/KaneHoshiのプレースホルダー
+- `src/app/comons/page.tsx` を新規作成。既存BizOwner/SARUDEMOと同一のコンポーネント（FadeSlide/StaggerChildren/TiltCard/LineDivider/LineIcon）・Tailwindテーマ（lp/lp-accent/cta/bg-section等）を流用し、一人社長向け顧問サービス「COMON'S」のLPをトンマナ統一で制作
+- ロゴ `public/lp/comons-logo.png` を追加（既存の透過ロゴ、BizOwnerロゴと同じ正方形モノグラム+ワードマーク構成）
+- サービス一覧（`src/app/services/page.tsx`）・トップページ（`src/app/page.tsx`）のサービスカード一覧、および `src/components/Footer.tsx` のサービスリンクから「Zeroichi Home」を削除し、「COMON'S」「HitoHoshi」「KaneHoshi」を追加（オーナー指示：Zeroichi Homeは廃止・NextVisionへLPごと移管済みのため）
+- HitoHoshi・KaneHoshiは実LP未着手のため `/hitohoshi` `/kanehoshi` に簡易な準備中ページを仮設置（ロゴ・説明文・サービス一覧への導線のみ）。ロゴは `public/lp/hitohoshi-logo.png` `public/lp/kanehoshi-logo.png`（いずれも既存の透過ロゴを流用）
+- `npm run build` でエラーなし・全ルート生成確認済み。ローカル動作確認済み（get_page_textで全セクション・フッターの文言を確認）
+
+### ✅ 確定した決定事項
+- COMON'S公式LINEのUTAGE URLは未発行のため、`comons/page.tsx` の `LINE_URL` は仮で `"#contact"`。発行後に差し替えが必要（コード内にTODOコメントあり）
+
+### 📌 次回再開ポイント
+- COMON'S公式LINE URL発行後、`src/app/comons/page.tsx` の `LINE_URL` を差し替え
+- HitoHoshi・KaneHoshiの本LP制作（`/hitohoshi` `/kanehoshi` は現在準備中ページのみ）
+
+---
+
 ## 2026-07-25（土）
 
 ### 🎯 全LP：LINE登録URLを統一
