@@ -6,6 +6,7 @@ import StaggerChildren, { StaggerItem } from "@/components/manabiya/StaggerChild
 import TiltCard from "@/components/manabiya/TiltCard";
 import LineDivider from "@/components/lp/LineDivider";
 import LineIcon from "@/components/LineIcon";
+import ImageReveal from "@/components/lp/ImageReveal";
 
 export const metadata: Metadata = {
   title: "HitoHoshi｜「不採用」をコストで終わらせない",
@@ -144,36 +145,14 @@ export default function HitoHoshiPage() {
             <FadeSlide direction="right" delay={400}>
               <div className="flex justify-center relative">
                 <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-tr from-lp-accent to-lp rounded-2xl rotate-3 scale-[1.02] opacity-10" />
-                <div
-                  className="w-[260px] md:w-[400px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10 p-8 md:p-10"
-                  style={{ background: "linear-gradient(160deg, #0e3358 0%, #0b2a4a 55%, #0a2038 100%)" }}
-                >
-                  <div className="absolute inset-0 lp-dots-pattern opacity-10 pointer-events-none" />
-                  <div className="relative z-10">
-                    <p className="text-[11px] tracking-[0.25em] font-bold text-white/55 uppercase">Recruiting Partner</p>
-                    <p className="text-white font-bold text-[18px] md:text-[20px] leading-[1.7] mt-3">
-                      採用の「入口」から「出口」まで、
-                      <br />
-                      一気通貫で引き受ける。
-                    </p>
-                    <div className="flex justify-center gap-4 my-7">
-                      {[
-                        { label: "採用代行", d: "M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" },
-                        { label: "人材再活用", d: "M17.25 6.75L22.5 12l-5.25 5.25M6.75 17.25L1.5 12l5.25-5.25M14 4l-4 16" },
-                      ].map((it) => (
-                        <div key={it.label} className="w-16 h-16 rounded-2xl bg-white/8 border border-white/20 flex flex-col items-center justify-center gap-1">
-                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={it.d} /></svg>
-                          <span className="text-[10px] text-white/70 font-semibold">{it.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between border-t border-white/15 pt-4">
-                      <span className="text-[11px] text-white/55">サービス利用料</span>
-                      <span className="text-white font-bold text-[22px]">¥10,000<span className="text-[12px] font-normal">/月</span></span>
-                    </div>
-                  </div>
-                </div>
+                <ImageReveal immediate direction="right" className="w-[220px] h-[280px] md:w-[360px] md:h-[450px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
+                  <Image src="/lp/hitohoshi-hero.jpg" alt="HitoHoshi" width={1920} height={1080} className="w-full h-full object-cover" priority />
+                </ImageReveal>
                 {/* Floating stats */}
+                <div className="absolute -bottom-4 right-3 md:right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
+                  <p className="text-[10px] text-text-light font-medium">サービス利用料</p>
+                  <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥10,000<span className="text-[11px] text-text-light font-normal">/月</span></p>
+                </div>
                 <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">初期費用</p>
                   <p className="font-bold text-cta text-[18px] md:text-[22px]">0円</p>
