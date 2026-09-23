@@ -720,14 +720,16 @@ export default function SarudemoPage() {
       </section>
 
       {/* ===== FOOTER ===== */}
-      <footer className="bg-[#04101A] py-12 text-white/50 border-t border-white/5">
+      <footer className="bg-[#030e1c] py-12 border-t border-white/10">
         <div className="max-w-[800px] mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="font-[Montserrat] font-bold text-[20px] text-white/80 tracking-widest">SARUDEMO</div>
-            <div className="flex gap-6 text-[12px] font-medium">
-              <Link href="/" className="hover:text-white transition-colors">ホーム</Link>
-              <Link href="/services" className="hover:text-white transition-colors">サービス一覧</Link>
-              <Link href="/#contact" className="hover:text-white transition-colors">お問い合わせ</Link>
+            <div>
+              <p className="font-[Montserrat] font-bold text-white/80 text-[18px] tracking-tight">SARUDEMO<span className="text-lp-accent">.</span></p>
+            </div>
+            <div className="flex gap-6 text-[12px] text-white/40 font-medium">
+              <Link href="/" className="hover:text-white/70 transition-colors">ホーム</Link>
+              <Link href="/services" className="hover:text-white/70 transition-colors">サービス一覧</Link>
+              <Link href="/#contact" className="hover:text-white/70 transition-colors">お問い合わせ</Link>
             </div>
           </div>
           <p className="text-white/20 text-[11px] text-center mt-8 font-[Inter]">&copy; 2026 SARUDEMO. All Rights Reserved.</p>
