@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 /* メインCV：公式LINE追加。全CTAの遷移先 */
-const LINE_URL = "https://utage-system.com/line/open/yjGgUvxEA3oy";
+const LINE_URL = "https://lin.ee/woJeT8Q";
 
 /* ── CTA Banner (variation A - dark premium) ── */
 function CtaBannerPremium() {
@@ -160,7 +160,7 @@ export default function SarudemoPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
           <span className="text-[10px] font-[Inter] tracking-[0.2em] font-bold text-lp">SCROLL</span>
           <div className="w-[1px] h-10 bg-gradient-to-b from-lp to-transparent" />
         </div>
@@ -433,7 +433,7 @@ export default function SarudemoPage() {
               <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括本部）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="lp-net grid grid-cols-2 md:grid-cols-5 gap-3">
               {[
                 { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
                 { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育", active: true },
@@ -510,7 +510,7 @@ export default function SarudemoPage() {
           </FadeSlide>
           <FadeSlide direction="up" className="-mx-2 md:mx-0">
             <div className="bg-white rounded-2xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-x-auto">
-              <table className="w-full min-w-[400px] text-[12px] md:text-[14px]">
+              <table className="lp-cmp w-full min-w-[400px] text-[12px] md:text-[14px]">
                 <thead>
                   <tr>
                     <th className="text-left p-3 md:p-5 border-b border-gray-100 w-[25%]" />
@@ -536,8 +536,8 @@ export default function SarudemoPage() {
                 ].map((row, i, arr) => (
                     <tr key={i} className={i < arr.length - 1 ? "border-b border-gray-50 hover:bg-gray-50/50 transition-colors" : ""}>
                       <td className="p-3 md:p-5 font-bold text-lp whitespace-nowrap">{row[0]}</td>
-                      <td className="p-3 md:p-5 text-center text-text-body whitespace-pre-line">{row[1]}</td>
-                      <td className="p-3 md:p-5 text-center font-bold text-lp bg-blue-50/10 whitespace-pre-line">{row[2]}</td>
+                      <td data-label="BizOwner" className="p-3 md:p-5 text-center text-text-body whitespace-pre-line">{row[1]}</td>
+                      <td data-label="SARUDEMO" className="p-3 md:p-5 text-center font-bold text-lp bg-blue-50/10 whitespace-pre-line">{row[2]}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -578,7 +578,7 @@ export default function SarudemoPage() {
                       </span>
                       <span className="text-white/80 font-bold text-[18px]">円</span>
                     </div>
-                    <p className="text-white/60 text-[13px] relative z-10">税別・一括限定（クレジットカード可）</p>
+                    <p className="text-white/60 text-[12px] md:text-[13px] relative z-10 text-balance">税別・一括限定（クレジットカード可）</p>
                   </div>
                 </div>
               </div>

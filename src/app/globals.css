@@ -113,6 +113,100 @@ body {
   }
 }
 
+/* ══════════════════════════════════════════════
+   スマホ版LP最適化（〜767px のみ・PC版には影響なし）
+   対象：CTAボタン(.cta-btn)を持つページ（BizOwner/SARUDEMO/COMON'S/HitoHoshi/KaneHoshi）
+   ══════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  /* セクション余白：PC基準の py-28 は縦に間延びするため圧縮 */
+  body:has(.cta-btn) section[class*="py-28"] {
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+  }
+  body:has(.cta-btn) section [class*="mb-16"] {
+    margin-bottom: 2.5rem;
+  }
+  body:has(.cta-btn) section [class*="mb-14"] {
+    margin-bottom: 2.25rem;
+  }
+
+  /* 見出しに被る巨大な背景ナンバー（01〜08）はスマホでは非表示 */
+  body:has(.cta-btn) .lp-bg-number {
+    display: none;
+  }
+
+  /* 傾いた帯バナーはスマホでは水平に（読みやすさ優先） */
+  body:has(.cta-btn) [class*="-rotate-1"] {
+    rotate: none !important;
+  }
+
+  /* CTAボタン：文言が2行に折れたりアイコンが浮いたりしないように */
+  body:has(.cta-btn) .cta-btn {
+    white-space: nowrap;
+    padding-left: 22px;
+    padding-right: 22px;
+    gap: 8px;
+  }
+  body:has(.cta-btn) .lp-gradient-border > div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* 事業ネットワーク図：奇数個で余る最後の1枚を中央に */
+  .lp-net > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 6px);
+  }
+
+
+  /* 比較表：横スクロールで見切れる表を「行ごとのカード」に組み替え */
+  .lp-cmp {
+    display: block;
+    min-width: 0 !important;
+  }
+  .lp-cmp thead {
+    display: none;
+  }
+  .lp-cmp tbody {
+    display: block;
+  }
+  .lp-cmp tr {
+    display: block;
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid #eef1f5;
+  }
+  .lp-cmp tr:last-child {
+    border-bottom: 0;
+  }
+  .lp-cmp td {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 7px 0 !important;
+    text-align: right !important;
+    white-space: normal !important;
+    background: transparent !important;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .lp-cmp td:first-child {
+    display: block;
+    padding: 0 0 6px !important;
+    text-align: left !important;
+    font-size: 14px;
+    color: #0b2a4a;
+  }
+  .lp-cmp td[data-label]::before {
+    content: attr(data-label);
+    flex: none;
+    color: #777;
+    font-size: 11px;
+    font-weight: 700;
+  }
+}
+
 /* ── Ghost Button ── */
 .btn-ghost {
   display: inline-flex;

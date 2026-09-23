@@ -15,7 +15,7 @@ export default function TiltCard({
 
   const handleMove = (e: MouseEvent<HTMLDivElement>) => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || window.matchMedia("(pointer: coarse)").matches) return;
     const rect = el.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;

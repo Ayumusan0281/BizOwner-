@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 /* メインCV：公式LINE追加。全CTAの遷移先 */
-const LINE_URL = "https://utage-system.com/line/open/yjGgUvxEA3oy";
+const LINE_URL = "https://lin.ee/woJeT8Q";
 
 /* ─── LINE CTA Button (TGU-style) ─── */
 function LineCta({ children, large = false }: { children: React.ReactNode; large?: boolean }) {

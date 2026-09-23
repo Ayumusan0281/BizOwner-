@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 };
 
 /* メインCV：公式LINE追加。全CTAの遷移先 */
-/* TODO: HitoHoshi専用公式LINEのURL発行後に差し替え（営業資料に「本件専用の公式LINE」と記載あり、URL未確定） */
-const LINE_URL = "#contact";
+/* 全国起業家協会 official（公式LINE）。全LPのCTA共通 */
+const LINE_URL = "https://lin.ee/woJeT8Q";
 
 /* ── CTA Banner (variation A - full width) ── */
 function CtaBannerFull() {
@@ -162,7 +162,7 @@ export default function HitoHoshiPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
           <span className="text-[10px] font-[Inter] tracking-[0.2em] font-bold text-lp">SCROLL</span>
           <div className="w-[1px] h-10 bg-gradient-to-b from-lp to-transparent" />
         </div>
@@ -475,7 +475,7 @@ export default function HitoHoshiPage() {
               <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括本部）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="lp-net grid grid-cols-2 md:grid-cols-5 gap-3">
               {[
                 { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
                 { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育" },
@@ -567,7 +567,7 @@ export default function HitoHoshiPage() {
             </a>
             <p className="text-white/30 text-[12px] mt-8 leading-[1.8]">
               HitoHoshi運営事務局：一般社団法人 全国起業家協会<br />
-              Email：<a href="mailto:main@business-manabiya.com" className="underline hover:text-white/60">main@business-manabiya.com</a>　受付時間：平日 10:00-18:00
+              Email：<a href="mailto:main@business-manabiya.com" className="underline hover:text-white/60">main@business-manabiya.com</a><span className="hidden md:inline">　</span><br className="md:hidden" />受付時間：平日 10:00-18:00
             </p>
           </FadeSlide>
         </div>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 /* メインCV：公式LINE追加。全CTAの遷移先 */
-const LINE_URL = "https://utage-system.com/line/open/yjGgUvxEA3oy";
+const LINE_URL = "https://lin.ee/woJeT8Q";
 
 /* ── CTA Banner (variation A - full width) ── */
 function CtaBannerFull() {
@@ -163,7 +163,7 @@ export default function BizOwnerPage() {
         </div>
 
 
-        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
           <span className="text-[10px] font-[Inter] tracking-[0.2em] font-bold text-lp">SCROLL</span>
           <div className="w-[1px] h-10 bg-gradient-to-b from-lp to-transparent" />
         </div>
@@ -307,7 +307,7 @@ export default function BizOwnerPage() {
               3ステップで<span className="text-lp-accent lp-marker">稼ぐ</span>仕組み
             </h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={200} className="grid md:grid-cols-3 gap-8 pt-8">
+          <StaggerChildren staggerMs={200} className="grid md:grid-cols-3 gap-16 md:gap-8 pt-8">
             {[
               { step: "01", title: "まずは面談", desc: "無料で会員登録。\n内容を理解した上で、\n権利収入の下準備をスタート", price: "無料", accent: false },
               { step: "02", title: "法人で権利収入", desc: "法人を作成し、利益が発生開始。\n収益チャネルが倍増し、\n権利収入が加速。", price: "+500,000円で\u200b法人作成", accent: false },
@@ -395,7 +395,7 @@ export default function BizOwnerPage() {
               <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括本部）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="lp-net grid grid-cols-2 md:grid-cols-5 gap-3">
               {[
                 { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援", active: true },
                 { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育" },
@@ -473,7 +473,7 @@ export default function BizOwnerPage() {
           </FadeSlide>
           <FadeSlide direction="up" className="-mx-2 md:mx-0">
             <div className="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-x-auto">
-              <table className="w-full min-w-[520px] text-[12px] md:text-[14px]">
+              <table className="lp-cmp w-full min-w-[520px] text-[12px] md:text-[14px]">
                 <thead>
                   <tr>
                     <th className="text-left p-3 md:p-5 bg-gray-50/50 font-bold text-text-dark border-b border-gray-100 w-[20%]" />
@@ -499,9 +499,9 @@ export default function BizOwnerPage() {
                   ].map((row, i) => (
                     <tr key={i} className={i < 4 ? "border-b border-gray-50" : ""}>
                       <td className="p-3 md:p-5 font-bold text-text-dark bg-gray-50/50 whitespace-nowrap">{row.label}</td>
-                      <td className="p-3 md:p-5 text-center bg-orange-50/30 font-bold text-cta">{row.biz}</td>
-                      <td className="p-3 md:p-5 text-center bg-white text-text-body">{row.other}</td>
-                      <td className="p-3 md:p-5 text-center bg-white text-text-body">{row.self}</td>
+                      <td data-label="BizOwner" className="p-3 md:p-5 text-center bg-orange-50/30 font-bold text-cta">{row.biz}</td>
+                      <td data-label="一般的な起業塾" className="p-3 md:p-5 text-center bg-white text-text-body">{row.other}</td>
+                      <td data-label="独学" className="p-3 md:p-5 text-center bg-white text-text-body">{row.self}</td>
                     </tr>
                   ))}
                 </tbody>

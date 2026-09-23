@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 };
 
 /* メインCV：公式LINE追加。全CTAの遷移先 */
-/* TODO: COMON'S公式LINEのUTAGE URL発行後に差し替え */
-const LINE_URL = "#contact";
+/* 全国起業家協会 official（公式LINE）。全LPのCTA共通 */
+const LINE_URL = "https://lin.ee/woJeT8Q";
 
 /* ── CTA Banner (variation A - full width) ── */
 function CtaBannerFull() {
@@ -161,7 +161,7 @@ export default function ComonsPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
           <span className="text-[10px] font-[Inter] tracking-[0.2em] font-bold text-lp">SCROLL</span>
           <div className="w-[1px] h-10 bg-gradient-to-b from-lp to-transparent" />
         </div>
@@ -454,15 +454,15 @@ export default function ComonsPage() {
           </StaggerChildren>
           <FadeSlide direction="up">
             <p className="text-center font-bold text-lp text-[14px] tracking-[0.05em] mb-6">顧問人数ごとの料金イメージ</p>
-            <div className="grid grid-cols-3 gap-4 md:gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
               {[
                 { label: "1名なら", price: "30,000", accent: false },
                 { label: "3名なら", price: "90,000", accent: true },
                 { label: "5名なら", price: "150,000", accent: false },
               ].map((b) => (
-                <div key={b.label} className={`relative rounded-2xl p-6 text-center ${b.accent ? "bg-white border-2 border-lp-accent shadow-[0_14px_34px_-14px_rgba(74,155,217,0.35)]" : "bg-bg-section border border-gray-100"}`}>
-                  {b.accent && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-lp-accent text-white text-[10px] font-bold px-3 py-1 rounded-full">人気</div>}
-                  <p className="text-[12px] font-bold text-text-light mb-2">{b.label}</p>
+                <div key={b.label} className={`relative rounded-2xl px-5 py-4 md:p-6 flex md:block items-center justify-between md:text-center ${b.accent ? "bg-white border-2 border-lp-accent shadow-[0_14px_34px_-14px_rgba(74,155,217,0.35)]" : "bg-bg-section border border-gray-100"}`}>
+                  {b.accent && <div className="absolute -top-3 right-4 md:right-auto md:left-1/2 md:-translate-x-1/2 bg-lp-accent text-white text-[10px] font-bold px-3 py-1 rounded-full">人気</div>}
+                  <p className="text-[13px] md:text-[12px] font-bold text-text-light mb-0 md:mb-2">{b.label}</p>
                   <p className="whitespace-nowrap text-text-dark font-bold text-[22px] md:text-[26px]">{b.price}<span className="text-[12px] text-text-light font-normal">円/月</span></p>
                 </div>
               ))}
@@ -525,7 +525,7 @@ export default function ComonsPage() {
               <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括法人）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="lp-net grid grid-cols-2 md:grid-cols-5 gap-3">
               {[
                 { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
                 { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育" },
