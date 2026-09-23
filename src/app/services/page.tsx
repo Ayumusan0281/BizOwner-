@@ -180,7 +180,7 @@ export default function ServicesPage() {
                   title: "BizOwner",
                   titleFont: "font-[Josefin_Sans]",
                   desc: "ビジネス素人から会社経営。知識ゼロ・リスク最小限で始められる権利収入の仕組み。",
-                  tags: ["月額50,000円〜", "知識不要", "権利収入"],
+                  tags: ["月額無料", "知識不要", "権利収入"],
                   bg: "linear-gradient(160deg,#002b3a 0%,#005f7e 55%,#0088a8 100%)",
                 },
                 {

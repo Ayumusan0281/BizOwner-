@@ -389,7 +389,7 @@ export default function SarudemoPage() {
               { no: "②", tag: "メイン事業", title: "人材派遣", sub: "BPO / アフィリエイト等", amount: "15〜150万円/月" },
               { no: "③", tag: "自主事業", title: "営業代行", sub: "成果報酬 / 全案件共有", amount: "100〜200万円/月" },
               { no: "④", tag: "自主事業", title: "自社事業", sub: "好きなことを自由に", amount: "―" },
-              { no: "⑤", tag: "金融系", title: "資金調達", sub: "デット / エクイティ / キャリア", amount: "100万円以上/回" },
+              { no: "⑤", tag: "金融系", title: "資金調達", sub: "デット / エクイティ", amount: "100万円以上/回" },
               { no: "⑥", tag: "金融系", title: "申請支援", sub: "補助金 / 助成金", amount: "100万円以上/回" },
               { no: "⑦", tag: "金融系", title: "法人投資", sub: "FX / 暗号通貨", amount: "50万円以上/月" },
               { no: "※", tag: "支出", title: "顧問", sub: "法務 / 税務 / 経営（2年目以降）", amount: "−10万円/月", accent: true },

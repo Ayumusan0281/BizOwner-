@@ -309,7 +309,7 @@ export default function BizOwnerPage() {
           </FadeSlide>
           <StaggerChildren staggerMs={200} className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 pt-8">
             {[
-              { step: "01", title: "まずは面談", desc: "無料で会員登録。\n内容を理解した上で、\n権利収入の下準備をスタート", price: "無料", accent: false },
+              { step: "01", title: "まずは面談", desc: "無料で会員登録。\n内容を理解した上で、\n権利収入の下準備をスタート", price: "資金調達　何度でもご相談無料", accent: false },
               { step: "02", title: "法人で権利収入", desc: "法人を作成し、利益が発生開始。\n収益チャネルが倍増し、\n権利収入が加速。", price: "+500,000円で\u200b法人作成", accent: false },
               { step: "03", title: "FC化で独立", desc: "フランチャイズオーナーとして\n完全独立。自分のチームを持ち、\n本格的なビジネスオーナーへ。", price: "FC加盟 500万円〜\n(2期目以降 月額顧問料10万円)", accent: true },
             ].map((s, i) => (
