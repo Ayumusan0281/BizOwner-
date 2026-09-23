@@ -26,9 +26,9 @@ function CtaBannerPremium() {
         <p className="text-[#D4AF37]/60 text-[13px] font-bold mb-4 tracking-wider">＼ 起業への第一歩を踏み出す ／</p>
         <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] px-10 py-5">
           <LineIcon className="w-6 h-6" />
-          1ヶ月無料でLINE登録する
+          公式LINEに登録する
         </a>
-        <p className="mt-4 text-[13px] text-white/40 font-medium">※ 解約自由・しつこい勧誘なし</p>
+        <p className="mt-4 text-[13px] text-white/40 font-medium">※ しつこい勧誘は一切ありません</p>
       </div>
     </section>
   );
@@ -41,11 +41,11 @@ function CtaBannerCard() {
       <div className="max-w-3xl mx-auto px-6">
         <div className="lp-gradient-border">
           <div className="bg-white py-8 px-6 md:px-10 text-center">
-            <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2">まずは無料で話を聞いてみませんか？</p>
-            <p className="text-text-light text-[13px] mb-6">LINE登録後、担当者とのセッションにてSARUDEMOの全貌を丁寧に説明致します。</p>
+            <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2">まずはお気軽にご相談ください</p>
+            <p className="text-text-light text-[13px] mb-6">LINE登録後、担当者との面談にてSARUDEMOの全貌を丁寧にご説明します。</p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[15px] md:text-[16px] px-8 py-4">
               <LineIcon className="w-5 h-5" />
-              LINE登録して詳細を見る
+              公式LINEに登録する
             </a>
           </div>
         </div>
@@ -56,7 +56,7 @@ function CtaBannerCard() {
 
 /* ── Marquee Banner ── */
 function MarqueeBanner() {
-  const items = ["猿でも出来る起業のファストパス", "最短最速で社長へ", "年商1億円を目標", "再現性のある成功を", "プロチームが全面コンサル", "契約金300万円で人生が変わる"];
+  const items = ["猿でも出来る起業のファストパス", "最短最速で社長へ", "年商1億円を目標", "実業のフランチャイズ・テンプレート", "経営のプロチームが指南", "契約金は一括のみ・クーリングオフ期間あり"];
   const doubled = [...items, ...items];
   return (
     <div className="bg-lp py-4 overflow-hidden">
@@ -101,19 +101,22 @@ export default function SarudemoPage() {
         <div className="absolute top-[20%] right-[12%] w-16 h-16 border-2 border-[#D4AF37]/20 rounded-full lp-float-slow pointer-events-none hidden lg:block" />
         <div className="absolute bottom-[30%] left-[5%] w-12 h-12 bg-lp-accent/10 rounded-lg rotate-45 lp-float-medium pointer-events-none hidden lg:block" />
 
-        <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-32 lg:pt-28 lg:pb-40 w-full">
-          <div className="flex flex-col lg:flex-row items-center gap-14">
-            <div className="flex-1 text-center lg:text-left space-y-7">
+        <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-32 lg:pt-28 lg:pb-40">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left space-y-7">
               <FadeSlide direction="up" delay={100}>
-                <div className="inline-flex items-center gap-2 bg-lp text-white font-bold text-[13px] tracking-widest px-5 py-2 rounded-full shadow-md">
-                  <svg className="w-4 h-4 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5z" /></svg>
-                  起業のファストパス
+                <div className="inline-flex items-center gap-2 bg-white border border-lp-accent/20 px-4 py-2 rounded-full shadow-sm">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cta opacity-75" />
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-cta" />
+                  </span>
+                  <span className="text-lp font-bold text-[13px]">個人向け起業支援プログラム</span>
                 </div>
               </FadeSlide>
               <FadeSlide direction="up" delay={300}>
                 <h1
                   className="font-bold text-lp"
-                  style={{ fontSize: "clamp(32px,6vw,56px)", lineHeight: 1.25, letterSpacing: "-0.01em" }}
+                  style={{ fontSize: "clamp(28px,6vw,56px)", lineHeight: 1.25, letterSpacing: "0.02em" }}
                 >
                   猿でも出来る、
                   <br />
@@ -121,57 +124,46 @@ export default function SarudemoPage() {
                 </h1>
               </FadeSlide>
               <FadeSlide direction="up" delay={500}>
-                <p className="text-[16px] md:text-[18px] text-text-body leading-[1.9] max-w-2xl mx-auto lg:mx-0 font-medium">
-                  最短最速で社長へ。年商1億円を目標にする起業プログラム。
+                <p className="text-[16px] md:text-[18px] text-text-body leading-[1.9] max-w-lg mx-auto md:mx-0">
+                  実業のフランチャイズ・テンプレートを使い、最短最速で「起業のファストパス」を駆け上がる個人向け経営プログラム。
                   <br className="hidden md:block" />
-                  テンプレート × プロチームで、再現性のある成功を。
+                  年商1億円を目標に、経営のプロチームが指南します。
                 </p>
               </FadeSlide>
               <FadeSlide direction="up" delay={700}>
-                <div className="flex flex-col items-center lg:items-start gap-4">
-                  <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] w-full md:w-auto px-10 py-5 justify-center">
+                <div className="flex flex-col gap-3">
+                  <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] w-full max-w-md px-8 py-5 justify-center mx-auto md:mx-0">
                     <LineIcon className="w-6 h-6" />
-                    1ヶ月無料でLINE登録する
+                    公式LINEに登録する
                   </a>
-                  <p className="text-[13px] text-text-light">※ 解約自由・しつこい勧誘なし</p>
+                  <p className="text-[13px] text-text-light md:ml-2">※ 契約金は一括のみ・クーリングオフ期間あり</p>
                 </div>
               </FadeSlide>
             </div>
-
-            <FadeSlide direction="right" delay={400} className="flex-1 w-full max-w-[400px] lg:max-w-none relative">
-              <ImageReveal immediate direction="right" className="relative z-10 rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] rotate-2 hover:rotate-0 transition-transform duration-500">
-                <Image src="/lp/sarudemo-hero.png" alt="SARUDEMO" width={1536} height={1024} className="w-full h-[320px] md:h-[500px] object-cover" priority />
-                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-lp/60 to-transparent" />
-                <div className="absolute bottom-6 left-6 z-20 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
-                  <p className="font-[Montserrat] font-bold text-[22px] tracking-widest text-[#D4AF37]">SARUDEMO</p>
-                  <p className="text-[13px] opacity-95">Premium Entrepreneurship</p>
+            <FadeSlide direction="right" delay={400}>
+              <div className="flex justify-center relative">
+                <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-tr from-lp-accent to-lp rounded-2xl rotate-3 scale-[1.02] opacity-10" />
+                <ImageReveal immediate direction="right" className="w-[260px] h-[260px] md:w-[400px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
+                  <Image src="/lp/sarudemo-hero.png" alt="SARUDEMO" width={1536} height={1024} className="w-full h-full object-cover" priority />
+                </ImageReveal>
+                {/* Floating stats */}
+                <div className="absolute -bottom-4 right-3 md:right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
+                  <p className="text-[10px] text-text-light font-medium">目標年商</p>
+                  <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">1<span className="text-[11px] text-text-light font-normal">億円</span></p>
                 </div>
-              </ImageReveal>
-              {/* Floating stats */}
-              <div className="absolute -bottom-4 right-4 md:right-10 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
-                <p className="text-[10px] text-text-light font-medium">目標年商</p>
-                <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">1<span className="text-[13px] text-text-light font-normal">億円</span></p>
-              </div>
-              <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
-                <p className="text-[10px] text-text-light font-medium">最短</p>
-                <p className="font-bold text-cta text-[18px] md:text-[22px]">1<span className="text-[13px] text-text-light font-normal">年で社長</span></p>
-              </div>
-              {/* Floating decorations */}
-              <div className="absolute -top-6 -right-6 w-20 h-20 bg-lp-accent/10 rounded-full backdrop-blur-md border border-lp-accent/20 flex items-center justify-center blob-float hidden md:flex">
-                <svg className="w-8 h-8 text-lp-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
+                  <p className="text-[10px] text-text-light font-medium">契約金（税別・一括）</p>
+                  <p className="font-bold text-cta text-[18px] md:text-[22px]">¥3,000,000</p>
+                </div>
               </div>
             </FadeSlide>
           </div>
         </div>
 
-
-        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-          <span className="font-[Inter] text-[10px] font-bold tracking-[0.2em] text-lp">SCROLL</span>
-          <div className="w-[1px] h-10 bg-lp/20 relative overflow-hidden">
-            <div className="w-full h-1/2 bg-lp absolute top-0 left-0 animate-[shimmer_2s_infinite]" />
-          </div>
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60 z-10">
+          <span className="text-[10px] font-[Inter] tracking-[0.2em] font-bold text-lp">SCROLL</span>
+          <div className="w-[1px] h-10 bg-gradient-to-b from-lp to-transparent" />
         </div>
-        <style>{`@keyframes shimmer { 0% { top: -50%; } 100% { top: 150%; } }`}</style>
       </section>
 
       {/* ===== Marquee ===== */}
@@ -223,13 +215,57 @@ export default function SarudemoPage() {
       {/* CTA 1 */}
       <CtaBannerPremium />
 
+      {/* ===== 失敗する人の共通点 ===== */}
+      <section className="py-28 lg:py-36 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 lp-dots-pattern opacity-40" />
+        <div className="max-w-[1000px] mx-auto px-6 relative z-10">
+          <FadeSlide direction="up" className="text-center mb-14">
+            <div className="lp-section-counter justify-center">
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">02 — INTRO</span>
+            </div>
+            <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5] mb-4">
+              ビジネスってむずかしい？<br />
+              結論、<span className="text-lp-accent lp-marker">超簡単</span>です！
+            </h2>
+            <p className="text-[14px] text-text-body leading-[1.9]">
+              ※ 正しい努力・正しい知識が大前提。失敗する人には、共通した3つの理由があります。
+            </p>
+          </FadeSlide>
+          <StaggerChildren staggerMs={150} className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              { num: "01", title: "知識不足", desc: "正しいやり方を知らないままスタートしてしまい、遠回りを重ねてしまう。" },
+              { num: "02", title: "こだわりが強すぎる", desc: "自分なりのアレンジを優先し、成功パターンから外れていく。" },
+              { num: "03", title: "我流に走る", desc: "テンプレートを踏襲せず、独自流に走って再現性を失う。" },
+            ].map((item) => (
+              <StaggerItem key={item.num}>
+                <TiltCard intensity={5} className="h-full">
+                  <div className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-[0_8px_30px_-10px_rgba(11,42,74,0.08)] overflow-hidden h-full">
+                    <span className="lp-bg-number top-[-16px] right-[10px]" style={{ fontSize: "110px" }}>{item.num}</span>
+                    <div className="relative z-10">
+                      <p className="text-[12px] font-[Inter] font-bold text-lp-accent tracking-wider mb-2">REASON {item.num}</p>
+                      <h3 className="font-bold text-lp text-[20px] mb-3">{item.title}</h3>
+                      <p className="text-[13px] text-text-body leading-[1.9]">{item.desc}</p>
+                    </div>
+                  </div>
+                </TiltCard>
+              </StaggerItem>
+            ))}
+          </StaggerChildren>
+          <FadeSlide direction="up" className="text-center mt-12">
+            <p className="text-lp font-bold text-[16px] md:text-[18px]">
+              だからSARUDEMOは、<span className="text-lp-accent lp-marker">テンプレートに沿って進めるだけ</span>の設計です。
+            </p>
+          </FadeSlide>
+        </div>
+      </section>
+
       {/* ===== SARUDEMOとは ===== */}
       <section className="py-28 lg:py-36 bg-white relative overflow-hidden">
         <div className="absolute inset-0 lp-lines-pattern" />
         <div className="max-w-[1100px] mx-auto px-6 relative z-10">
           <FadeSlide direction="up" className="text-center mb-16">
             <div className="lp-section-counter justify-center">
-              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">02 — ABOUT</span>
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">03 — ABOUT</span>
             </div>
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5]">
               猿でも出来る起業。<br className="md:hidden" />最短最速の<span className="text-lp-accent lp-marker">ファストパス</span>。
@@ -245,11 +281,11 @@ export default function SarudemoPage() {
             </FadeSlide>
             <FadeSlide direction="right" className="flex-1">
               <p className="text-[16px] md:text-[18px] text-text-dark leading-loose font-medium">
-                SARUDEMOは、実業のフランチャイズテンプレートと経営のプロチームによるサポートで、<strong className="text-lp bg-[#FBF5E6] px-2">最短1年以内</strong>にビジネスオーナーへ育成する起業プログラムです。
+                SARUDEMOは、「猿でも出来る起業」がコンセプト。実業のフランチャイズ・テンプレートと経営のプロチームによるサポートで、<strong className="text-lp bg-[#FBF5E6] px-2">最短1年以内</strong>にビジネスオーナーへ育成する起業プログラムです。
               </p>
               <div className="w-16 h-[3px] bg-gradient-to-r from-[#D4AF37] to-lp-accent my-6" />
               <p className="text-[14px] leading-[2] text-text-light">
-                テンプレートに沿って進めば十分です。経験・知識・資格は不要。法務・税務・教育まで、プロチームが全面コンサルします。
+                テンプレートに沿って進めれば十分です。経験・知識・資格は不要。法務・税務・経営まで、プロチームがコンサルで支えます。
               </p>
             </FadeSlide>
           </div>
@@ -257,20 +293,20 @@ export default function SarudemoPage() {
             {[
               {
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />,
-                title: "最短最速で起業",
-                desc: "1年以内に社長へ育成。\nテンプレートで圧倒的スピード。",
+                title: "起業のファストパス",
+                desc: "最短最速で成功へたどり着く、\n唯一無二の専用ルートを用意。",
                 accent: "bg-yellow-50",
               },
               {
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
-                title: "再現性がエグイ",
-                desc: "実業のFCテンプレート。\n猿でも出来る簡単さ。",
+                title: "実業のフランチャイズ",
+                desc: "実際に機能している事業テンプレートを\nそのまま使用して再現。",
                 accent: "bg-green-50",
               },
               {
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />,
-                title: "プロチームが指南",
-                desc: "経営のプロが全面コンサル。\n法務・税務・教育まで。",
+                title: "脱サラなんて当たり前",
+                desc: "年商1億円を当たり前の目標に設定。\n経営脳のチューニングから教育。",
                 accent: "bg-blue-50",
               },
             ].map((item) => (
@@ -300,17 +336,17 @@ export default function SarudemoPage() {
         <div className="max-w-[1100px] mx-auto px-6 relative z-10">
           <FadeSlide direction="up" className="text-center mb-16">
             <div className="lp-section-counter justify-center">
-              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">03 — WHY SARUDEMO</span>
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">04 — FEATURES</span>
             </div>
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5]">
-              SARUDEMOが<span className="text-lp-accent lp-marker">選ばれる</span>理由
+              SARUDEMOの<span className="text-lp-accent lp-marker">3つのエグさ</span>
             </h2>
           </FadeSlide>
           <StaggerChildren staggerMs={200} className="grid lg:grid-cols-3 gap-8 md:gap-10">
             {[
-              { num: "01", title: "起業のファストパス", highlight: "1年以内に社長へ", dark: false },
-              { num: "02", title: "脱サラなんて当たり前", highlight: "年商1億円を目標", dark: false },
-              { num: "03", title: "プロチームが全面支援", highlight: "経営のプロがコンサル", dark: true },
+              { num: "01", title: "再現性がエグイ。", highlight: "「猿でも出来る」簡単さ", dark: false },
+              { num: "02", title: "スピード感がエグイ。", highlight: "1年以内に大社長へ育成", dark: false },
+              { num: "03", title: "サポート内容がエグイ。", highlight: "経営のプロチームが君を指南", dark: true },
             ].map((s) => (
               <StaggerItem key={s.num}>
                 <TiltCard intensity={5}>
@@ -319,7 +355,7 @@ export default function SarudemoPage() {
                     {s.dark && <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/20 rounded-bl-full blur-xl" />}
                     <div className="relative z-10">
                       <h3 className={`text-[20px] font-bold ${s.dark ? "text-white" : "text-lp"} mb-3 flex flex-col gap-2`}>
-                        <span className={`text-[12px] font-[Inter] ${s.dark ? "text-[#D4AF37]" : "text-lp-accent"} tracking-wider font-bold`}>REASON {s.num}</span>
+                        <span className={`text-[12px] font-[Inter] ${s.dark ? "text-[#D4AF37]" : "text-lp-accent"} tracking-wider font-bold`}>POINT {s.num}</span>
                         {s.title}
                       </h3>
                       <p className={`text-[16px] ${s.dark ? "text-white/80" : "text-text-body"} font-medium`}>{s.highlight}</p>
@@ -340,36 +376,38 @@ export default function SarudemoPage() {
         <div className="max-w-[1000px] mx-auto px-6 relative z-10">
           <FadeSlide direction="up" className="text-center mb-16">
             <div className="lp-section-counter justify-center">
-              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">04 — REVENUE MODEL</span>
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">05 — REVENUE MODEL</span>
             </div>
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5] mb-4">
               起業後の<span className="text-lp-accent lp-marker">報酬モデル</span>
             </h2>
-            <p className="text-[14px] text-text-body">多彩な収益チャネルで、安定と成長を両立。</p>
+            <p className="text-[14px] text-text-body">起業後は、複数のカテゴリーを組み合わせて収益を積み上げていきます。</p>
           </FadeSlide>
-          <StaggerChildren staggerMs={100} className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6 mb-6">
+          <StaggerChildren staggerMs={100} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mb-6">
             {[
-              { title: "権利収入", sub: "EC / 人材 / ビザ等", amount: "100〜300万円/月", icon: "💰" },
-              { title: "人材派遣", sub: "BPO / アフィリエイト", amount: "100〜300万円/月", icon: "👥" },
-              { title: "物件オーナー", sub: "民泊 / 店舗 / 事業所", amount: "100〜300万円/月", icon: "📈" },
-              { title: "資金調達", sub: "デット / エクイティ", amount: "1000万円以上", icon: "🏦" },
-              { title: "申請支援", sub: "補助金 / 助成金", amount: "1000万円以上", icon: "📋" },
-              { title: "自社事業", sub: "好きなことを自由に", amount: "無限大", icon: "🚀", accent: true },
+              { no: "①", tag: "メイン事業", title: "権利収入", sub: "アカウント貸出（EC/人材等）", amount: "30〜300万円/月" },
+              { no: "②", tag: "メイン事業", title: "人材派遣", sub: "BPO / アフィリエイト等", amount: "15〜150万円/月" },
+              { no: "③", tag: "自主事業", title: "営業代行", sub: "成果報酬 / 全案件共有", amount: "100〜200万円/月" },
+              { no: "④", tag: "自主事業", title: "自社事業", sub: "好きなことを自由に", amount: "―", accent: true },
+              { no: "⑤", tag: "金融系", title: "資金調達", sub: "デット / エクイティ / キャリア", amount: "100万円以上/回" },
+              { no: "⑥", tag: "金融系", title: "申請支援", sub: "補助金 / 助成金", amount: "100万円以上/回" },
+              { no: "⑦", tag: "金融系", title: "法人投資", sub: "FX / 暗号通貨", amount: "50万円以上/月" },
+              { no: "※", tag: "支出", title: "顧問", sub: "法務 / 税務 / 経営（2年目以降）", amount: "−10万円/月", muted: true },
             ].map((item) => (
               <StaggerItem key={item.title}>
                 <TiltCard intensity={4}>
                   <div className={`${item.accent ? "bg-gradient-to-br from-lp to-[#1a4f7a] shadow-[0_10px_30px_-10px_rgba(11,42,74,0.2)]" : "bg-white shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)]"} p-6 rounded-2xl text-center transition-all border border-gray-100`}>
-                    <div className="text-2xl mb-2">{item.icon}</div>
+                    <p className={`text-[10px] font-bold tracking-wider mb-2 ${item.accent ? "text-[#D4AF37]" : "text-lp-accent"}`}>{item.no} {item.tag}</p>
                     <h3 className={`font-bold ${item.accent ? "text-white" : "text-lp"} mb-1 text-[15px]`}>{item.title}</h3>
                     <p className={`text-[11px] ${item.accent ? "text-white/60" : "text-text-light"} leading-[1.7] mb-2`}>{item.sub}</p>
-                    <p className={`font-bold font-[Inter] text-[16px] ${item.accent ? "text-[#D4AF37]" : "text-lp-accent"}`}>{item.amount}</p>
+                    <p className={`font-bold font-[Inter] text-[16px] ${item.accent ? "text-[#D4AF37]" : item.muted ? "text-text-light" : "text-lp-accent"}`}>{item.amount}</p>
                   </div>
                 </TiltCard>
               </StaggerItem>
             ))}
           </StaggerChildren>
           <FadeSlide direction="up">
-            <p className="text-[12px] text-text-light text-right">※ 報酬金額はあくまで目安です。成果により変動します。</p>
+            <p className="text-[12px] text-text-light text-right">※ 報酬金額はあくまで目安です。成果を保証するものではなく、事業内容・稼働により変動します。①②はメイン事業、③④は自主事業、⑤⑥⑦は金融系の位置づけです。</p>
           </FadeSlide>
         </div>
       </section>
@@ -377,41 +415,40 @@ export default function SarudemoPage() {
       {/* CTA 3 */}
       <CtaBannerPremium />
 
-      {/* ===== コミュニティ ===== */}
-      <section
-        className="py-24 md:py-28 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #0b2a4a 0%, #061729 100%)" }}
-      >
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-lp-accent/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-cta/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4" />
-
-        <div className="max-w-[1100px] mx-auto px-6 relative z-10 text-center">
-          <FadeSlide direction="up">
-            <div className="lp-section-counter justify-center text-white/30 mb-6">
-              <span className="font-[Inter] font-bold text-[12px] tracking-[0.3em]">COMMUNITY</span>
+      {/* ===== 運営体制 ===== */}
+      <section className="py-28 md:py-36 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 lp-dots-pattern opacity-40" />
+        <div className="max-w-[900px] mx-auto px-6 relative z-10">
+          <FadeSlide direction="up" className="text-center mb-14">
+            <div className="lp-section-counter justify-center">
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">TRUST &amp; NETWORK</span>
             </div>
-            <h2 className="font-bold text-white text-[26px] md:text-[40px] leading-[1.4]">
-              ただの起業じゃ終わらない。
-              <br />
-              <span className="bg-gradient-to-r from-lp-accent to-lp-sky bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>&ldquo;Zeroichi Home&rdquo;</span>という、青春。
-            </h2>
+            <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5]">運営体制</h2>
+            <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
+              SARUDEMOは、「一般社団法人 全国起業家協会」が展開する起業/経営支援事業の一つとして運営されているサービスです。
+            </p>
           </FadeSlide>
-          <StaggerChildren staggerMs={120} className="mt-5 md:mt-6 mx-auto max-w-[820px] grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 auto-rows-fr">
-            {[
-              { emoji: "🎬", title: "独自ツール", desc: "一流のIT顧問監修" },
-              { emoji: "🎉", title: "楽しい行事", desc: "BBQ・旅行など" },
-              { emoji: "⚽", title: "チーム所属", desc: "仲間と切磋琢磨" },
-              { emoji: "🎁", title: "福利厚生", desc: "会員限定特典" },
-            ].map((c) => (
-              <StaggerItem key={c.title} className="h-full">
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 md:p-6 rounded-2xl text-center hover:bg-white/20 transition-colors h-full flex flex-col items-center justify-center">
-                  <div className="text-3xl mb-2 leading-none">{c.emoji}</div>
-                  <h4 className="font-bold text-white text-[16px]">{c.title}</h4>
-                  <p className="text-white/40 text-[11px] mt-1">{c.desc}</p>
+          <FadeSlide direction="up">
+            <div className="text-center mb-2">
+              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括本部）</span>
+            </div>
+            <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+              {[
+                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×起業支援" },
+                { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育", active: true },
+                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×人材再活用" },
+                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント運用代行" },
+                { name: "COMON'S", tag: "一人社長向け", desc: "多分野の顧問サービス" },
+              ].map((n) => (
+                <div key={n.name} className={`rounded-2xl p-5 text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>
+                  <p className={`font-bold text-[14px] mb-1 ${n.active ? "text-cta" : "text-text-dark"}`}>{n.name}</p>
+                  <p className="text-[10px] text-text-light mb-1.5">{n.tag}</p>
+                  <p className="text-[10px] text-text-light">{n.desc}</p>
                 </div>
-              </StaggerItem>
-            ))}
-          </StaggerChildren>
+              ))}
+            </div>
+          </FadeSlide>
         </div>
       </section>
 
@@ -421,7 +458,7 @@ export default function SarudemoPage() {
         <div className="max-w-[900px] mx-auto px-6 relative z-10">
           <FadeSlide direction="up" className="text-center mb-14">
             <div className="lp-section-counter justify-center">
-              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">05 — ADVISOR</span>
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">06 — ADVISOR</span>
             </div>
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5]">顧問紹介</h2>
           </FadeSlide>
@@ -442,8 +479,8 @@ export default function SarudemoPage() {
               <div className="flex flex-col gap-8 relative z-10 pl-12">
                 {[
                   { color: "bg-gray-300 border-gray-300", label: "絶望から", desc: "19歳で精神病院に2年間入院。退院後、人生の逆転を誓う。" },
-                  { color: "bg-white border-[#D4AF37]", label: "下克上", desc: "ホストNo.1、アイドルプロデュース、JAPAN EXPO出演。" },
-                  { color: "bg-lp border-white shadow-[0_0_10px_rgba(74,155,217,0.5)]", label: "起業家へ", desc: "初年度年商1億円達成。経営コンサルタントとして50社以上を指導。" },
+                  { color: "bg-white border-[#D4AF37]", label: "下克上", desc: "大阪のホストクラブで12ヶ月間No.1。新人を半年で1000万プレイヤーに育成。アイドルプロデュース、フランス版JAPAN EXPO出演。" },
+                  { color: "bg-lp border-white shadow-[0_0_10px_rgba(74,155,217,0.5)]", label: "起業家へ", desc: "社会人経験なしで営業会社を起業。人脈×高単価×リファラル営業に特化した組織構築で、初年度から年商1億円。経営コンサルとして延べ50社を指導。" },
                 ].map((item, i) => (
                   <div key={i} className="relative">
                     <div className={`absolute -left-[45px] top-1 w-6 h-6 rounded-full ${item.color} border-4 shadow-sm`} />
@@ -464,7 +501,7 @@ export default function SarudemoPage() {
         <div className="max-w-[900px] mx-auto px-6 relative z-10">
           <FadeSlide direction="up" className="text-center mb-14">
             <div className="lp-section-counter justify-center">
-              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">06 — COMPARISON</span>
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">07 — COMPARISON</span>
             </div>
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5] mb-4">
               BizOwner <span className="font-normal text-text-light text-[20px] mx-2">vs</span> <span className="text-lp-accent font-[Montserrat] tracking-tight">SARUDEMO</span>
@@ -489,14 +526,14 @@ export default function SarudemoPage() {
                 </thead>
                 <tbody>
                   {[
-                    ["コンセプト", "ビジネス素人から\n権利収入", "最短最速で起業"],
-                    ["対象", "ビジネス初心者", "CICホワイト"],
-                    ["価格", "500万円", "300万円"],
-                    ["支払方法", "一括", "クレジットカード可"],
-                    ["権利収入", "10,000円/件", "100〜300万円/月"],
-                    ["目標", "副収入の確保", "年商1億の大社長"],
-                    ["コミュニティ", "月額5万円", "月額5万円"],
-                  ].map((row, i, arr) => (
+                    ["販売価格", "500万円※", "300万円"],
+                    ["販売対象", "CICブラック\n（年齢・知識不問）", "CICホワイト"],
+                    ["支払回数", "一括のみ", "一括のみ"],
+                    ["支払方法", "売上から天引き可", "クレジットカード可"],
+                    ["契約期間", "1年間", "1年間"],
+                    ["2期目以降", "10万円/月", "10万円/月"],
+                    ["メンバーシップ", "あり／全体サポート", "あり／個別サポート"],
+                ].map((row, i, arr) => (
                     <tr key={i} className={i < arr.length - 1 ? "border-b border-gray-50 hover:bg-gray-50/50 transition-colors" : ""}>
                       <td className="p-3 md:p-5 font-bold text-lp whitespace-nowrap">{row[0]}</td>
                       <td className="p-3 md:p-5 text-center text-text-body whitespace-pre-line">{row[1]}</td>
@@ -506,6 +543,9 @@ export default function SarudemoPage() {
                 </tbody>
               </table>
             </div>
+            <p className="text-[11px] text-text-light mt-4 leading-[1.8]">
+              ※ BizOwnerは法人作成費用から始められますが、SARUDEMOと同等レベルになるには総額500万円以上が必要になります。
+            </p>
           </FadeSlide>
         </div>
       </section>
@@ -524,9 +564,9 @@ export default function SarudemoPage() {
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5]">料金構成</h2>
           </FadeSlide>
           <FadeSlide direction="up">
-            <div className="grid md:grid-cols-3 gap-6 mb-10">
+            <div className="grid md:grid-cols-3 gap-6 mb-10 items-stretch">
               {/* Main Price */}
-              <div className="md:col-span-3">
+              <div className="md:col-span-2">
                 <div className="relative p-[2px] rounded-3xl overflow-hidden" style={{ background: "linear-gradient(135deg, #D4AF37, #8B6914, #D4AF37)" }}>
                   <div className="bg-lp p-10 rounded-[22px] text-center relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0b2a4a 0%, #061729 100%)" }}>
                     <div className="lp-ribbon-gold lp-ribbon">おすすめ</div>
@@ -538,29 +578,19 @@ export default function SarudemoPage() {
                       </span>
                       <span className="text-white/80 font-bold text-[18px]">円</span>
                     </div>
-                    <p className="text-white/60 text-[13px] relative z-10">税別</p>
+                    <p className="text-white/60 text-[13px] relative z-10">税別・一括限定（クレジットカード可）</p>
                   </div>
                 </div>
               </div>
               {/* Sub Prices */}
               <TiltCard intensity={4}>
-                <div className="bg-bg-section p-8 rounded-2xl text-center border border-gray-100 shadow-sm">
-                  <h3 className="font-bold text-lp mb-4 text-[14px]">コミュニティ 会費</h3>
-                  <div className="flex justify-center items-baseline gap-1">
-                    <span className="font-[Inter] text-[28px] font-bold text-lp"><CountUp end={50000} /></span>
-                    <span className="text-text-body font-bold text-[13px]">円/月</span>
-                  </div>
-                  <p className="text-[11px] text-text-light mt-2">Zeroichi Home</p>
-                </div>
-              </TiltCard>
-              <TiltCard intensity={4} className="md:col-span-2">
-                <div className="bg-bg-section p-8 rounded-2xl text-center border border-gray-100 shadow-sm">
+                <div className="bg-bg-section p-8 rounded-2xl text-center border border-gray-100 shadow-sm h-full">
                   <h3 className="font-bold text-lp mb-4 text-[14px]">2期目以降 顧問料</h3>
                   <div className="flex justify-center items-baseline gap-1">
                     <span className="font-[Inter] text-[28px] font-bold text-lp"><CountUp end={100000} /></span>
                     <span className="text-text-body font-bold text-[13px]">円/月</span>
                   </div>
-                  <p className="text-[11px] text-text-light mt-2">※ 1年目は契約金に含まれます</p>
+                  <p className="text-[11px] text-text-light mt-2">※ 契約期間は1年間。1年目は契約金に含まれます</p>
                 </div>
               </TiltCard>
             </div>
@@ -570,9 +600,10 @@ export default function SarudemoPage() {
               <div className="absolute inset-0 lp-shine" />
               <p className="text-cta font-bold text-[14px] md:text-[15px] flex items-center justify-center gap-2 flex-wrap relative z-10">
                 <span className="text-[20px]">💰</span>
-                資金調達サポートあり。先行者利益のため、金額は随時上昇予定。今がチャンスです。
+                契約金は一括のみ。安心のクーリングオフ期間あり。資金調達サポートあり、現在貯蓄が無くても問題ございません。
               </p>
             </div>
+            <p className="text-[12px] text-text-light text-center mt-4">※ 「先行者利益」としての金額は暫定です。随時更新・上昇予定。</p>
           </FadeSlide>
         </div>
       </section>
@@ -622,18 +653,18 @@ export default function SarudemoPage() {
         <div className="max-w-[800px] mx-auto px-6">
           <FadeSlide direction="up" className="text-center mb-14">
             <div className="lp-section-counter justify-center">
-              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">07 — FAQ</span>
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">08 — FAQ</span>
             </div>
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5]">よくある質問</h2>
           </FadeSlide>
           <StaggerChildren staggerMs={100} className="space-y-4 lp-accordion">
             {[
-              { q: "BizOwnerとSARUDEMOの違いは何ですか？", a: "同じ運営チームが提供する2つのプランです。BizOwnerはビジネス素人から小さく始めたい方向け、SARUDEMOは本気で起業・独立を目指す方向けです。SARUDEMOは契約金300万円で、より大きな報酬モデルとプロチームによる手厚いサポートが特徴です。" },
-              { q: "300万円の投資に見合うリターンはありますか？", a: "権利収入だけで月100〜300万円、営業支援や資金調達を含めるとさらに大きな収益が見込めます。BizOwnerで同等レベルになるには総額500万円以上が必要なため、本気の方にはSARUDEMOがお得です。" },
-              { q: "起業経験がゼロでも大丈夫ですか？", a: "はい。SARUDEMOは「猿でも出来る」がコンセプト。実業のフランチャイズテンプレートに沿って進めるだけなので、経験は不要です。経営のプロチームが全面コンサルします。" },
-              { q: "資金調達のサポートはありますか？", a: "はい。個人・法人の各種融資や投資家のご紹介など、多角的な資金調達をサポートいたします。" },
-              { q: "契約期間はどれくらいですか？", a: "契約期間は1年間です。2期目以降は顧問料として月額10万円がかかりますが、その分プロチームの継続サポートを受けられます。" },
-              { q: "途中で解約できますか？", a: "はい、いつでも解約可能です。違約金や引き止めは一切ありません。" },
+              { q: "BizOwnerとSARUDEMOの違いは何ですか？", a: "同じ運営チームが提供する2つのサービスです。BizOwnerは副業感覚で小さく始めたい方（CICブラックの方を含む）向け、SARUDEMOは本気で経営を学び、起業・独立を目指すCICホワイトの方向けです。SARUDEMOは契約金300万円で、より大きな報酬モデルと個別サポートが特徴です。" },
+              { q: "300万円の投資に見合うリターンはありますか？", a: "権利収入（アカウント貸出）で月30〜300万円が目安ですが、成果をお約束するものではなく、事業内容や稼働により変動します。営業代行・資金調達・申請支援などを組み合わせて収益を積み上げていくモデルです。BizOwnerで同等レベルになるには総額500万円以上が必要なため、本気で取り組む方にはSARUDEMOが向いています。" },
+              { q: "起業経験がゼロでも大丈夫ですか？", a: "はい。SARUDEMOは「猿でも出来る」がコンセプト。実業のフランチャイズ・テンプレートに沿って進めるので、経験は不要です。経営のプロチームがコンサルで支えます。" },
+              { q: "資金調達のサポートはありますか？", a: "はい。現在貯蓄が無くても問題ございません。個人・法人の各種融資など、資金調達をサポートいたします。" },
+              { q: "契約期間はどれくらいですか？", a: "契約期間は1年間です。2期目以降は顧問料として月額10万円がかかりますが、その分、法務・税務・経営のプロによる継続サポートを受けられます。" },
+              { q: "契約後に考え直したい場合はどうなりますか？", a: "契約金は一括のみですが、安心のクーリングオフ期間があります。詳細な条件は面談の際に、契約書をもとに丁寧にご説明します。" },
             ].map((faq, i) => (
               <StaggerItem key={i}>
                 <details className="group bg-bg-section rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
@@ -672,16 +703,16 @@ export default function SarudemoPage() {
               <span className="bg-gradient-to-r from-cta to-orange-400 bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>社長</span>になる。
             </h2>
             <p className="text-white/50 text-[15px] leading-[2] mb-12 max-w-lg mx-auto">
-              最短最速で起業。テンプレート × プロチームで、再現性のある成功を。
+              最短最速で起業。テンプレート × プロチームで、再現性を高めます。
               <br className="hidden md:block" />
               まずはLINE登録して、SARUDEMOの全貌をご確認ください。
             </p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn lp-shine text-[18px] md:text-[22px] px-12 md:px-16 py-6 md:py-7 shadow-[0_0_40px_rgba(232,93,47,0.4)] hover:shadow-[0_0_60px_rgba(232,93,47,0.6)] hover:scale-105 transition-all">
               <LineIcon className="w-7 h-7 md:w-8 md:h-8" />
-              1ヶ月無料でLINE登録する
+              公式LINEに登録する
             </a>
             <p className="text-white/30 text-[12px] mt-8 leading-[1.8]">
-              ※ 解約自由・しつこい勧誘は一切ありません<br />
+              ※ しつこい勧誘は一切ありません<br />
               ※ LINE登録は無料です
             </p>
           </FadeSlide>
