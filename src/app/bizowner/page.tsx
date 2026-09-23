@@ -26,7 +26,7 @@ function CtaBannerFull() {
         <p className="text-white/60 text-[13px] font-bold mb-4 tracking-wider">＼ 今すぐ無料で始める ／</p>
         <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] px-10 py-5">
           <LineIcon className="w-6 h-6" />
-          1ヶ月無料でLINE登録する
+          公式LINEに登録する
         </a>
         <p className="mt-4 text-[13px] text-white/50 font-medium">※ 解約自由・しつこい勧誘なし</p>
       </div>
@@ -41,11 +41,11 @@ function CtaBannerCard() {
       <div className="max-w-3xl mx-auto px-6">
         <div className="lp-gradient-border">
           <div className="bg-white py-8 px-6 md:px-10 text-center">
-            <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2">まずは無料で体験してみませんか？</p>
-            <p className="text-text-light text-[13px] mb-6">1ヶ月無料・解約自由。リスクゼロで始められます。</p>
+            <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2">まずはお気軽にご相談ください</p>
+            <p className="text-text-light text-[13px] mb-6">月額0円・解約自由。リスクゼロで始められます。</p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[15px] md:text-[16px] px-8 py-4">
               <LineIcon className="w-5 h-5" />
-              LINE登録して無料体験する
+              公式LINEに登録する
             </a>
           </div>
         </div>
@@ -56,7 +56,7 @@ function CtaBannerCard() {
 
 /* ── Marquee Banner ── */
 function MarqueeBanner() {
-  const items = ["ビジネス素人から会社のオーナーに", "月額50,000円から", "知識ゼロ・経験ゼロでOK", "権利収入で未来を変える", "ビジネス初心者でも参加可能", "1ヶ月無料キャンペーン中"];
+  const items = ["ビジネス素人から会社のオーナーに", "月額0円から", "知識ゼロ・経験ゼロでOK", "権利収入で未来を変える", "ビジネス初心者でも参加可能", "初期費用500,000円のみ"];
   const doubled = [...items, ...items];
   return (
     <div className="bg-lp py-4 overflow-hidden">
@@ -112,7 +112,7 @@ export default function BizOwnerPage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cta opacity-75" />
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-cta" />
                   </span>
-                  <span className="text-lp font-bold text-[13px]">1ヶ月無料キャンペーン実施中</span>
+                  <span className="text-lp font-bold text-[13px]">個人向け・副業で始める会社経営プログラム</span>
                 </div>
               </FadeSlide>
               <FadeSlide direction="up" delay={300}>
@@ -120,23 +120,23 @@ export default function BizOwnerPage() {
                   className="font-bold text-text-dark"
                   style={{ fontSize: "clamp(32px,6vw,56px)", lineHeight: 1.25, letterSpacing: "0.02em" }}
                 >
-                  ビジネス素人から、
+                  副業感覚で、
                   <br />
-                  会社の<span className="text-lp-accent lp-marker">オーナー</span>になる。
+                  会社を<span className="text-lp-accent lp-marker">経営</span>する。
                 </h1>
               </FadeSlide>
               <FadeSlide direction="up" delay={500}>
                 <p className="text-[16px] md:text-[18px] text-text-body leading-[1.9] max-w-lg">
-                  月額50,000円から始める、あなたの権利収入ライフ。
+                  求人・EC・補助金申請。既存事業を、あなた名義の会社で運用する権利収入モデル。
                   <br className="hidden md:block" />
-                  知識ゼロ・経験ゼロでもOK。
+                  知識ゼロから始めて、法人化、そしてフランチャイズ独立まで一気通貫で伴走します。
                 </p>
               </FadeSlide>
               <FadeSlide direction="up" delay={700}>
                 <div className="flex flex-col gap-3">
                   <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] w-full max-w-md px-8 py-5 justify-center">
                     <LineIcon className="w-6 h-6" />
-                    1ヶ月無料でLINE登録する
+                    公式LINEに登録する
                   </a>
                   <p className="text-[13px] text-text-light ml-2">※ 解約自由・しつこい勧誘なし</p>
                 </div>
@@ -145,17 +145,17 @@ export default function BizOwnerPage() {
             <FadeSlide direction="right" delay={400}>
               <div className="flex justify-center relative">
                 <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-tr from-lp-accent to-lp rounded-2xl rotate-3 scale-[1.02] opacity-10" />
-                <ImageReveal immediate direction="right" className="w-[220px] h-[280px] md:w-[360px] md:h-[450px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
+                <ImageReveal immediate direction="right" className="w-[260px] h-[260px] md:w-[400px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
                   <Image src="/lp/bizowner-hero.png" alt="BizOwner" width={1024} height={1536} className="w-full h-full object-cover" priority />
                 </ImageReveal>
                 {/* Floating stats */}
                 <div className="absolute -bottom-4 right-3 md:right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
-                  <p className="text-[10px] text-text-light font-medium">月額費用</p>
-                  <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥50,000<span className="text-[11px] text-text-light font-normal">/月</span></p>
+                  <p className="text-[10px] text-text-light font-medium">月額</p>
+                  <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">0<span className="text-[11px] text-text-light font-normal">円</span></p>
                 </div>
                 <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
-                  <p className="text-[10px] text-text-light font-medium">初月</p>
-                  <p className="font-bold text-cta text-[18px] md:text-[22px]">無料</p>
+                  <p className="text-[10px] text-text-light font-medium">初期費用</p>
+                  <p className="font-bold text-cta text-[18px] md:text-[22px]">¥500,000</p>
                 </div>
               </div>
             </FadeSlide>
@@ -249,7 +249,7 @@ export default function BizOwnerPage() {
               </p>
               <div className="w-16 h-[3px] bg-gradient-to-r from-lp-accent to-cta my-6" />
               <p className="text-[14px] leading-[2] text-text-light">
-                月額50,000円という低コストで始められ、ビジネス初心者の方でも安心して参加いただけます。本部が伴走するので、初めてでも迷わず一歩を踏み出せます。
+                月額0円で始められ、ビジネス初心者の方でも安心して参加いただけます。本部が伴走するので、初めてでも迷わず一歩を踏み出せます。
               </p>
             </FadeSlide>
           </div>
@@ -269,8 +269,8 @@ export default function BizOwnerPage() {
               },
               {
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />,
-                title: "月額50,000円から",
-                desc: "低コストで気軽にスタート。\n初月無料・解約自由で安心。",
+                title: "月額0円から",
+                desc: "法人作成費用のみでスタート可能。\n無理な費用負担はありません。",
                 accent: "bg-orange-50",
               },
             ].map((item) => (
@@ -309,9 +309,9 @@ export default function BizOwnerPage() {
           </FadeSlide>
           <StaggerChildren staggerMs={200} className="grid md:grid-cols-3 gap-8 pt-8">
             {[
-              { step: "01", title: "まずは面談", desc: "無料で会員登録。\n内容を理解した上で、\n権利収入の下準備をスタート", price: "月額50,000円", accent: false },
+              { step: "01", title: "まずは面談", desc: "無料で会員登録。\n内容を理解した上で、\n権利収入の下準備をスタート", price: "無料", accent: false },
               { step: "02", title: "法人で権利収入", desc: "法人を作成し、利益が発生開始。\n収益チャネルが倍増し、\n権利収入が加速。", price: "+500,000円で法人作成", accent: false },
-              { step: "03", title: "FC化で独立", desc: "フランチャイズオーナーとして\n完全独立。自分のチームを持ち、\n本格的なビジネスオーナーへ。", price: "FC加盟 500万円", accent: true },
+              { step: "03", title: "FC化で独立", desc: "フランチャイズオーナーとして\n完全独立。自分のチームを持ち、\n本格的なビジネスオーナーへ。", price: "FC加盟 500万円〜\n(2期目以降 月額顧問料10万円)", accent: true },
             ].map((s, i) => (
               <StaggerItem key={s.step}>
                 <TiltCard intensity={5} className="h-full">
@@ -328,7 +328,7 @@ export default function BizOwnerPage() {
                     )}
                     <h3 className={`font-bold ${s.accent ? "text-cta" : "text-text-dark"} text-[18px] mb-3 mt-2`}>{s.title}</h3>
                     <p className="text-[13px] text-text-body leading-[1.9] whitespace-pre-line mb-5">{s.desc}</p>
-                    <div className={`${s.accent ? "bg-gradient-to-r from-cta to-[#d04f24] text-white" : "bg-lp-sky text-lp"} py-3 px-4 rounded-xl text-[14px] font-bold`}>
+                    <div className={`${s.accent ? "bg-gradient-to-r from-cta to-[#d04f24] text-white" : "bg-lp-sky text-lp"} py-3 px-4 rounded-xl text-[14px] font-bold whitespace-pre-line leading-[1.5]`}>
                       {s.price}
                     </div>
                   </div>
@@ -356,9 +356,9 @@ export default function BizOwnerPage() {
           </FadeSlide>
           <StaggerChildren staggerMs={80} className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
             {[
-              { title: "人材アカウント", sub: "Indeed / エアワーク等", icon: "👥" },
-              { title: "ECショップ", sub: "メルカリ / 楽天市場等", icon: "🛒" },
-              { title: "権利運用", sub: "ビザ / 派遣 / 物販等", icon: "📊" },
+              { title: "人材アカウント", sub: "Indeed / エンゲージ / 求人ボックス等", icon: "👥" },
+              { title: "ECショップ", sub: "メルカリ / 楽天市場 / Shopee等", icon: "🛒" },
+              { title: "組織構築", sub: "業務委託・完全歩合で組織化", icon: "🏗️" },
               { title: "補助金・助成金", sub: "行政申請サポート", icon: "📋" },
               { title: "物件オーナー", sub: "民泊 / 店舗 / 事業所", icon: "💡" },
               { title: "夢の事業", sub: "やりたいビジネスを支援", icon: "🚀", accent: true },
@@ -377,47 +377,40 @@ export default function BizOwnerPage() {
         </div>
       </section>
 
-      {/* ===== コミュニティ ===== */}
-      <section
-        className="py-32 md:py-40 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #0b2a4a 0%, #1a4f7a 100%)" }}
-      >
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-lp-accent/10 rounded-full blur-[100px] -translate-y-1/3 translate-x-1/4" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cta/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4" />
-        <div className="max-w-[1100px] mx-auto px-6 relative z-10 text-center">
-          <FadeSlide direction="up">
-            <div className="lp-section-counter justify-center text-white/30 mb-6">
-              <span className="font-[Inter] font-bold text-[12px] tracking-[0.3em]">COMMUNITY</span>
+      {/* ===== 運営体制 ===== */}
+      <section className="py-28 md:py-36 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 lp-dots-pattern opacity-40" />
+        <div className="max-w-[900px] mx-auto px-6 relative z-10">
+          <FadeSlide direction="up" className="text-center mb-14">
+            <div className="lp-section-counter justify-center">
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">TRUST &amp; NETWORK</span>
             </div>
-            <h2 className="font-bold text-white text-[26px] md:text-[40px] leading-[1.4] mb-6">
-              権利収入だけじゃ終わらない。
-              <br />
-              <span className="text-lp-accent">&ldquo;Zeroichi Home&rdquo;</span>
-              <br className="md:hidden" />
-              という、青春。
-            </h2>
-            <p className="text-white/60 text-[15px] leading-[2] max-w-lg mx-auto">
-              BizOwner会員は「Zeroichi Home」コミュニティに参加可能。
-              ビジネスだけじゃない、仲間と楽しむ場がここにあります。
+            <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">運営体制</h2>
+            <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
+              BizOwnerは、「一般社団法人 全国起業家協会」が展開する起業/経営支援事業の一つとして運営されているサービスです。
             </p>
           </FadeSlide>
-          <StaggerChildren staggerMs={120} className="mt-5 md:mt-6 mx-auto max-w-[820px] grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 auto-rows-fr">
-            {[
-              { emoji: "🎬", title: "独自ツール", desc: "一流のIT顧問監修" },
-              { emoji: "🎉", title: "楽しい行事", desc: "BBQ・旅行など" },
-              { emoji: "⚽", title: "チーム所属", desc: "仲間と切磋琢磨" },
-              { emoji: "🎁", title: "福利厚生", desc: "会員限定特典" },
-            ].map((c) => (
-              <StaggerItem key={c.title} className="h-full">
-                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/20 hover:bg-white/20 transition-all group h-full flex flex-col items-center text-center justify-center">
-                  <span className="text-2xl block mb-2 leading-none">{c.emoji}</span>
-                  <span className="font-bold text-white text-[15px] block leading-tight">{c.title}</span>
-                  <span className="text-white/40 text-[11px] mt-1">{c.desc}</span>
+          <FadeSlide direction="up">
+            <div className="text-center mb-2">
+              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括本部）</span>
+            </div>
+            <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+              {[
+                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×起業支援", active: true },
+                { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育" },
+                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×人材再活用" },
+                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント運用代行" },
+                { name: "COMON'S", tag: "一人社長向け", desc: "多分野の顧問サービス" },
+              ].map((n) => (
+                <div key={n.name} className={`rounded-2xl p-5 text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>
+                  <p className={`font-bold text-[14px] mb-1 ${n.active ? "text-cta" : "text-text-dark"}`}>{n.name}</p>
+                  <p className="text-[10px] text-text-light mb-1.5">{n.tag}</p>
+                  <p className="text-[10px] text-text-light">{n.desc}</p>
                 </div>
-              </StaggerItem>
-            ))}
-          </StaggerChildren>
+              ))}
+            </div>
+          </FadeSlide>
         </div>
       </section>
 
@@ -498,7 +491,7 @@ export default function BizOwnerPage() {
                 </thead>
                 <tbody>
                   {[
-                    { label: "初期費用", biz: "月額50,000円", other: "30〜100万円", self: "0円〜" },
+                    { label: "初期費用", biz: "500,000円（月額0円）", other: "30〜100万円", self: "0円〜" },
                     { label: "知識・経験", biz: "不要", other: "ある程度必要", self: "自力で習得" },
                     { label: "サポート", biz: "本部が全面支援", other: "講師による指導", self: "なし" },
                     { label: "収益化", biz: "法人作成後、すぐに利益", other: "数ヶ月後", self: "不確定" },
@@ -531,15 +524,14 @@ export default function BizOwnerPage() {
           <FadeSlide direction="up">
             <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-8 rounded-2xl mb-12 shadow-lg font-bold text-[18px] md:text-[22px] -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKSIvPgo8L3N2Zz4=')] opacity-50" />
-              <span className="relative z-10">🎉 今なら<span className="text-yellow-300 text-[26px] mx-1">1</span>ヶ月無料！いつでも解約OK。まずはお試しください。</span>
+              <span className="relative z-10">💡 月額料金なし。法人作成費用のみでスタート可能。FC加盟は必要になった段階で。</span>
             </div>
           </FadeSlide>
-          <StaggerChildren staggerMs={100} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+          <StaggerChildren staggerMs={100} className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5">
             {[
-              { label: "ご利用料金", price: 50000, unit: "円", sub: "/月（税込）", highlight: true },
+              { label: "ご利用料金", price: 0, unit: "円", sub: "/月（税込）", highlight: true },
               { label: "法人作成費用", price: 500000, unit: "円", sub: "一括" },
-              { label: "FC加盟料金", price: 500, unit: "万円", sub: "一括" },
-              { label: "サークル等費用", price: 0, unit: "", sub: "各サークルによる", isText: true },
+              { label: "FC加盟料金", price: 500, unit: "万円〜", sub: "一括（2期目以降 月額顧問料10万円）" },
             ].map((p) => (
               <StaggerItem key={p.label}>
                 <TiltCard intensity={4}>
@@ -547,9 +539,7 @@ export default function BizOwnerPage() {
                     {p.highlight && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-lp-accent text-white text-[10px] font-bold px-3 py-1 rounded-full">基本</div>}
                     <p className="text-[12px] text-text-light font-bold mb-3 mt-1">{p.label}</p>
                     <p className="text-text-dark font-bold text-[28px] leading-none mb-1">
-                      {p.isText ? (
-                        "団長決定"
-                      ) : p.highlight ? (
+                      {p.highlight ? (
                         <span className="text-lp-accent"><CountUp end={p.price} /></span>
                       ) : (
                         <CountUp end={p.price} />
@@ -606,6 +596,49 @@ export default function BizOwnerPage() {
         </div>
       </section>
 
+      {/* ===== 紹介制度 ===== */}
+      <section className="py-28 md:py-36 bg-bg-section relative overflow-hidden">
+        <div className="max-w-[1000px] mx-auto px-6 relative z-10">
+          <FadeSlide direction="up" className="text-center mb-14">
+            <div className="lp-section-counter justify-center">
+              <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">REFERRAL</span>
+            </div>
+            <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">紹介制度</h2>
+            <p className="text-[14px] text-text-body mt-4 max-w-lg mx-auto leading-[1.9]">
+              ご自身の周りにも是非ご紹介ください。報酬は直紹介のみ、二段目以降はありません。
+            </p>
+          </FadeSlide>
+          <div className="grid md:grid-cols-[1.4fr_1fr] gap-6 items-stretch">
+            <FadeSlide direction="up">
+              <div className="bg-white rounded-3xl border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] divide-y divide-gray-100 h-full">
+                {[
+                  { label: "参加（法人設立）した会員数に応じて", value: "人数 × 10,000円" },
+                  { label: "紹介者の継続案件数に応じて", value: "案件数 × 5,000円/月" },
+                  { label: "紹介人数ノルマ達成でボーナス", value: "毎月トップ3に別途賞金" },
+                  { label: "紹介者がFC加盟したら", value: "加盟金の10%" },
+                ].map((row, i) => (
+                  <div key={i} className="flex flex-col md:flex-row md:items-center justify-between gap-1 p-5 md:p-6">
+                    <p className="text-[13px] md:text-[14px] text-text-body">{row.label}</p>
+                    <p className="text-cta font-bold text-[15px] md:text-[16px] whitespace-nowrap">{row.value}</p>
+                  </div>
+                ))}
+              </div>
+            </FadeSlide>
+            <FadeSlide direction="up" delay={150}>
+              <div className="bg-lp rounded-3xl p-7 md:p-8 h-full flex flex-col justify-center">
+                <p className="text-lp-accent font-bold text-[14px] mb-3">紹介方法</p>
+                <p className="text-white/80 text-[13px] leading-[1.9] mb-5">
+                  ご自身専用のアフィリエイトURL／紹介コードを共有してもらうだけ。特別な営業トークは不要です。
+                </p>
+                <p className="text-white/50 text-[12px] leading-[1.9]">
+                  ※報酬の対象は直紹介のみ。二段目以降のマルチ的な報酬は発生しません。
+                </p>
+              </div>
+            </FadeSlide>
+          </div>
+        </div>
+      </section>
+
       <LineDivider />
 
       {/* ===== Q&A ===== */}
@@ -621,7 +654,6 @@ export default function BizOwnerPage() {
           <StaggerChildren staggerMs={100} className="space-y-4 lp-accordion">
             {[
               { q: "作った法人は自由に使って良いですか？", a: "作成した法人は、BizOwnerが許可した案件にてご利用いただけます。基本的には本部案件にご活用ください。" },
-              { q: "新しくサークルを作ってもいいですか？", a: "もちろんです。Zeroichi Homeではメンバー発信のサークルを歓迎しています。" },
               { q: "BizOwnerの進め方は？", a: "専属コンサルタントの案内に従ってください。" },
               { q: "個別の質疑応答はどこでできますか？", a: "週1回、個別コンサルを受けられる権限をご用意しています。そちらで個別のご質問にお答えしますので、ぜひご活用ください。" },
               { q: "本当に知識ゼロでも大丈夫ですか？", a: "はい。本部のサポートの上で行うため、誰でも権利収入を得られます。" },
@@ -670,7 +702,7 @@ export default function BizOwnerPage() {
             </p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn lp-shine text-[18px] px-12 py-6 shadow-[0_0_40px_rgba(232,93,47,0.4)] hover:shadow-[0_0_60px_rgba(232,93,47,0.6)] hover:-translate-y-1 transition-all">
               <LineIcon className="w-7 h-7" />
-              1ヶ月無料でLINE登録する
+              公式LINEに登録する
             </a>
             <p className="text-white/30 text-[12px] mt-8 leading-[1.8]">
               ※ 解約自由・しつこい勧誘は一切ありません<br />

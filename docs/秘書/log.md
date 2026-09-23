@@ -9,6 +9,32 @@
 
 ---
 
+## 2026-09-23（水）
+
+### 🎯 BizOwner LP：最新営業資料への全面リメイク＋ヒーロー画像の比率統一
+- オーナーがLINEで最新の営業資料（`BizOwner_営業資料.pdf`、全14ページ）を共有、本番LP（`/bizowner`）を最新内容へ更新するよう依頼。最初は別プロジェクト（`全国起業家協会`リポジトリ）で作業していたが、そちらにソースが無いことが判明し、本リポジトリ（`biz-owner-lp`）で対応。
+- `src/app/bizowner/page.tsx` を以下の通り修正：
+  - 月額50,000円（1ヶ月無料キャンペーン）→ **月額0円が恒久仕様**に全面差し替え（ヒーロー見出し・サブコピー・バッジ・フローティングカード・マーキー帯・ABOUT・STEP1バッジ・COMPARISON・PRICING）。CTAボタン文言も「1ヶ月無料でLINE登録する」→「公式LINEに登録する」に統一（CtaBannerFull/CtaBannerCard/最終CTA含む全箇所）
+  - PRICINGセクションの4枚カードを3枚に整理：「サークル等費用（団長決定）」カードを削除（Zeroichi Home廃止に伴い意味を持たなくなったため）。FC加盟料金に「2期目以降 月額顧問料10万円」の注記を追加
+  - 案件一覧の「権利運用（ビザ／派遣／物販等）」を削除し「組織構築（業務委託・完全歩合で組織化）」に差し替え
+  - **Zeroichi Homeのコミュニティ訴求セクションを丸ごと削除**し、代わりにHitoHoshi/COMON'Sと同じ「運営体制（TRUST & NETWORK）」セクションを新設（BizOwner/SARUDEMO/HitoHoshi/KaneHoshi/COMON'Sの5事業ネットワーク図、BizOwnerをハイライト）
+  - FAQから「新しくサークルを作ってもいいですか？」（Zeroichi Home前提の設問）を削除
+  - 新資料にのみあった「紹介制度」セクションを新設（直紹介のみ・人数×1万円／案件数×5千円／FC加盟で10%、マルチ商法ではない旨を明記）
+- **ヒーロー画像のアスペクト比統一**：オーナー指摘の通り、ヒーロー画像コンテナが縦長(`w-[220px] h-[280px] md:w-[360px] md:h-[450px]`)で他LPと不統一だったため、HitoHoshi/KaneHoshiと同じ正方形(`w-[260px] h-[260px] md:w-[400px] md:h-[400px]`)に変更。既存の`bizowner-hero.png`のまま`object-cover`で正方形クロップされ、見た目も自然（中央の人物2名がちょうど収まる構図）。
+- `.claude/launch.json`が無かったため新規作成（`全国起業家協会`リポジトリ側の`launch.json`に`biz-owner-lp`のdev起動設定として追加、ポート3005）
+- ローカル（`localhost:3005/bizowner`）でデスクトップ・モバイル両方のビューポートで実地確認済み（get_page_text・スクリーンショット・CountUpアニメーション完了後の最終値まで確認）。`npm run build`（TypeScript含む）成功、コンソールエラーなし。
+- **未コミット**：ソース修正はローカルのみ。origin(`Ayumusan0281/BizOwner-`)への push はVercel自動デプロイをトリガーするため、オーナー確認の上で実施予定。
+
+### ✅ 確定した決定事項
+- Zeroichi Home関連の記述・訴求はBizOwner LPから完全に排除する（事業廃止に伴う対応）
+- ヒーロー画像は他LP（HitoHoshi/KaneHoshi）と同じ正方形クロップに統一する
+
+### 📌 次回再開ポイント
+- オーナー確認後、`git add -A && git commit && git push` でVercel本番へ反映
+- 余力があればSARUDEMOのヒーロー画像も正方形に統一するか検討（現状は横長バンド型で不統一の可能性）
+
+---
+
 ## 2026-09-22（火）
 
 ### 🎯 新サービスLP追加：COMON'S、HitoHoshi/KaneHoshiのプレースホルダー
