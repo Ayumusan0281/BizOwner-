@@ -42,7 +42,7 @@ function CtaBannerCard() {
         <div className="lp-gradient-border">
           <div className="bg-white py-8 px-6 md:px-10 text-center">
             <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2">御社の状況をお伺いしたうえで、参加条件をご案内します。</p>
-            <p className="text-text-light text-[13px] mb-6">お問い合わせはKaneHoshi公式LINEからお気軽にご連絡ください。</p>
+            <p className="text-text-light text-[13px] mb-6">お問い合わせは全国起業家協会の公式LINEからお気軽にご連絡ください。</p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[15px] md:text-[16px] px-8 py-4">
               <LineIcon className="w-5 h-5" />
               公式LINEで無料相談する
@@ -597,7 +597,7 @@ export default function KaneHoshiPage() {
             <p className="text-white/50 text-[15px] leading-[2] mb-12 max-w-lg mx-auto">
               御社の状況に合わせて、参加条件と進め方をご案内します。
               <br className="hidden md:block" />
-              お問い合わせはKaneHoshi公式LINEからお気軽にご連絡ください。
+              お問い合わせは全国起業家協会の公式LINEからお気軽にご連絡ください。
             </p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn lp-shine text-[18px] px-12 py-6 shadow-[0_0_40px_rgba(232,93,47,0.4)] hover:shadow-[0_0_60px_rgba(232,93,47,0.6)] hover:-translate-y-1 transition-all">
               <LineIcon className="w-7 h-7" />

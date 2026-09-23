@@ -42,7 +42,7 @@ function CtaBannerCard() {
         <div className="lp-gradient-border">
           <div className="bg-white py-8 px-6 md:px-10 text-center">
             <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2">貴社の採用状況をお伺いしたうえで、最適な導入プランをご提案します。</p>
-            <p className="text-text-light text-[13px] mb-6">お問い合わせはHitoHoshi公式LINEからお気軽にご連絡ください。</p>
+            <p className="text-text-light text-[13px] mb-6">お問い合わせは全国起業家協会の公式LINEからお気軽にご連絡ください。</p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[15px] md:text-[16px] px-8 py-4">
               <LineIcon className="w-5 h-5" />
               公式LINEで無料相談する
@@ -512,7 +512,7 @@ export default function HitoHoshiPage() {
             <div className="absolute left-[27px] md:left-[41px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-lp-accent via-lp to-cta/20 rounded-full" />
             <div className="space-y-10">
               {[
-                { title: "お問い合わせ", desc: "本件専用の公式LINEからご連絡下さい。案内に沿って進めて下さい。" },
+                { title: "お問い合わせ", desc: "全国起業家協会の公式LINEからご連絡下さい。案内に沿って進めて下さい。" },
                 { title: "ヒアリング", desc: "面談にて現在の採用状況・使用アカウント・課題感を確認致します。" },
                 { title: "ご契約", desc: "サービス範囲・料金体系をすり合わせのうえ、契約を締結します。" },
                 { title: "運用開始", desc: "アカウント運用・選考代行を順次開始。", last: true },
@@ -559,7 +559,7 @@ export default function HitoHoshiPage() {
             <p className="text-white/50 text-[15px] leading-[2] mb-12 max-w-lg mx-auto">
               貴社の採用状況をお伺いしたうえで、最適な導入プランをご提案致します。
               <br className="hidden md:block" />
-              お問い合わせはHitoHoshi公式LINEからお気軽にご連絡ください。
+              お問い合わせは全国起業家協会の公式LINEからお気軽にご連絡ください。
             </p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn lp-shine text-[18px] px-12 py-6 shadow-[0_0_40px_rgba(232,93,47,0.4)] hover:shadow-[0_0_60px_rgba(232,93,47,0.6)] hover:-translate-y-1 transition-all">
               <LineIcon className="w-7 h-7" />
