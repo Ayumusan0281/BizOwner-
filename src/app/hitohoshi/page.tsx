@@ -293,17 +293,17 @@ export default function HitoHoshiPage() {
           </FadeSlide>
           <StaggerChildren staggerMs={120} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { kanji: "運", title: "求人媒体アカウントの運用", desc: "Indeed・Airwork・求人ボックス・エンゲージ等、既存アカウントの求人票作成・更新・掲載管理を代行。" },
+              { kanji: "運", title: "求人媒体アカウントの運用", desc: "Indeed・\u200bAirwork・\u200b求人ボックス・\u200bエンゲージ等、既存アカウントの求人票作成・更新・掲載管理を代行。" },
               { kanji: "調", title: "面接日程の調整", desc: "候補者・面接官双方との日程調整を仲介・対応。" },
               { kanji: "応", title: "応募者対応", desc: "応募受付から合否連絡までを窓口として責任を持って代行し、対応漏れ・遅延等を防止。" },
               { kanji: "進", title: "選考進行管理", desc: "選考ステータスの一元管理と、貴社への定期レポーティング。" },
             ].map((item) => (
               <StaggerItem key={item.title}>
-                <div className="h-full bg-white rounded-2xl p-7 border border-gray-100 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.08)] flex gap-5 items-start">
+                <div className="h-full bg-white rounded-2xl p-5 md:p-7 border border-gray-100 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.08)] flex gap-4 md:gap-5 items-start">
                   <div className="w-13 h-13 w-[52px] h-[52px] rounded-xl bg-lp flex items-center justify-center shrink-0 shadow-md">
                     <span className="text-white font-bold text-[19px]">{item.kanji}</span>
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="font-bold text-text-dark text-[15.5px] mb-1.5">{item.title}</h3>
                     <p className="text-[12.5px] text-text-light leading-[1.85]">{item.desc}</p>
                   </div>
@@ -475,18 +475,23 @@ export default function HitoHoshiPage() {
               <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括本部）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
-            <div className="lp-net grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
               {[
-                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
-                { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育" },
-                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用", active: true },
-                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント\u200b運用代行" },
-                { name: "COMON'S", tag: "一人社長向け", desc: "多分野の顧問サービス" },
+                { name: "BizOwner", logo: "/lp/bizowner-logo.png", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
+                { name: "SARUDEMO", logo: "/lp/sarudemo-logo.png", tag: "個人向け", desc: "FC型経営教育" },
+                { name: "HitoHoshi", logo: "/lp/hitohoshi-logo.png", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用", active: true },
+                { name: "KaneHoshi", logo: "/lp/kanehoshi-logo.png", tag: "既存法人向け", desc: "ECアカウント\u200b運用代行" },
+                { name: "COMON'S", logo: "/lp/comons-logo.png", tag: "一人社長向け", desc: "多分野の顧問サービス" },
               ].map((n) => (
-                <div key={n.name} className={`rounded-2xl p-5 text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>
-                  <p className={`font-bold text-[14px] mb-1 ${n.active ? "text-cta" : "text-text-dark"}`}>{n.name}</p>
-                  <p className="text-[10px] text-text-light mb-1.5">{n.tag}</p>
-                  <p className="text-[10px] text-text-light">{n.desc}</p>
+                <div key={n.name} className={`rounded-2xl px-5 py-4 md:p-5 flex md:block items-center gap-4 text-left md:text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>
+                  <div className="relative shrink-0 w-14 h-14 md:w-[68px] md:h-[68px] md:mx-auto md:mb-2">
+                    <Image src={n.logo} alt="" fill sizes="68px" className="object-contain" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className={`font-bold text-[15px] md:text-[14px] mb-1 ${n.active ? "text-cta" : "text-text-dark"}`}>{n.name}</p>
+                    <p className="text-[11px] md:text-[10px] text-text-light mb-1 md:mb-1.5">{n.tag}</p>
+                    <p className="text-[11px] md:text-[10px] text-text-light">{n.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -547,6 +552,9 @@ export default function HitoHoshiPage() {
         <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-cta/10 rounded-full blur-[80px] pointer-events-none" />
         <div className="relative z-10 max-w-[700px] mx-auto px-6 text-center">
           <FadeSlide direction="up">
+            <div className="relative w-20 h-20 md:w-24 md:h-24 mx-auto mb-4">
+              <Image src="/lp/hitohoshi-logo.png" alt="HitoHoshi" fill sizes="96px" className="object-contain brightness-0 invert" />
+            </div>
             <p className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em] mb-6 uppercase">Contact</p>
             <h2
               className="font-bold text-white mb-6"

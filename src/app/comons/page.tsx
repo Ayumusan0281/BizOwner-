@@ -298,7 +298,7 @@ export default function ComonsPage() {
                 points: [
                   "初年度で年商1億円を達成した実体験に基づく経営指導",
                   "経営コンサルタントとして50社以上を指導した実績",
-                  "全国起業家協会代表理事／資金繰り・営業戦略・採用まで伴走",
+                  "全国起業家協会代表理事\n資金繰り・営業戦略・採用まで伴走",
                 ],
               },
               {
@@ -310,7 +310,7 @@ export default function ComonsPage() {
                 points: [
                   "Next.js・TypeScriptを軸としたフルスタック開発（3年以上）",
                   "BIツール・業務システムなど、要件定義からの構築実績多数",
-                  "AutoSystems株式会社代表／専門用語を使わず分かりやすく整理",
+                  "AutoSystems株式会社代表\n専門用語を使わず分かりやすく整理",
                 ],
               },
               {
@@ -320,8 +320,8 @@ export default function ComonsPage() {
                 role: "法務統括／名古屋総合法務事務所",
                 tagline: "登記・契約書の実務を、任せられる窓口に。",
                 points: [
-                  "会社設立・商業登記（役員変更・増資等）／契約書のチェック・作成支援",
-                  "内容証明郵便の作成／簡易裁判所における訴訟代理（訴額140万円以下）",
+                  "会社設立・商業登記（役員変更・増資等）\n契約書のチェック・作成支援",
+                  "内容証明郵便の作成\n簡易裁判所における訴訟代理（訴額140万円以下）",
                   "対応範囲外：高額な訴訟の代理・交渉、複雑な紛争対応（提携弁護士をご紹介）",
                 ],
               },
@@ -344,7 +344,7 @@ export default function ComonsPage() {
                     </div>
                     <ul className="relative z-10 space-y-3">
                       {a.points.map((p, i) => (
-                        <li key={i} className="text-[12px] text-text-body leading-[1.8] text-center text-balance border-t border-gray-50 pt-3 first:border-t-0 first:pt-0">
+                        <li key={i} className="text-[12px] text-text-body leading-[1.8] text-center text-balance whitespace-pre-line border-t border-gray-50 pt-3 first:border-t-0 first:pt-0">
                           {p}
                         </li>
                       ))}
@@ -445,10 +445,10 @@ export default function ComonsPage() {
             ].map((p) => (
               <StaggerItem key={p.name}>
                 <TiltCard intensity={4}>
-                  <div className="bg-white rounded-2xl p-5 text-center border border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
+                  <div className="bg-white rounded-2xl p-4 md:p-5 text-center border border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
                     <p className="text-[12px] font-bold text-text-dark mb-1">{p.name}</p>
                     <p className="text-[10px] text-text-light mb-3 min-h-[28px]">{p.field}</p>
-                    <p className="whitespace-nowrap text-text-dark font-bold text-[20px] leading-none">30,000<span className="text-[11px] text-text-light font-normal">円/月</span></p>
+                    <p className="whitespace-nowrap text-text-dark font-bold text-[17px] min-[360px]:text-[20px] leading-none">30,000<span className="text-[11px] text-text-light font-normal">円/月</span></p>
                   </div>
                 </TiltCard>
               </StaggerItem>
@@ -527,18 +527,23 @@ export default function ComonsPage() {
               <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括法人）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
-            <div className="lp-net grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
               {[
-                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
-                { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育" },
-                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用" },
-                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント\u200b運用代行" },
-                { name: "COMON'S", tag: "一人社長向け", desc: "多分野の顧問サービス", active: true },
+                { name: "BizOwner", logo: "/lp/bizowner-logo.png", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
+                { name: "SARUDEMO", logo: "/lp/sarudemo-logo.png", tag: "個人向け", desc: "FC型経営教育" },
+                { name: "HitoHoshi", logo: "/lp/hitohoshi-logo.png", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用" },
+                { name: "KaneHoshi", logo: "/lp/kanehoshi-logo.png", tag: "既存法人向け", desc: "ECアカウント\u200b運用代行" },
+                { name: "COMON'S", logo: "/lp/comons-logo.png", tag: "一人社長向け", desc: "多分野の顧問サービス", active: true },
               ].map((n) => (
-                <div key={n.name} className={`rounded-2xl p-5 text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>
-                  <p className={`font-bold text-[14px] mb-1 ${n.active ? "text-cta" : "text-text-dark"}`}>{n.name}</p>
-                  <p className="text-[10px] text-text-light mb-1.5">{n.tag}</p>
-                  <p className="text-[10px] text-text-light">{n.desc}</p>
+                <div key={n.name} className={`rounded-2xl px-5 py-4 md:p-5 flex md:block items-center gap-4 text-left md:text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>
+                  <div className="relative shrink-0 w-14 h-14 md:w-[68px] md:h-[68px] md:mx-auto md:mb-2">
+                    <Image src={n.logo} alt="" fill sizes="68px" className="object-contain" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className={`font-bold text-[15px] md:text-[14px] mb-1 ${n.active ? "text-cta" : "text-text-dark"}`}>{n.name}</p>
+                    <p className="text-[11px] md:text-[10px] text-text-light mb-1 md:mb-1.5">{n.tag}</p>
+                    <p className="text-[11px] md:text-[10px] text-text-light">{n.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -632,6 +637,9 @@ export default function ComonsPage() {
         <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-cta/10 rounded-full blur-[80px] pointer-events-none" />
         <div className="relative z-10 max-w-[700px] mx-auto px-6 text-center">
           <FadeSlide direction="up">
+            <div className="relative w-20 h-20 md:w-24 md:h-24 mx-auto mb-4">
+              <Image src="/lp/comons-logo.png" alt="COMON'S" fill sizes="96px" className="object-contain brightness-0 invert" />
+            </div>
             <p className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em] mb-6 uppercase">Contact</p>
             <h2
               className="font-bold text-white mb-6"
