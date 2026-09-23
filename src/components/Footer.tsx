@@ -26,7 +26,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/bizowner"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary transition-colors whitespace-nowrap"
                   >
                     BizOwner
                   </Link>
@@ -34,7 +34,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/sarudemo"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary transition-colors whitespace-nowrap"
                   >
                     SARUDEMO
                   </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/comons"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary transition-colors whitespace-nowrap"
                   >
                     COMON&apos;S
                   </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/hitohoshi"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary transition-colors whitespace-nowrap"
                   >
                     HitoHoshi
                   </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/kanehoshi"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary transition-colors whitespace-nowrap"
                   >
                     KaneHoshi
                   </Link>
@@ -73,7 +73,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary transition-colors whitespace-nowrap"
                   >
                     サービス一覧
                   </Link>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/#contact"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary transition-colors whitespace-nowrap"
                   >
                     お問い合わせ
                   </Link>
@@ -94,12 +94,12 @@ export default function Footer() {
               </p>
               <ul className="space-y-2.5 text-[13px] text-text-main">
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-primary transition-colors whitespace-nowrap">
                     利用規約
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-primary transition-colors whitespace-nowrap">
                     プライバシーポリシー
                   </a>
                 </li>

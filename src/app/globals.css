@@ -69,6 +69,50 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@layer base {
+  /* ── 日本語の折り返し最適化 ──
+     ・文節単位で改行（word-break: auto-phrase ／ 未対応ブラウザは通常折り返し）
+     ・見出しは行の長さを均等化、本文は最終行に1〜2文字だけ残る「孤立行」を防止
+     ・禁則処理を厳格化（句読点・閉じかっこ等が行頭に来ない） */
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    word-break: auto-phrase;
+    line-break: strict;
+  }
+
+  p,
+  li,
+  dd,
+  dt,
+  blockquote,
+  summary,
+  details > div {
+    text-wrap: pretty;
+    word-break: auto-phrase;
+    line-break: strict;
+  }
+
+  /* 中央寄せの文・ボタン・バッジ・小さなラベル類は、行の長さを均等化して
+     「1〜2文字だけ次の行に落ちる」見た目を防ぐ */
+  a,
+  button,
+  label,
+  td,
+  th,
+  .text-center p,
+  p.text-center,
+  p[class*="text-[10px]"],
+  p[class*="text-[11px]"],
+  p[class*="text-[12px]"] {
+    text-wrap: balance;
+    word-break: auto-phrase;
+    line-break: strict;
+  }
+}
+
 /* ── Ghost Button ── */
 .btn-ghost {
   display: inline-flex;

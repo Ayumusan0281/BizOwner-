@@ -138,7 +138,7 @@ export default function ServicesPage() {
                   </p>
                   <ul className="space-y-2 text-[13px] text-text-main">
                     {svc.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2">
+                      <li key={item} className="flex items-start gap-2 text-balance">
                         <span className="w-1 h-1 rounded-full bg-primary mt-[9px] shrink-0"></span>
                         {item}
                       </li>
@@ -193,7 +193,7 @@ export default function ServicesPage() {
                   titleFont: "font-[Josefin_Sans]",
                   desc: "最短最速で年商1億円を目指す起業ファストパス。1年以内に社長へ。",
                   tags: ["年商1億円", "1年で社長", "プロチーム支援"],
-                  bg: "linear-gradient(160deg,#003a4a 0%,#006e87 60%,#00a3b8 100%)",
+                  bg: "linear-gradient(160deg,#0b2a4a 0%,#2e6fa8 60%,#4a9bd9 100%)",
                 },
                 {
                   href: "/comons",
@@ -205,7 +205,7 @@ export default function ServicesPage() {
                   titleFont: "font-[Josefin_Sans]",
                   desc: "法人を、ひとりで背負わない。厳選な審査を通過した顧問チームで経営を伴走。",
                   tags: ["月額30,000円〜", "顧問1名から", "分野不問"],
-                  bg: "linear-gradient(160deg,#0b2a4a 0%,#2e6fa8 60%,#4a9bd9 100%)",
+                  bg: "linear-gradient(160deg,#3a0b14 0%,#8a2e3c 60%,#c4515e 100%)",
                 },
                 {
                   href: "/hitohoshi",
@@ -248,10 +248,10 @@ export default function ServicesPage() {
                   </div>
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center justify-between mb-6">
-                      <p className="font-[Josefin_Sans] text-[11px] text-white/55 tracking-[0.2em]">
+                      <p className="font-[Josefin_Sans] text-[11px] text-white/55 tracking-[0.2em] whitespace-nowrap">
                         {s.eyebrow}
                       </p>
-                      <span className="text-white/65 text-[10px] tracking-[0.1em] border border-white/20 px-2.5 py-[3px] rounded-full">
+                      <span className="text-white/65 text-[10px] tracking-[0.1em] border border-white/20 px-2.5 py-[3px] rounded-full whitespace-nowrap shrink-0">
                         {s.badge}
                       </span>
                     </div>

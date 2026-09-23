@@ -396,11 +396,11 @@ export default function SarudemoPage() {
             ].map((item) => (
               <StaggerItem key={item.title}>
                 <TiltCard intensity={4}>
-                  <div className={`${item.accent ? "bg-gradient-to-br from-lp to-[#1a4f7a] shadow-[0_10px_30px_-10px_rgba(11,42,74,0.2)]" : "bg-white shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)]"} p-6 rounded-2xl text-center transition-all border border-gray-100`}>
+                  <div className={`${item.accent ? "bg-gradient-to-br from-lp to-[#1a4f7a] shadow-[0_10px_30px_-10px_rgba(11,42,74,0.2)]" : "bg-white shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)]"} p-4 md:p-6 rounded-2xl text-center transition-all border border-gray-100`}>
                     <p className={`text-[10px] font-bold tracking-wider mb-2 ${item.accent ? "text-[#D4AF37]" : "text-lp-accent"}`}>{item.no} {item.tag}</p>
                     <h3 className={`font-bold ${item.accent ? "text-white" : "text-lp"} mb-1 text-[15px]`}>{item.title}</h3>
                     <p className={`text-[11px] ${item.accent ? "text-white/60" : "text-text-light"} leading-[1.7] mb-2`}>{item.sub}</p>
-                    <p className={`font-bold font-[Inter] text-[16px] ${item.accent ? "text-[#D4AF37]" : item.muted ? "text-text-light" : "text-lp-accent"}`}>{item.amount}</p>
+                    <p className={`font-bold font-[Inter] text-[14px] md:text-[16px] whitespace-nowrap ${item.accent ? "text-[#D4AF37]" : item.muted ? "text-text-light" : "text-lp-accent"}`}>{item.amount}</p>
                   </div>
                 </TiltCard>
               </StaggerItem>
@@ -435,10 +435,10 @@ export default function SarudemoPage() {
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
               {[
-                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×起業支援" },
+                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
                 { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育", active: true },
-                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×人材再活用" },
-                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント運用代行" },
+                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用" },
+                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント\u200b運用代行" },
                 { name: "COMON'S", tag: "一人社長向け", desc: "多分野の顧問サービス" },
               ].map((n) => (
                 <div key={n.name} className={`rounded-2xl p-5 text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>

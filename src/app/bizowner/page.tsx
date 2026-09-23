@@ -112,7 +112,7 @@ export default function BizOwnerPage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cta opacity-75" />
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-cta" />
                   </span>
-                  <span className="text-lp font-bold text-[13px]">個人向け・副業で始める会社経営プログラム</span>
+                  <span className="text-lp font-bold text-[13px] text-balance">個人向け・副業で始める会社経営プログラム</span>
                 </div>
               </FadeSlide>
               <FadeSlide direction="up" delay={300}>
@@ -202,7 +202,7 @@ export default function BizOwnerPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M12 3a9 9 0 100 18 9 9 0 000-18z" />
                     </svg>
                   </div>
-                  <p className="text-[15px] md:text-[16px] font-bold text-white/90 leading-[1.8]">{text}</p>
+                  <p className="text-[15px] md:text-[16px] font-bold text-white/90 leading-[1.8] text-balance">{text}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -310,7 +310,7 @@ export default function BizOwnerPage() {
           <StaggerChildren staggerMs={200} className="grid md:grid-cols-3 gap-8 pt-8">
             {[
               { step: "01", title: "まずは面談", desc: "無料で会員登録。\n内容を理解した上で、\n権利収入の下準備をスタート", price: "無料", accent: false },
-              { step: "02", title: "法人で権利収入", desc: "法人を作成し、利益が発生開始。\n収益チャネルが倍増し、\n権利収入が加速。", price: "+500,000円で法人作成", accent: false },
+              { step: "02", title: "法人で権利収入", desc: "法人を作成し、利益が発生開始。\n収益チャネルが倍増し、\n権利収入が加速。", price: "+500,000円で\u200b法人作成", accent: false },
               { step: "03", title: "FC化で独立", desc: "フランチャイズオーナーとして\n完全独立。自分のチームを持ち、\n本格的なビジネスオーナーへ。", price: "FC加盟 500万円〜\n(2期目以降 月額顧問料10万円)", accent: true },
             ].map((s, i) => (
               <StaggerItem key={s.step}>
@@ -328,7 +328,7 @@ export default function BizOwnerPage() {
                     )}
                     <h3 className={`font-bold ${s.accent ? "text-cta" : "text-text-dark"} text-[18px] mb-3 mt-2`}>{s.title}</h3>
                     <p className="text-[13px] text-text-body leading-[1.9] whitespace-pre-line mb-5">{s.desc}</p>
-                    <div className={`${s.accent ? "bg-gradient-to-r from-cta to-[#d04f24] text-white" : "bg-lp-sky text-lp"} py-3 px-4 rounded-xl text-[14px] font-bold whitespace-pre-line leading-[1.5]`}>
+                    <div className={`${s.accent ? "bg-gradient-to-r from-cta to-[#d04f24] text-white" : "bg-lp-sky text-lp"} py-3 px-4 rounded-xl text-[14px] font-bold whitespace-pre-line leading-[1.5] text-balance`}>
                       {s.price}
                     </div>
                   </div>
@@ -365,7 +365,7 @@ export default function BizOwnerPage() {
             ].map((item) => (
               <StaggerItem key={item.title}>
                 <TiltCard intensity={4}>
-                  <div className={`rounded-2xl p-6 md:p-7 border hover-card text-center group ${item.accent ? "bg-gradient-to-br from-lp to-[#1a4f7a] border-lp/20 shadow-[0_10px_30px_-10px_rgba(11,42,74,0.2)]" : "bg-white border-gray-100 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)]"}`}>
+                  <div className={`rounded-2xl p-4 md:p-7 border hover-card text-center group ${item.accent ? "bg-gradient-to-br from-lp to-[#1a4f7a] border-lp/20 shadow-[0_10px_30px_-10px_rgba(11,42,74,0.2)]" : "bg-white border-gray-100 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)]"}`}>
                     <div className="text-3xl mb-3">{item.icon}</div>
                     <h3 className={`font-bold text-[15px] mb-1 ${item.accent ? "text-white" : "text-text-dark"}`}>{item.title}</h3>
                     <p className={`text-[12px] leading-[1.7] ${item.accent ? "text-white/60" : "text-text-light"}`}>{item.sub}</p>
@@ -397,10 +397,10 @@ export default function BizOwnerPage() {
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
               {[
-                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×起業支援", active: true },
+                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援", active: true },
                 { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育" },
-                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×人材再活用" },
-                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント運用代行" },
+                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用" },
+                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント\u200b運用代行" },
                 { name: "COMON'S", tag: "一人社長向け", desc: "多分野の顧問サービス" },
               ].map((n) => (
                 <div key={n.name} className={`rounded-2xl p-5 text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>

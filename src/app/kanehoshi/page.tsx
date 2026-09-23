@@ -151,7 +151,7 @@ export default function KaneHoshiPage() {
                 {/* Floating stats */}
                 <div className="absolute -bottom-4 right-3 md:right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">サービス利用料</p>
-                  <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥10,000<span className="text-[11px] text-text-light font-normal">/月</span></p>
+                  <p className="whitespace-nowrap font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥10,000<span className="text-[11px] text-text-light font-normal">/月</span></p>
                 </div>
                 <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">初期費用</p>
@@ -432,7 +432,7 @@ export default function KaneHoshiPage() {
             </p>
           </FadeSlide>
           <FadeSlide direction="up">
-            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-8 rounded-2xl mb-12 shadow-lg font-bold text-[16px] md:text-[20px] -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
+            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-8 rounded-2xl mb-12 shadow-lg font-bold text-[16px] md:text-[20px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKSIvPgo8L3N2Zz4=')] opacity-50" />
               <span className="relative z-10">サービス利用料は月額10,000円（税別）のみ。初期費用は0円です。</span>
             </div>
@@ -514,9 +514,9 @@ export default function KaneHoshiPage() {
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
               {[
-                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×起業支援" },
+                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
                 { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育" },
-                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×人材再活用" },
+                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用" },
                 { name: "COMON'S", tag: "一人社長向け", desc: "多分野の顧問サービス" },
                 { name: "KaneHoshi", tag: "既存法人向け", desc: "EC運用で売上実績づくり", active: true },
               ].map((n) => (

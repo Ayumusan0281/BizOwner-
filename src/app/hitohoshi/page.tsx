@@ -151,7 +151,7 @@ export default function HitoHoshiPage() {
                 {/* Floating stats */}
                 <div className="absolute -bottom-4 right-3 md:right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">サービス利用料</p>
-                  <p className="font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥10,000<span className="text-[11px] text-text-light font-normal">/月</span></p>
+                  <p className="whitespace-nowrap font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥10,000<span className="text-[11px] text-text-light font-normal">/月</span></p>
                 </div>
                 <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">初期費用</p>
@@ -477,10 +477,10 @@ export default function HitoHoshiPage() {
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
               {[
-                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×起業支援" },
+                { name: "BizOwner", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
                 { name: "SARUDEMO", tag: "個人向け", desc: "FC型経営教育" },
-                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×人材再活用", active: true },
-                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント運用代行" },
+                { name: "HitoHoshi", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用", active: true },
+                { name: "KaneHoshi", tag: "既存法人向け", desc: "ECアカウント\u200b運用代行" },
                 { name: "COMON'S", tag: "一人社長向け", desc: "多分野の顧問サービス" },
               ].map((n) => (
                 <div key={n.name} className={`rounded-2xl p-5 text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>
