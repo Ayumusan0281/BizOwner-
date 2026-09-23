@@ -103,10 +103,10 @@ export default function KaneHoshiPage() {
         <div className="absolute bottom-[25%] left-[8%] w-10 h-10 bg-lp-accent/10 rounded-full lp-float-medium pointer-events-none hidden lg:block" />
         <div className="absolute top-[40%] left-[5%] w-3 h-3 bg-cta/30 rounded-full lp-float-slow pointer-events-none" />
 
-        <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-32 lg:pt-28 lg:pb-40">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left space-y-7">
-              <FadeSlide direction="up" delay={100}>
+        <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-16 md:pb-32 lg:pt-28 lg:pb-40">
+          <div className="grid md:grid-cols-2 gap-y-7 md:gap-12 items-center">
+            <div className="contents md:block text-center md:text-left md:space-y-7">
+              <FadeSlide direction="up" delay={100} className="order-1 md:order-none">
                 <div className="inline-flex items-center gap-2 bg-white border border-lp-accent/20 px-4 py-2 rounded-full shadow-sm">
                   <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cta opacity-75" />
@@ -115,7 +115,7 @@ export default function KaneHoshiPage() {
                   <span className="text-lp font-bold text-[13px]">初期費用0円・月額10,000円（税別）</span>
                 </div>
               </FadeSlide>
-              <FadeSlide direction="up" delay={300}>
+              <FadeSlide direction="up" delay={300} className="order-2 md:order-none">
                 <h1
                   className="font-bold text-text-dark"
                   style={{ fontSize: "clamp(32px,6vw,56px)", lineHeight: 1.35, letterSpacing: "0.02em" }}
@@ -125,14 +125,14 @@ export default function KaneHoshiPage() {
                   <span className="text-lp-accent lp-marker">決算書</span>をつくる。
                 </h1>
               </FadeSlide>
-              <FadeSlide direction="up" delay={500}>
+              <FadeSlide direction="up" delay={500} className="order-4 md:order-none">
                 <p className="text-[16px] md:text-[18px] text-text-body leading-[1.9] max-w-lg">
                   協会提携の運用事業者が、御社の法人でECショップを運営。
                   <br className="hidden md:block" />
                   売上実績を積み上げ、次の融資・補助金申請に備えます。
                 </p>
               </FadeSlide>
-              <FadeSlide direction="up" delay={700}>
+              <FadeSlide direction="up" delay={700} className="order-5 md:order-none">
                 <div className="flex flex-col gap-3">
                   <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] w-full max-w-md px-8 py-5 justify-center">
                     <LineIcon className="w-6 h-6" />
@@ -142,10 +142,10 @@ export default function KaneHoshiPage() {
                 </div>
               </FadeSlide>
             </div>
-            <FadeSlide direction="right" delay={400}>
+            <FadeSlide direction="right" delay={400} className="order-3 md:order-none my-1 md:my-0">
               <div className="flex justify-center relative">
                 <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-tr from-lp-accent to-lp rounded-2xl rotate-3 scale-[1.02] opacity-10" />
-                <ImageReveal immediate direction="right" className="w-[260px] h-[260px] md:w-[400px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
+                <ImageReveal immediate direction="right" className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
                   <Image src="/lp/kanehoshi-hero.jpg" alt="KaneHoshi" width={1080} height={1080} className="w-full h-full object-cover" priority />
                 </ImageReveal>
                 {/* Floating stats */}
@@ -170,9 +170,6 @@ export default function KaneHoshiPage() {
 
       {/* ===== Marquee ===== */}
       <MarqueeBanner />
-
-      {/* CTA 1 */}
-      <CtaBannerFull />
 
       {/* ===== 01 課題パート ===== */}
       <section
@@ -221,8 +218,8 @@ export default function KaneHoshiPage() {
         </div>
       </section>
 
-      {/* CTA 2 */}
-      <CtaBannerCard />
+      {/* CTA 1 */}
+      <CtaBannerFull />
 
       {/* ===== 02 WHAT WE DO ===== */}
       <section className="py-28 md:py-36 bg-white relative overflow-hidden">
@@ -290,6 +287,9 @@ export default function KaneHoshiPage() {
           </FadeSlide>
         </div>
       </section>
+
+      {/* CTA 2 */}
+      <CtaBannerCard />
 
       {/* ===== 03 HOW IT WORKS ===== */}
       <section className="py-28 md:py-36 relative overflow-hidden" style={{ background: "linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%)" }}>
@@ -504,7 +504,7 @@ export default function KaneHoshiPage() {
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">運営体制</h2>
             <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
-              KaneHoshiは、「一般社団法人 全国起業家協会」が展開する事業ネットワークの一員として運営されているサービスです。
+              KaneHoshiは、「一般社団法人 全国起業家協会」が展開する事業ネットワークの<span className="whitespace-nowrap">一員として</span>運営されているサービスです。
             </p>
           </FadeSlide>
           <FadeSlide direction="up">

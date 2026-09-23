@@ -103,10 +103,10 @@ export default function ComonsPage() {
         <div className="absolute bottom-[25%] left-[8%] w-10 h-10 bg-lp-accent/10 rounded-full lp-float-medium pointer-events-none hidden lg:block" />
         <div className="absolute top-[40%] left-[5%] w-3 h-3 bg-cta/30 rounded-full lp-float-slow pointer-events-none" />
 
-        <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-32 lg:pt-28 lg:pb-40">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left space-y-7">
-              <FadeSlide direction="up" delay={100}>
+        <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-16 md:pb-32 lg:pt-28 lg:pb-40">
+          <div className="grid md:grid-cols-2 gap-y-7 md:gap-12 items-center">
+            <div className="contents md:block text-center md:text-left md:space-y-7">
+              <FadeSlide direction="up" delay={100} className="order-1 md:order-none">
                 <div className="inline-flex items-center gap-2 bg-white border border-lp-accent/20 px-4 py-2 rounded-full shadow-sm">
                   <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cta opacity-75" />
@@ -115,7 +115,7 @@ export default function ComonsPage() {
                   <span className="text-lp font-bold text-[13px]">初期費用0円・顧問1名から月額30,000円</span>
                 </div>
               </FadeSlide>
-              <FadeSlide direction="up" delay={300}>
+              <FadeSlide direction="up" delay={300} className="order-2 md:order-none">
                 <h1
                   className="font-bold text-text-dark"
                   style={{ fontSize: "clamp(32px,6vw,56px)", lineHeight: 1.25, letterSpacing: "0.02em" }}
@@ -124,14 +124,14 @@ export default function ComonsPage() {
                   <span className="text-lp-accent lp-marker">背負わない</span>。
                 </h1>
               </FadeSlide>
-              <FadeSlide direction="up" delay={500}>
+              <FadeSlide direction="up" delay={500} className="order-4 md:order-none">
                 <p className="text-[16px] md:text-[18px] text-text-body leading-[1.9] max-w-lg">
                   厳選なる審査を通過した顧問を自社へ招き、ビジネスを抜本的に改善。
                   <br className="hidden md:block" />
                   経営に伴走する顧問チームを自由に配置、売上を大幅加速。
                 </p>
               </FadeSlide>
-              <FadeSlide direction="up" delay={700}>
+              <FadeSlide direction="up" delay={700} className="order-5 md:order-none">
                 <div className="flex flex-col gap-3">
                   <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] w-full max-w-md px-8 py-5 justify-center">
                     <LineIcon className="w-6 h-6" />
@@ -141,10 +141,10 @@ export default function ComonsPage() {
                 </div>
               </FadeSlide>
             </div>
-            <FadeSlide direction="right" delay={400}>
+            <FadeSlide direction="right" delay={400} className="order-3 md:order-none my-1 md:my-0">
               <div className="flex justify-center relative">
                 <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-tr from-lp-accent to-lp rounded-2xl rotate-3 scale-[1.02] opacity-10" />
-                <ImageReveal immediate direction="right" className="w-[280px] h-[280px] md:w-[420px] md:h-[420px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
+                <ImageReveal immediate direction="right" className="w-[300px] h-[300px] md:w-[420px] md:h-[420px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
                   <Image src="/lp/comons-hero.jpg" alt="COMON'S" width={1920} height={1080} className="w-full h-full object-cover" priority />
                 </ImageReveal>
                 {/* Floating stats */}
@@ -429,7 +429,7 @@ export default function ComonsPage() {
             </h2>
           </FadeSlide>
           <FadeSlide direction="up">
-            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-8 rounded-2xl mb-12 shadow-lg font-bold text-[16px] md:text-[20px] -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
+            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-8 rounded-2xl mb-12 shadow-lg font-bold text-[16px] md:text-[20px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKSIvPgo8L3N2Zz4=')] opacity-50" />
               <span className="relative z-10">初期費用は0円。人数の上限なし、いつでも追加・見直しができます。</span>
             </div>
@@ -517,7 +517,7 @@ export default function ComonsPage() {
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">運営体制</h2>
             <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
-              COMON&apos;Sは、一般社団法人 全国起業家協会が展開する事業ネットワークの一員として運営されています。
+              COMON&apos;Sは、一般社団法人 全国起業家協会が展開する事業ネットワークの<span className="whitespace-nowrap">一員として</span>運営されています。
             </p>
           </FadeSlide>
           <FadeSlide direction="up">
@@ -649,8 +649,8 @@ export default function ComonsPage() {
               公式LINEで相談する
             </a>
             <p className="text-white/30 text-[12px] mt-8 leading-[1.8]">
-              ※ COMON&apos;S運営事務局：一般社団法人 全国起業家協会<br />
-              ※ 受付時間：平日 10:00-18:00
+              COMON&apos;S運営事務局：一般社団法人 全国起業家協会<br />
+              Email：<a href="mailto:main@business-manabiya.com" className="underline hover:text-white/60">main@business-manabiya.com</a><span className="hidden md:inline">　</span><br className="md:hidden" />受付時間：平日 10:00-18:00
             </p>
           </FadeSlide>
         </div>

@@ -101,10 +101,10 @@ export default function SarudemoPage() {
         <div className="absolute top-[20%] right-[12%] w-16 h-16 border-2 border-[#D4AF37]/20 rounded-full lp-float-slow pointer-events-none hidden lg:block" />
         <div className="absolute bottom-[30%] left-[5%] w-12 h-12 bg-lp-accent/10 rounded-lg rotate-45 lp-float-medium pointer-events-none hidden lg:block" />
 
-        <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-32 lg:pt-28 lg:pb-40">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left space-y-7">
-              <FadeSlide direction="up" delay={100}>
+        <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-16 md:pb-32 lg:pt-28 lg:pb-40">
+          <div className="grid md:grid-cols-2 gap-y-7 md:gap-12 items-center">
+            <div className="contents md:block text-center md:text-left md:space-y-7">
+              <FadeSlide direction="up" delay={100} className="order-1 md:order-none">
                 <div className="inline-flex items-center gap-2 bg-white border border-lp-accent/20 px-4 py-2 rounded-full shadow-sm">
                   <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cta opacity-75" />
@@ -113,7 +113,7 @@ export default function SarudemoPage() {
                   <span className="text-lp font-bold text-[13px]">個人向け起業支援プログラム</span>
                 </div>
               </FadeSlide>
-              <FadeSlide direction="up" delay={300}>
+              <FadeSlide direction="up" delay={300} className="order-2 md:order-none">
                 <h1
                   className="font-bold text-lp"
                   style={{ fontSize: "clamp(28px,6vw,56px)", lineHeight: 1.25, letterSpacing: "0.02em" }}
@@ -123,14 +123,14 @@ export default function SarudemoPage() {
                   <span className="text-lp-accent lp-marker">起業</span>のファストパス。
                 </h1>
               </FadeSlide>
-              <FadeSlide direction="up" delay={500}>
+              <FadeSlide direction="up" delay={500} className="order-4 md:order-none">
                 <p className="text-[16px] md:text-[18px] text-text-body leading-[1.9] max-w-lg mx-auto md:mx-0">
                   実業のフランチャイズ・テンプレートを使い、最短最速で「起業のファストパス」を駆け上がる個人向け経営プログラム。
                   <br className="hidden md:block" />
                   年商1億円を目標に、経営のプロチームが指南します。
                 </p>
               </FadeSlide>
-              <FadeSlide direction="up" delay={700}>
+              <FadeSlide direction="up" delay={700} className="order-5 md:order-none">
                 <div className="flex flex-col gap-3">
                   <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[16px] md:text-[18px] w-full max-w-md px-8 py-5 justify-center mx-auto md:mx-0">
                     <LineIcon className="w-6 h-6" />
@@ -140,10 +140,10 @@ export default function SarudemoPage() {
                 </div>
               </FadeSlide>
             </div>
-            <FadeSlide direction="right" delay={400}>
+            <FadeSlide direction="right" delay={400} className="order-3 md:order-none my-1 md:my-0">
               <div className="flex justify-center relative">
                 <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-tr from-lp-accent to-lp rounded-2xl rotate-3 scale-[1.02] opacity-10" />
-                <ImageReveal immediate direction="right" className="w-[260px] h-[260px] md:w-[400px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
+                <ImageReveal immediate direction="right" className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border-4 border-white relative z-10">
                   <Image src="/lp/sarudemo-hero.png" alt="SARUDEMO" width={1536} height={1024} className="w-full h-full object-cover" priority />
                 </ImageReveal>
                 {/* Floating stats */}
@@ -425,7 +425,7 @@ export default function SarudemoPage() {
             </div>
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5]">運営体制</h2>
             <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
-              SARUDEMOは、「一般社団法人 全国起業家協会」が展開する起業/経営支援事業の一つとして運営されているサービスです。
+              SARUDEMOは、「一般社団法人 全国起業家協会」が展開する起業/経営支援事業の<span className="whitespace-nowrap">一つとして</span>運営されているサービスです。
             </p>
           </FadeSlide>
           <FadeSlide direction="up">
@@ -510,7 +510,7 @@ export default function SarudemoPage() {
           </FadeSlide>
           <FadeSlide direction="up" className="-mx-2 md:mx-0">
             <div className="bg-white rounded-2xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-x-auto">
-              <table className="lp-cmp w-full min-w-[400px] text-[12px] md:text-[14px]">
+              <table className="w-full min-w-[400px] text-[12px] md:text-[14px]">
                 <thead>
                   <tr>
                     <th className="text-left p-3 md:p-5 border-b border-gray-100 w-[25%]" />
@@ -536,8 +536,8 @@ export default function SarudemoPage() {
                 ].map((row, i, arr) => (
                     <tr key={i} className={i < arr.length - 1 ? "border-b border-gray-50 hover:bg-gray-50/50 transition-colors" : ""}>
                       <td className="p-3 md:p-5 font-bold text-lp whitespace-nowrap">{row[0]}</td>
-                      <td data-label="BizOwner" className="p-3 md:p-5 text-center text-text-body whitespace-pre-line">{row[1]}</td>
-                      <td data-label="SARUDEMO" className="p-3 md:p-5 text-center font-bold text-lp bg-blue-50/10 whitespace-pre-line">{row[2]}</td>
+                      <td className="p-3 md:p-5 text-center text-text-body whitespace-pre-line">{row[1]}</td>
+                      <td className="p-3 md:p-5 text-center font-bold text-lp bg-blue-50/10 whitespace-pre-line">{row[2]}</td>
                     </tr>
                   ))}
                 </tbody>

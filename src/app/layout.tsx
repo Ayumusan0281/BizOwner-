@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Josefin_Sans, Montserrat, Noto_Sans_JP, Noto_Serif_JP, Orbitron, RocknRoll_One, Yusei_Magic } from "next/font/google";
 import "./globals.css";
+import PhraseBreaks from "@/components/PhraseBreaks";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -71,6 +72,7 @@ export default function RootLayout({
     >
       <body className="font-sans text-text-main bg-white overflow-x-hidden">
         {children}
+        <PhraseBreaks />
       </body>
     </html>
   );

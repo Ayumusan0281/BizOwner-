@@ -158,52 +158,13 @@ body {
     justify-self: center;
     width: calc(50% - 6px);
   }
+}
 
-
-  /* 比較表：横スクロールで見切れる表を「行ごとのカード」に組み替え */
-  .lp-cmp {
-    display: block;
-    min-width: 0 !important;
-  }
-  .lp-cmp thead {
-    display: none;
-  }
-  .lp-cmp tbody {
-    display: block;
-  }
-  .lp-cmp tr {
-    display: block;
-    padding: 14px 16px 10px;
-    border-bottom: 1px solid #eef1f5;
-  }
-  .lp-cmp tr:last-child {
-    border-bottom: 0;
-  }
-  .lp-cmp td {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 7px 0 !important;
-    text-align: right !important;
-    white-space: normal !important;
-    background: transparent !important;
-    font-size: 13px;
-    line-height: 1.6;
-  }
-  .lp-cmp td:first-child {
-    display: block;
-    padding: 0 0 6px !important;
-    text-align: left !important;
-    font-size: 14px;
-    color: #0b2a4a;
-  }
-  .lp-cmp td[data-label]::before {
-    content: attr(data-label);
-    flex: none;
-    color: #777;
-    font-size: 11px;
-    font-weight: 700;
+/* スマホ：BudouXで文節ごとにゼロ幅スペースを入れたブロックは、文節の途中では折り返さない（Safari等でも同じ改行になる） */
+@media (max-width: 767px) {
+  .budoux-block {
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 }
 
