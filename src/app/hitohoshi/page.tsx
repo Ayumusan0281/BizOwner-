@@ -330,11 +330,11 @@ export default function HitoHoshiPage() {
             </p>
           </FadeSlide>
 
-          <FadeSlide direction="up" className="flex flex-col items-center gap-1.5 mb-12">
-            <span className="bg-bg-section border border-gray-100 text-lp font-bold text-[13.5px] px-6 py-3 rounded-xl text-center">貴社が選考で「不採用」と判断</span>
-            <span className="text-lp-accent text-[18px]">▾</span>
-            <span className="bg-lp text-white font-bold text-[13.5px] px-6 py-3 rounded-xl text-center">HitoHoshiが取次・送客</span>
-            <span className="text-lp-accent text-[18px]">▾</span>
+          <FadeSlide direction="up" className="flex flex-col items-center gap-2 mb-12">
+            <span className="bg-bg-section border border-gray-100 text-lp font-bold text-[17px] md:text-[22px] px-8 py-4 md:px-10 md:py-5 rounded-2xl text-center">貴社が選考で「不採用」と判断</span>
+            <span className="text-lp-accent text-[24px] md:text-[28px]">▾</span>
+            <span className="bg-lp text-white font-bold text-[17px] md:text-[22px] px-8 py-4 md:px-10 md:py-5 rounded-2xl text-center shadow-md">HitoHoshiが取次・送客</span>
+            <span className="text-lp-accent text-[24px] md:text-[28px]">▾</span>
           </FadeSlide>
 
           <StaggerChildren staggerMs={150} className="grid md:grid-cols-2 gap-6">
