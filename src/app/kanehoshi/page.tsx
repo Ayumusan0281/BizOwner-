@@ -104,7 +104,7 @@ export default function KaneHoshiPage() {
         <div className="absolute top-[40%] left-[5%] w-3 h-3 bg-cta/30 rounded-full lp-float-slow pointer-events-none" />
 
         <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-16 md:pb-32 lg:pt-28 lg:pb-40">
-          <div className="grid md:grid-cols-2 gap-y-7 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-7 md:gap-12 items-center">
             <div className="contents md:block text-center md:text-left md:space-y-7">
               <FadeSlide direction="up" delay={100} className="order-1 md:order-none">
                 <div className="inline-flex items-center gap-2 bg-white border border-lp-accent/20 px-4 py-2 rounded-full shadow-sm">
@@ -191,7 +191,7 @@ export default function KaneHoshiPage() {
               融資や補助金の審査で最初に見られるのは、売上規模と成長性です。ただ、そのために新規事業を立ち上げる余力は、多くの会社にありません。
             </p>
           </FadeSlide>
-          <StaggerChildren staggerMs={100} className="grid md:grid-cols-3 gap-5">
+          <StaggerChildren staggerMs={100} className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               { title: "決算書に伸びしろがない", desc: "売上規模や成長性は、金融機関が最初に見る数字。本業だけだと頭打ちに見えてしまう。" },
               { title: "新規事業に割く人手がない", desc: "EC出店は有効と分かっていても、商材選定から運用まで自前でやる余力がない。" },
@@ -305,7 +305,7 @@ export default function KaneHoshiPage() {
               ECショップの売上を御社の実績として積み上げ、次期の融資・補助金申請の場で示せる状態を作ります。
             </p>
           </FadeSlide>
-          <StaggerChildren staggerMs={120} className="grid md:grid-cols-2 gap-6">
+          <StaggerChildren staggerMs={120} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { kanji: "出", title: "①御社の法人でEC出店", desc: "御社の法人名義でECショップを開設します。" },
               { kanji: "営", title: "②運用事業者がショップ運営", desc: "出品・受注・在庫・問い合わせを運用事業者が行います。" },
@@ -342,7 +342,7 @@ export default function KaneHoshiPage() {
               融資審査の3つのポイントに、<span className="text-lp-accent lp-marker">実績</span>で応える。
             </h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={100} className="grid md:grid-cols-3 gap-5">
+          <StaggerChildren staggerMs={100} className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               { title: "売上規模", desc: "EC事業の売上が加わり、決算書上の売上規模が大きくなります。" },
               { title: "事業の多角化", desc: "本業に加えて新たな収益の柱があることを、数字で示せます。" },
@@ -382,7 +382,7 @@ export default function KaneHoshiPage() {
               御社の作業は最小限。
             </h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={150} className="grid md:grid-cols-2 gap-6">
+          <StaggerChildren staggerMs={150} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 tag: "御社にお願いすること",
@@ -432,9 +432,9 @@ export default function KaneHoshiPage() {
             </p>
           </FadeSlide>
           <FadeSlide direction="up">
-            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-8 rounded-2xl mb-12 shadow-lg font-bold text-[16px] md:text-[20px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
+            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-4 md:px-8 rounded-2xl mb-12 shadow-lg font-bold text-[15px] md:text-[20px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKSIvPgo8L3N2Zz4=')] opacity-50" />
-              <span className="relative z-10">サービス利用料は月額10,000円（税別）のみ。初期費用は0円です。</span>
+              <span className="relative z-10">サービス利用料は月額10,000円（税別）のみ。<br className="md:hidden" />初期費用は0円です。</span>
             </div>
           </FadeSlide>
           <FadeSlide direction="up">
@@ -590,7 +590,7 @@ export default function KaneHoshiPage() {
               className="font-bold text-white mb-6"
               style={{ fontSize: "clamp(28px,5vw,48px)", lineHeight: 1.4 }}
             >
-              まずは、御社の状況を
+              まずは御社の状況を
               <br />
               お聞かせください
             </h2>

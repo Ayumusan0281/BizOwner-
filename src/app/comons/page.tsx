@@ -104,7 +104,7 @@ export default function ComonsPage() {
         <div className="absolute top-[40%] left-[5%] w-3 h-3 bg-cta/30 rounded-full lp-float-slow pointer-events-none" />
 
         <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-16 md:pb-32 lg:pt-28 lg:pb-40">
-          <div className="grid md:grid-cols-2 gap-y-7 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-7 md:gap-12 items-center">
             <div className="contents md:block text-center md:text-left md:space-y-7">
               <FadeSlide direction="up" delay={100} className="order-1 md:order-none">
                 <div className="inline-flex items-center gap-2 bg-white border border-lp-accent/20 px-4 py-2 rounded-full shadow-sm">
@@ -187,7 +187,7 @@ export default function ComonsPage() {
               <span className="text-lp-accent lp-marker">相談相手</span>がいなくなる。
             </h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={100} className="grid md:grid-cols-3 gap-5">
+          <StaggerChildren staggerMs={100} className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               { title: "経営判断を、ひとりで抱え込む", desc: "資金繰りも、営業戦略も、採用も。相談できる経営者仲間も、壁打ち相手もいないまま意思決定が続く。" },
               { title: "IT・AI活用は分かるけど手付かず", desc: "便利なのは分かっているが、何から着手すればいいのか。エンジニアへの発注もハードルが高い。" },
@@ -235,7 +235,7 @@ export default function ComonsPage() {
               COMON&apos;Sは、様々な分野のプロを顧問として迎え、その中からユーザーが好きな人を自由に選べるサービスです。カテゴリーの縛りはありません。
             </p>
           </FadeSlide>
-          <StaggerChildren staggerMs={150} className="grid md:grid-cols-3 gap-6">
+          <StaggerChildren staggerMs={150} className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
@@ -287,7 +287,7 @@ export default function ComonsPage() {
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">顧問紹介</h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={150} className="grid md:grid-cols-3 gap-6">
+          <StaggerChildren staggerMs={150} className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 initial: "あ",
@@ -344,7 +344,7 @@ export default function ComonsPage() {
                     </div>
                     <ul className="relative z-10 space-y-3">
                       {a.points.map((p, i) => (
-                        <li key={i} className="text-[12px] text-text-body leading-[1.8] border-t border-gray-50 pt-3 first:border-t-0 first:pt-0">
+                        <li key={i} className="text-[12px] text-text-body leading-[1.8] text-center text-balance border-t border-gray-50 pt-3 first:border-t-0 first:pt-0">
                           {p}
                         </li>
                       ))}
@@ -374,7 +374,7 @@ export default function ComonsPage() {
               COMON&apos;Sに登録されている顧問は、全員が協会規定の厳選なる審査を通過しています。誰でも自由に登録できるわけではありません。
             </p>
           </FadeSlide>
-          <StaggerChildren staggerMs={100} className="grid md:grid-cols-3 gap-6 mb-16">
+          <StaggerChildren staggerMs={100} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {[
               { title: "実務経験・実績", desc: "当該分野での実務経験と、具体的な実績があること。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /> },
               { title: "過去の実績・顧客の声", desc: "実際に支援した実績や、顧客からの評価・声を確認します。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25M6.75 17.25L1.5 12l5.25-5.25M14 4l-4 16" /> },
@@ -395,17 +395,19 @@ export default function ComonsPage() {
           </StaggerChildren>
           <FadeSlide direction="up">
             <p className="text-center font-bold text-lp text-[14px] tracking-[0.05em] mb-8">顧問登録の流れ</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-6">
               {[
                 { step: "1", title: "エントリー", desc: "協会からの招待、又は信頼できる人物からの推薦のみで対応。" },
                 { step: "2", title: "実績確認", desc: "実務経験・過去の実績や評価を総合的に確認します。" },
                 { step: "3", title: "代表理事による面談", desc: "直接会って人柄・相性・信頼性を確認します。" },
                 { step: "4", title: "登録開始", desc: "審査通過後、顧問プロフィールを公開します。" },
               ].map((s) => (
-                <div key={s.step} className="text-center">
-                  <div className="w-10 h-10 rounded-full bg-white border-2 border-lp-accent text-lp-accent font-bold flex items-center justify-center mx-auto mb-3 text-[14px]">{s.step}</div>
-                  <h4 className="font-bold text-text-dark text-[13px] mb-1">{s.title}</h4>
-                  <p className="text-[11px] text-text-light leading-[1.7]">{s.desc}</p>
+                <div key={s.step} className="flex md:block items-center gap-4 text-left md:text-center bg-bg-section md:bg-transparent border border-gray-100 md:border-0 rounded-2xl md:rounded-none px-5 py-4 md:p-0">
+                  <div className="w-10 h-10 shrink-0 rounded-full bg-white border-2 border-lp-accent text-lp-accent font-bold flex items-center justify-center mx-0 md:mx-auto mb-0 md:mb-3 text-[14px]">{s.step}</div>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-text-dark text-[14px] md:text-[13px] mb-1">{s.title}</h4>
+                    <p className="text-[12px] md:text-[11px] text-text-light leading-[1.7]">{s.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -429,9 +431,9 @@ export default function ComonsPage() {
             </h2>
           </FadeSlide>
           <FadeSlide direction="up">
-            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-8 rounded-2xl mb-12 shadow-lg font-bold text-[16px] md:text-[20px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
+            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-4 md:px-8 rounded-2xl mb-12 shadow-lg font-bold text-[16px] md:text-[20px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKSIvPgo8L3N2Zz4=')] opacity-50" />
-              <span className="relative z-10">初期費用は0円。人数の上限なし、いつでも追加・見直しができます。</span>
+              <span className="relative z-10">初期費用は0円。<br className="md:hidden" />人数の上限なし、<br className="md:hidden" />いつでも追加・見直しができます。</span>
             </div>
           </FadeSlide>
           <StaggerChildren staggerMs={100} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mb-16">
@@ -484,7 +486,7 @@ export default function ComonsPage() {
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">COMON&apos;Sが選ばれる理由</h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={120} className="grid md:grid-cols-2 gap-6">
+          <StaggerChildren staggerMs={120} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { title: "経営目線でつながる顧問チーム", desc: "分野ごとに窓口が分かれる士業と違い、経営全体を見ながら顧問同士が連携します。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" /> },
               { title: "必要な分だけ、無理なく", desc: "まとめて契約させられることなく、今困っている領域だけを月30,000円から始められます。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /> },

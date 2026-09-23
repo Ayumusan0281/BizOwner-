@@ -102,7 +102,7 @@ export default function SarudemoPage() {
         <div className="absolute bottom-[30%] left-[5%] w-12 h-12 bg-lp-accent/10 rounded-lg rotate-45 lp-float-medium pointer-events-none hidden lg:block" />
 
         <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-16 md:pb-32 lg:pt-28 lg:pb-40">
-          <div className="grid md:grid-cols-2 gap-y-7 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-7 md:gap-12 items-center">
             <div className="contents md:block text-center md:text-left md:space-y-7">
               <FadeSlide direction="up" delay={100} className="order-1 md:order-none">
                 <div className="inline-flex items-center gap-2 bg-white border border-lp-accent/20 px-4 py-2 rounded-full shadow-sm">
@@ -231,7 +231,7 @@ export default function SarudemoPage() {
               ※ 正しい努力・正しい知識が大前提。失敗する人には、共通した3つの理由があります。
             </p>
           </FadeSlide>
-          <StaggerChildren staggerMs={150} className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <StaggerChildren staggerMs={150} className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
               { num: "01", title: "知識不足", desc: "正しいやり方を知らないままスタートしてしまい、遠回りを重ねてしまう。" },
               { num: "02", title: "こだわりが強すぎる", desc: "自分なりのアレンジを優先し、成功パターンから外れていく。" },
@@ -289,7 +289,7 @@ export default function SarudemoPage() {
               </p>
             </FadeSlide>
           </div>
-          <StaggerChildren staggerMs={150} className="grid md:grid-cols-3 gap-8">
+          <StaggerChildren staggerMs={150} className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />,
@@ -342,7 +342,7 @@ export default function SarudemoPage() {
               SARUDEMOの<span className="text-lp-accent lp-marker">3つのエグさ</span>
             </h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={200} className="grid lg:grid-cols-3 gap-8 md:gap-10">
+          <StaggerChildren staggerMs={200} className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
             {[
               { num: "01", title: "再現性がエグイ。", highlight: "「猿でも出来る」簡単さ", dark: false },
               { num: "02", title: "スピード感がエグイ。", highlight: "1年以内に大社長へ育成", dark: false },
@@ -383,31 +383,37 @@ export default function SarudemoPage() {
             </h2>
             <p className="text-[14px] text-text-body">起業後は、複数のカテゴリーを組み合わせて収益を積み上げていきます。</p>
           </FadeSlide>
-          <StaggerChildren staggerMs={100} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mb-6">
+          <StaggerChildren staggerMs={100} className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-5 mb-8">
             {[
               { no: "①", tag: "メイン事業", title: "権利収入", sub: "アカウント貸出（EC/人材等）", amount: "30〜300万円/月" },
               { no: "②", tag: "メイン事業", title: "人材派遣", sub: "BPO / アフィリエイト等", amount: "15〜150万円/月" },
               { no: "③", tag: "自主事業", title: "営業代行", sub: "成果報酬 / 全案件共有", amount: "100〜200万円/月" },
-              { no: "④", tag: "自主事業", title: "自社事業", sub: "好きなことを自由に", amount: "―", accent: true },
+              { no: "④", tag: "自主事業", title: "自社事業", sub: "好きなことを自由に", amount: "―" },
               { no: "⑤", tag: "金融系", title: "資金調達", sub: "デット / エクイティ / キャリア", amount: "100万円以上/回" },
               { no: "⑥", tag: "金融系", title: "申請支援", sub: "補助金 / 助成金", amount: "100万円以上/回" },
               { no: "⑦", tag: "金融系", title: "法人投資", sub: "FX / 暗号通貨", amount: "50万円以上/月" },
-              { no: "※", tag: "支出", title: "顧問", sub: "法務 / 税務 / 経営（2年目以降）", amount: "−10万円/月", muted: true },
+              { no: "※", tag: "支出", title: "顧問", sub: "法務 / 税務 / 経営（2年目以降）", amount: "−10万円/月", accent: true },
             ].map((item) => (
               <StaggerItem key={item.title}>
                 <TiltCard intensity={4}>
-                  <div className={`${item.accent ? "bg-gradient-to-br from-lp to-[#1a4f7a] shadow-[0_10px_30px_-10px_rgba(11,42,74,0.2)]" : "bg-white shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)]"} p-4 md:p-6 rounded-2xl text-center transition-all border border-gray-100`}>
-                    <p className={`text-[10px] font-bold tracking-wider mb-2 ${item.accent ? "text-[#D4AF37]" : "text-lp-accent"}`}>{item.no} {item.tag}</p>
-                    <h3 className={`font-bold ${item.accent ? "text-white" : "text-lp"} mb-1 text-[15px]`}>{item.title}</h3>
-                    <p className={`text-[11px] ${item.accent ? "text-white/60" : "text-text-light"} leading-[1.7] mb-2`}>{item.sub}</p>
-                    <p className={`font-bold font-[Inter] text-[14px] md:text-[16px] whitespace-nowrap ${item.accent ? "text-[#D4AF37]" : item.muted ? "text-text-light" : "text-lp-accent"}`}>{item.amount}</p>
+                  <div className={`${item.accent ? "bg-gradient-to-br from-lp to-[#1a4f7a] shadow-[0_10px_30px_-10px_rgba(11,42,74,0.2)]" : "bg-white shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)]"} px-5 py-4 md:p-6 rounded-2xl text-left md:text-center transition-all border border-gray-100 flex md:block items-center justify-between gap-4`}>
+                    <div className="min-w-0">
+                      <p className={`text-[10px] font-bold tracking-wider mb-1 md:mb-2 ${item.accent ? "text-[#D4AF37]" : "text-lp-accent"}`}>{item.no} {item.tag}</p>
+                      <h3 className={`font-bold ${item.accent ? "text-white" : "text-lp"} mb-1 text-[15px]`}>{item.title}</h3>
+                      <p className={`text-[11px] ${item.accent ? "text-white/60" : "text-text-light"} leading-[1.7] mb-0 md:mb-2`}>{item.sub}</p>
+                    </div>
+                    <p className={`font-bold font-[Inter] text-[14px] md:text-[16px] whitespace-nowrap shrink-0 text-right md:text-center ${item.accent ? "text-[#D4AF37]" : "text-lp-accent"}`}>{item.amount}</p>
                   </div>
                 </TiltCard>
               </StaggerItem>
             ))}
           </StaggerChildren>
           <FadeSlide direction="up">
-            <p className="text-[12px] text-text-light text-right">※ 報酬金額はあくまで目安です。成果を保証するものではなく、事業内容・稼働により変動します。①②はメイン事業、③④は自主事業、⑤⑥⑦は金融系の位置づけです。</p>
+            <p className="text-[12px] text-text-light text-center leading-[1.9] max-w-[640px] mx-auto">
+              ※ 報酬金額はあくまで目安です。成果を保証するものではなく、事業内容・稼働により変動します。
+              <br />
+              ①②はメイン事業、③④は自主事業、<br className="md:hidden" />⑤⑥⑦は金融系の位置づけです。
+            </p>
           </FadeSlide>
         </div>
       </section>
@@ -564,7 +570,7 @@ export default function SarudemoPage() {
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5]">料金構成</h2>
           </FadeSlide>
           <FadeSlide direction="up">
-            <div className="grid md:grid-cols-3 gap-6 mb-10 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 items-stretch">
               {/* Main Price */}
               <div className="md:col-span-2">
                 <div className="relative p-[2px] rounded-3xl overflow-hidden" style={{ background: "linear-gradient(135deg, #D4AF37, #8B6914, #D4AF37)" }}>

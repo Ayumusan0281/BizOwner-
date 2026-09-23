@@ -104,7 +104,7 @@ export default function HitoHoshiPage() {
         <div className="absolute top-[40%] left-[5%] w-3 h-3 bg-cta/30 rounded-full lp-float-slow pointer-events-none" />
 
         <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-16 md:pb-32 lg:pt-28 lg:pb-40">
-          <div className="grid md:grid-cols-2 gap-y-7 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-7 md:gap-12 items-center">
             <div className="contents md:block text-center md:text-left md:space-y-7">
               <FadeSlide direction="up" delay={100} className="order-1 md:order-none">
                 <div className="inline-flex items-center gap-2 bg-white border border-lp-accent/20 px-4 py-2 rounded-full shadow-sm">
@@ -188,7 +188,7 @@ export default function HitoHoshiPage() {
               こんな<span className="text-lp-accent lp-marker">悩み</span>を抱えがち。
             </h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={100} className="grid md:grid-cols-3 gap-5">
+          <StaggerChildren staggerMs={100} className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               { title: "採用コストが積み上がる", desc: "媒体掲載費・エージェント手数料・運用の人件費。採用のたびに固定費と変動費の両方がのしかかる。" },
               { title: "選考工数が現場を圧迫", desc: "応募対応、日程調整、スカウト送信。本業と兼務する採用担当にとって、選考業務は後回しになりがち。" },
@@ -236,7 +236,7 @@ export default function HitoHoshiPage() {
               採用の「入口」を代行しながら、「出口」まで責任を持つ。この一気通貫の設計が、HitoHoshiの核です。
             </p>
           </FadeSlide>
-          <StaggerChildren staggerMs={150} className="grid md:grid-cols-2 gap-6">
+          <StaggerChildren staggerMs={150} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 tag: "PILLAR 01",
@@ -291,7 +291,7 @@ export default function HitoHoshiPage() {
               採用アカウントを「持っているだけ」で終わらせず、日々の運用まで引き受けます。
             </p>
           </FadeSlide>
-          <StaggerChildren staggerMs={120} className="grid md:grid-cols-2 gap-6">
+          <StaggerChildren staggerMs={120} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { kanji: "運", title: "求人媒体アカウントの運用", desc: "Indeed・Airwork・求人ボックス・エンゲージ等、既存アカウントの求人票作成・更新・掲載管理を代行。" },
               { kanji: "調", title: "面接日程の調整", desc: "候補者・面接官双方との日程調整を仲介・対応。" },
@@ -337,7 +337,7 @@ export default function HitoHoshiPage() {
             <span className="text-lp-accent text-[24px] md:text-[28px]">▾</span>
           </FadeSlide>
 
-          <StaggerChildren staggerMs={150} className="grid md:grid-cols-2 gap-6">
+          <StaggerChildren staggerMs={150} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 tag: "ROUTE A ― 転職",
@@ -391,9 +391,9 @@ export default function HitoHoshiPage() {
             </p>
           </FadeSlide>
           <FadeSlide direction="up">
-            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-8 rounded-2xl mb-12 shadow-lg font-bold text-[16px] md:text-[20px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
+            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-4 md:px-8 rounded-2xl mb-12 shadow-lg font-bold text-[16px] md:text-[20px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKSIvPgo8L3N2Zz4=')] opacity-50" />
-              <span className="relative z-10">サービス利用料は月額10,000円のみ。初期費用は0円です。</span>
+              <span className="relative z-10">サービス利用料は月額10,000円のみ。<br className="md:hidden" />初期費用は0円です。</span>
             </div>
           </FadeSlide>
           <FadeSlide direction="up">
@@ -434,7 +434,7 @@ export default function HitoHoshiPage() {
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">導入いただくメリット</h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={120} className="grid md:grid-cols-2 gap-6">
+          <StaggerChildren staggerMs={120} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { title: "採用工数の削減", desc: "媒体運用～選考進行まで現場が抱えていた業務を丸々引き受けます。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /> },
               { title: "圧倒的なコスパ", desc: "固定費は月額1万円のみ。むしろ成果報酬で逆に利益を得られる。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V6m0 2v8m0 0v2m0-2c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /> },

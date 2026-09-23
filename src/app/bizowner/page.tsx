@@ -104,7 +104,7 @@ export default function BizOwnerPage() {
         <div className="absolute top-[40%] left-[5%] w-3 h-3 bg-cta/30 rounded-full lp-float-slow pointer-events-none" />
 
         <div className="max-w-[1100px] mx-auto px-6 relative z-10 pt-20 pb-16 md:pb-32 lg:pt-28 lg:pb-40">
-          <div className="grid md:grid-cols-2 gap-y-7 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-7 md:gap-12 items-center">
             <div className="contents md:block text-center md:text-left md:space-y-7">
               <FadeSlide direction="up" delay={100} className="order-1 md:order-none">
                 <div className="inline-flex items-center gap-2 bg-white border border-lp-accent/20 px-4 py-2 rounded-full shadow-sm">
@@ -237,7 +237,7 @@ export default function BizOwnerPage() {
               </h2>
             </FadeSlide>
           </div>
-          <div className="grid md:grid-cols-2 gap-14 items-center mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center mb-20">
             <div className="relative">
               <ImageReveal direction="left" className="rounded-2xl overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] relative z-10">
                 <Image src="/lp/bizowner-sidework.png" alt="副業イメージ" width={1536} height={1024} className="w-full h-[240px] md:h-[400px] object-cover" />
@@ -253,7 +253,7 @@ export default function BizOwnerPage() {
               </p>
             </FadeSlide>
           </div>
-          <StaggerChildren staggerMs={150} className="grid md:grid-cols-3 gap-6">
+          <StaggerChildren staggerMs={150} className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />,
@@ -307,7 +307,7 @@ export default function BizOwnerPage() {
               3ステップで<span className="text-lp-accent lp-marker">稼ぐ</span>仕組み
             </h2>
           </FadeSlide>
-          <StaggerChildren staggerMs={200} className="grid md:grid-cols-3 gap-16 md:gap-8 pt-8">
+          <StaggerChildren staggerMs={200} className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 pt-8">
             {[
               { step: "01", title: "まずは面談", desc: "無料で会員登録。\n内容を理解した上で、\n権利収入の下準備をスタート", price: "無料", accent: false },
               { step: "02", title: "法人で権利収入", desc: "法人を作成し、利益が発生開始。\n収益チャネルが倍増し、\n権利収入が加速。", price: "+500,000円で\u200b法人作成", accent: false },
@@ -354,7 +354,7 @@ export default function BizOwnerPage() {
             </h2>
             <p className="text-[14px] text-text-body">あなたに合った案件を自由に選べます。</p>
           </FadeSlide>
-          <StaggerChildren staggerMs={80} className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+          <StaggerChildren staggerMs={80} className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
             {[
               { title: "人材アカウント", sub: "Indeed / エンゲージ / 求人ボックス等", icon: "👥" },
               { title: "ECショップ", sub: "メルカリ / 楽天市場 / Shopee等", icon: "🛒" },
@@ -365,10 +365,12 @@ export default function BizOwnerPage() {
             ].map((item) => (
               <StaggerItem key={item.title}>
                 <TiltCard intensity={4}>
-                  <div className={`rounded-2xl p-4 md:p-7 border hover-card text-center group ${item.accent ? "bg-gradient-to-br from-lp to-[#1a4f7a] border-lp/20 shadow-[0_10px_30px_-10px_rgba(11,42,74,0.2)]" : "bg-white border-gray-100 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)]"}`}>
-                    <div className="text-3xl mb-3">{item.icon}</div>
+                  <div className={`rounded-2xl px-5 py-4 md:p-7 border hover-card flex md:block items-center gap-4 text-left md:text-center group ${item.accent ? "bg-gradient-to-br from-lp to-[#1a4f7a] border-lp/20 shadow-[0_10px_30px_-10px_rgba(11,42,74,0.2)]" : "bg-white border-gray-100 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)]"}`}>
+                    <div className="text-3xl mb-0 md:mb-3 shrink-0 w-10 text-center md:w-auto">{item.icon}</div>
+                    <div className="min-w-0">
                     <h3 className={`font-bold text-[15px] mb-1 ${item.accent ? "text-white" : "text-text-dark"}`}>{item.title}</h3>
                     <p className={`text-[12px] leading-[1.7] ${item.accent ? "text-white/60" : "text-text-light"}`}>{item.sub}</p>
+                    </div>
                   </div>
                 </TiltCard>
               </StaggerItem>
@@ -522,9 +524,9 @@ export default function BizOwnerPage() {
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">料金プラン</h2>
           </FadeSlide>
           <FadeSlide direction="up">
-            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-8 rounded-2xl mb-12 shadow-lg font-bold text-[18px] md:text-[22px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
+            <div className="bg-gradient-to-r from-cta to-[#d04f24] text-white text-center py-6 px-4 md:px-8 rounded-2xl mb-12 shadow-lg font-bold text-[18px] md:text-[22px] text-balance -rotate-1 hover:rotate-0 transition-transform border border-white/20 lp-shine relative overflow-hidden">
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKSIvPgo8L3N2Zz4=')] opacity-50" />
-              <span className="relative z-10">💡 月額料金なし。法人作成費用のみでスタート可能。FC加盟は必要になった段階で。</span>
+              <span className="relative z-10">💡 月額料金なし。<br className="md:hidden" />法人作成費用のみでスタート可能。<br className="md:hidden" />FC加盟は必要になった段階で。</span>
             </div>
           </FadeSlide>
           <StaggerChildren staggerMs={100} className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5">
@@ -608,7 +610,7 @@ export default function BizOwnerPage() {
               ご自身の周りにも是非ご紹介ください。報酬は直紹介のみ、二段目以降はありません。
             </p>
           </FadeSlide>
-          <div className="grid md:grid-cols-[1.4fr_1fr] gap-6 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-6 items-stretch">
             <FadeSlide direction="up">
               <div className="bg-white rounded-3xl border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] divide-y divide-gray-100 h-full">
                 {[
