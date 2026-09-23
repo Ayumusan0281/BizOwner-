@@ -443,9 +443,9 @@ export default function SarudemoPage() {
               {[
                 { name: "BizOwner", logo: "/lp/bizowner-logo.png", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
                 { name: "SARUDEMO", logo: "/lp/sarudemo-logo.png", tag: "個人向け", desc: "FC型経営教育", active: true },
+                { name: "COMON'S", logo: "/lp/comons-logo.png", tag: "一人社長向け", desc: "多分野の顧問サービス" },
                 { name: "HitoHoshi", logo: "/lp/hitohoshi-logo.png", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用" },
                 { name: "KaneHoshi", logo: "/lp/kanehoshi-logo.png", tag: "既存法人向け", desc: "ECアカウント\u200b運用代行" },
-                { name: "COMON'S", logo: "/lp/comons-logo.png", tag: "一人社長向け", desc: "多分野の顧問サービス" },
               ].map((n) => (
                 <div key={n.name} className={`rounded-2xl px-5 py-4 md:p-5 flex md:block items-center gap-4 text-left md:text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>
                   <div className="relative shrink-0 w-14 h-14 md:w-[68px] md:h-[68px] md:mx-auto md:mb-2">
@@ -609,8 +609,7 @@ export default function SarudemoPage() {
           <FadeSlide direction="up">
             <div className="bg-gradient-to-r from-cta/10 to-orange-50 border border-cta/20 rounded-2xl p-6 text-center relative overflow-hidden">
               <div className="absolute inset-0 lp-shine" />
-              <p className="text-cta font-bold text-[14px] md:text-[15px] block md:flex items-center justify-center gap-2 flex-wrap relative z-10 text-balance">
-                <span className="text-[20px] mr-1 md:mr-0 align-middle">💰</span>
+              <p className="text-cta font-bold text-[14px] md:text-[15px] relative z-10 text-balance">
                 契約金は一括のみ。安心のクーリングオフ期間あり。資金調達サポートあり、現在貯蓄が無くても問題ございません。
               </p>
             </div>

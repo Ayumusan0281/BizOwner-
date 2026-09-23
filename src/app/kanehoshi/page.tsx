@@ -516,9 +516,9 @@ export default function KaneHoshiPage() {
               {[
                 { name: "BizOwner", logo: "/lp/bizowner-logo.png", tag: "個人向け", desc: "アカウント運用×\u200b起業支援" },
                 { name: "SARUDEMO", logo: "/lp/sarudemo-logo.png", tag: "個人向け", desc: "FC型経営教育" },
+                { name: "COMON'S", logo: "/lp/comons-logo.png", tag: "一人社長向け", desc: "多分野の顧問サービス" },
                 { name: "HitoHoshi", logo: "/lp/hitohoshi-logo.png", tag: "既存法人向け", desc: "採用代行×\u200b人材再活用" },
                 { name: "KaneHoshi", logo: "/lp/kanehoshi-logo.png", tag: "既存法人向け", desc: "ECアカウント\u200b運用代行", active: true },
-                { name: "COMON'S", logo: "/lp/comons-logo.png", tag: "一人社長向け", desc: "多分野の顧問サービス" },
               ].map((n) => (
                 <div key={n.name} className={`rounded-2xl px-5 py-4 md:p-5 flex md:block items-center gap-4 text-left md:text-center border ${n.active ? "border-2 border-cta shadow-[0_12px_28px_-12px_rgba(232,93,47,0.3)]" : "border-gray-100 shadow-[0_6px_18px_-12px_rgba(11,42,74,0.08)]"}`}>
                   <div className="relative shrink-0 w-14 h-14 md:w-[68px] md:h-[68px] md:mx-auto md:mb-2">
