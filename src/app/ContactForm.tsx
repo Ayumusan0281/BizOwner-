@@ -39,8 +39,8 @@ export default function ContactForm() {
 
     const payload = {
       access_key: ACCESS_KEY,
-      subject: "【WOWNER】お問い合わせフォームからの新着メッセージ",
-      from_name: "WOWNER お問い合わせフォーム",
+      subject: "【全国起業家協会】お問い合わせフォームからの新着メッセージ",
+      from_name: "全国起業家協会 お問い合わせフォーム",
       name: data.get("name"),
       company: data.get("company") || "（未記入）",
       email: data.get("email"),
