@@ -299,12 +299,12 @@ export default function HitoHoshiPage() {
               { kanji: "進", title: "選考進行管理", desc: "選考ステータスの一元管理と、貴社への定期レポーティング。" },
             ].map((item) => (
               <StaggerItem key={item.title}>
-                <div className="h-full bg-white rounded-2xl p-5 md:p-7 border border-gray-100 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.08)] flex gap-4 md:gap-5 items-start">
+                <div className="h-full bg-white rounded-2xl p-5 max-[359px]:p-4 md:p-7 border border-gray-100 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.08)] flex gap-4 max-[359px]:gap-3 md:gap-5 items-start">
                   <div className="w-13 h-13 w-[52px] h-[52px] rounded-xl bg-lp flex items-center justify-center shrink-0 shadow-md">
                     <span className="text-white font-bold text-[19px]">{item.kanji}</span>
                   </div>
                   <div className="min-w-0">
-                    <h3 className="font-bold text-text-dark text-[15.5px] mb-1.5">{item.title}</h3>
+                    <h3 className="font-bold text-text-dark text-[15.5px] max-[359px]:text-[14px] mb-1.5">{item.title}</h3>
                     <p className="text-[12.5px] text-text-light leading-[1.85]">{item.desc}</p>
                   </div>
                 </div>
@@ -331,7 +331,7 @@ export default function HitoHoshiPage() {
           </FadeSlide>
 
           <FadeSlide direction="up" className="flex flex-col items-center gap-2 mb-12">
-            <span className="bg-bg-section border border-gray-100 text-lp font-bold text-[17px] md:text-[22px] px-8 py-4 md:px-10 md:py-5 rounded-2xl text-center">貴社が選考で「不採用」と判断</span>
+            <span className="bg-bg-section border border-gray-100 text-lp font-bold text-[17px] max-[359px]:text-[15px] md:text-[22px] px-8 max-[359px]:px-5 py-4 md:px-10 md:py-5 rounded-2xl text-center text-balance">貴社が選考で「不採用」と判断</span>
             <span className="text-lp-accent text-[24px] md:text-[28px]">▾</span>
             <span className="bg-lp text-white font-bold text-[17px] md:text-[22px] px-8 py-4 md:px-10 md:py-5 rounded-2xl text-center shadow-md">HitoHoshiが取次・送客</span>
             <span className="text-lp-accent text-[24px] md:text-[28px]">▾</span>
@@ -442,12 +442,12 @@ export default function HitoHoshiPage() {
               { title: "唯一無二の企業向けサービス", desc: "不採用人材も決して無駄にはせず、しっかりとマネタイズする唯一無二のB2Bサービス。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /> },
             ].map((item) => (
               <StaggerItem key={item.title}>
-                <div className="h-full bg-white rounded-2xl p-7 border border-gray-100 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.08)] flex gap-5 items-start">
+                <div className="h-full bg-white rounded-2xl p-7 max-[359px]:p-4 border border-gray-100 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.08)] flex gap-5 max-[359px]:gap-3 items-start">
                   <div className="w-12 h-12 rounded-xl bg-lp flex items-center justify-center shrink-0 shadow-md">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">{item.icon}</svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-text-dark text-[15px] mb-1.5">{item.title}</h3>
+                    <h3 className="font-bold text-text-dark text-[15px] max-[359px]:text-[14px] mb-1.5">{item.title}</h3>
                     <p className="text-[12.5px] text-text-light leading-[1.85]">{item.desc}</p>
                   </div>
                 </div>

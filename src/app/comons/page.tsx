@@ -438,7 +438,7 @@ export default function ComonsPage() {
           </FadeSlide>
           <StaggerChildren staggerMs={100} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mb-16">
             {[
-              { name: "あゆむ先生", field: "経営コンサルティング" },
+              { name: "あゆむ先生", field: "経営コンサル\u200bティング" },
               { name: "原先生", field: "システム開発・AI活用" },
               { name: "西田先生", field: "登記/契約書/法律トラブル等" },
               { name: "その他の顧問", field: "分野不問・審査通過順に追加" },
@@ -447,7 +447,7 @@ export default function ComonsPage() {
                 <TiltCard intensity={4}>
                   <div className="bg-white rounded-2xl p-4 md:p-5 text-center border border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
                     <p className="text-[12px] font-bold text-text-dark mb-1">{p.name}</p>
-                    <p className="text-[10px] text-text-light mb-3 min-h-[28px]">{p.field}</p>
+                    <p className="text-[10px] max-[359px]:text-[9.5px] text-text-light mb-3 min-h-[28px]">{p.field}</p>
                     <p className="whitespace-nowrap text-text-dark font-bold text-[17px] min-[360px]:text-[20px] leading-none">30,000<span className="text-[11px] text-text-light font-normal">円/月</span></p>
                   </div>
                 </TiltCard>
