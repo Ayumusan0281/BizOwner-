@@ -58,6 +58,9 @@ export const metadata: Metadata = {
   },
   description:
     "営業支援・コミュニティ構築・経営支援で、事業成長を加速します。",
+  applicationName: "全国起業家協会",
+  // iPhoneの「ホーム画面に追加」で表示される名前（アイコンは app/apple-icon.png）
+  appleWebApp: { title: "全国起業家協会", capable: true, statusBarStyle: "default" },
 };
 
 export default function RootLayout({
