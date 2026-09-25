@@ -112,7 +112,7 @@ export default function KaneHoshiPage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cta opacity-75" />
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-cta" />
                   </span>
-                  <span className="text-lp font-bold text-[13px]">初期費用0円・月額10,000円（税別）</span>
+                  <span className="text-lp font-bold text-[13px] max-[359px]:text-[12px]">初期費用0円・月額10,000円（税別）</span>
                 </div>
               </FadeSlide>
               <FadeSlide direction="up" delay={300} className="order-2 md:order-none">
@@ -483,7 +483,7 @@ export default function KaneHoshiPage() {
                   "事業実態のある、既存の法人であること",
                   "その他の条件（資本金・課税方式など）は、個別面談でご案内",
                 ].map((it) => (
-                  <li key={it} className="flex items-start text-[14.5px] text-text-body leading-[1.9]">
+                  <li key={it} className="flex items-start text-[14.5px] max-[359px]:text-[13.5px] text-text-body leading-[1.9] text-balance">
                     <span className="lp-check shrink-0 mt-0.5">✓</span>
                     {it}
                   </li>
