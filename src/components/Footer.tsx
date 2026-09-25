@@ -94,14 +94,14 @@ export default function Footer() {
               </p>
               <ul className="space-y-2.5 text-[13px] text-text-main">
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors whitespace-nowrap">
+                  <Link href="/terms" className="hover:text-primary transition-colors whitespace-nowrap">
                     利用規約
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors whitespace-nowrap">
+                  <Link href="/privacy" className="hover:text-primary transition-colors whitespace-nowrap">
                     プライバシーポリシー
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
