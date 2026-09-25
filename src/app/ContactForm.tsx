@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -181,6 +182,13 @@ export default function ContactForm() {
             {errorMessage}
           </p>
         )}
+        <p className="font-[Noto_Sans_JP] text-[12px] text-text-main text-center leading-[1.9]">
+          送信いただくと、
+          <Link href="/privacy" className="text-primary underline underline-offset-2">
+            プライバシーポリシー
+          </Link>
+          に同意したものとみなします。
+        </p>
         <div className="text-center pt-2">
           <button
             type="submit"

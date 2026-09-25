@@ -10,14 +10,16 @@ import { usePathname } from "next/navigation";
  * 改行されてしまう。Google の BudouX で文節境界を求め、その位置にゼロ幅スペースを挿入し、
  * CSS（.budoux-block）で文節の途中では折り返さないようにする。
  * インライン要素（強調・リンクなど）をまたぐ文も1つの文として解析される。
- * PC幅（768px以上）では何もしない（PC版の見た目は変えない）。
+ * PC幅（768px以上）では、[data-phrase-all] を付けた条文ページ以外は何もしない（PC版の見た目は変えない）。
  */
 export default function PhraseBreaks() {
   const pathname = usePathname();
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 767px)");
-    if (!mq.matches) return;
+    // スマホは全ページ。PC幅では [data-phrase-all]（プライバシーポリシー等の条文ページ）だけ。
+    const desktopRoots = Array.from(document.querySelectorAll<HTMLElement>("[data-phrase-all]"));
+    if (!mq.matches && desktopRoots.length === 0) return;
 
     let cancelled = false;
     // ハイドレーション完了後（Reactの描画が落ち着いてから）に実行
@@ -28,7 +30,11 @@ export default function PhraseBreaks() {
         className: "budoux-block",
         separator: "\u200b",
       });
-      parser.applyToElement(document.body);
+      if (mq.matches) {
+        parser.applyToElement(document.body);
+      } else {
+        desktopRoots.forEach((el) => parser.applyToElement(el));
+      }
       document.documentElement.classList.add("js-phrase");
     }, 400);
 

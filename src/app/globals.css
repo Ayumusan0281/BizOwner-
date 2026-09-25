@@ -168,6 +168,12 @@ body {
   }
 }
 
+/* 条文ページ（プライバシーポリシー等）は、PC幅でも文節の途中では折り返さない */
+[data-phrase-all] .budoux-block {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 /* ── Ghost Button ── */
 .btn-ghost {
   display: inline-flex;
