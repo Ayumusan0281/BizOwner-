@@ -5,9 +5,12 @@ import { buildChatworkMessage, parseContact } from "../../../lib/contact";
  *
  * 必要な環境変数（Vercel の Environment Variables）
  *   CHATWORK_API_TOKEN            … 投稿に使うChatworkのAPIトークン（秘密。ブラウザには出さない）
- *   CHATWORK_CONTACT_ROOM_ID      … 投稿先ルームID（数字）
+ *   CHATWORK_CONTACT_ROOM_ID      … （任意）投稿先ルームID。未設定なら下の既定値を使う
  */
 export const runtime = "nodejs";
+
+/** 既定の投稿先：Chatworkルーム「全国起業家協会/業務/メイン」（ルームIDは秘密情報ではない） */
+const DEFAULT_ROOM_ID = "443131528";
 
 // 簡易レート制限（同一IPから10分に5回まで）。サーバーレスのため完全ではなく、あくまで補助。
 const hits = new Map<string, number[]>();
@@ -73,9 +76,9 @@ export async function POST(req: Request) {
   if (!parsed.ok) return json(400, { ok: false, error: parsed.error });
 
   const token = process.env.CHATWORK_API_TOKEN;
-  const roomId = process.env.CHATWORK_CONTACT_ROOM_ID;
+  const roomId = process.env.CHATWORK_CONTACT_ROOM_ID || DEFAULT_ROOM_ID;
   if (!token || !roomId || !/^\d+$/.test(roomId)) {
-    console.error("[contact] CHATWORK_API_TOKEN / CHATWORK_CONTACT_ROOM_ID が未設定または不正です");
+    console.error("[contact] CHATWORK_API_TOKEN が未設定、またはルームIDが不正です");
     return json(503, { ok: false, error: "not_configured" });
   }
 
