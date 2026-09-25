@@ -2,29 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { CATEGORY_LABELS, MAX_MESSAGE } from "@/lib/contact";
 
 type Status = "idle" | "submitting" | "success" | "error";
-
-/**
- * Web3Forms のアクセスキー（公開前提のキー。ブラウザに配信される値で、秘密情報ではない）。
- * 発行方法：https://web3forms.com/ でメールアドレスを入力するとキーがメールで届く。
- * 環境変数 NEXT_PUBLIC_WEB3FORMS_KEY を設定した場合はそちらを優先する。
- */
-const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "";
 
 const CONTACT_EMAIL = "main@business-manabiya.com";
 const LINE_URL = "https://lin.ee/woJeT8Q";
 
-const CATEGORY_LABELS: Record<string, string> = {
-  bizowner: "BizOwnerについて",
-  sarudemo: "SARUDEMOについて",
-  comons: "COMON'Sについて",
-  hitohoshi: "HitoHoshiについて",
-  kanehoshi: "KaneHoshiについて",
-  other: "全国起業家協会について・その他",
-};
-
-const MAX_MESSAGE = 3000;
 const inputClass =
   "w-full px-4 py-3 border border-[#d0d0d0] bg-white focus:border-primary focus:outline-none transition-colors text-[16px] md:text-[14px]";
 const labelClass =
@@ -99,25 +83,15 @@ export default function ContactForm() {
       setErrorMessage(`メッセージは${MAX_MESSAGE}文字以内でご入力ください。`);
       return;
     }
-    if (!ACCESS_KEY) {
-      setStatus("error");
-      setErrorMessage("現在、フォームからの送信を準備中です。恐れ入りますが、下記の方法でご連絡ください。");
-      return;
-    }
-
     setStatus("submitting");
     setErrorMessage("");
 
     const payload = {
-      access_key: ACCESS_KEY,
-      subject: `【全国起業家協会】お問い合わせ（${CATEGORY_LABELS[category] ?? category}）`,
-      from_name: "全国起業家協会 お問い合わせフォーム",
-      replyto: email,
       name,
-      company: String(data.get("company") ?? "").trim() || "（未記入）",
+      company: String(data.get("company") ?? "").trim(),
       email,
-      phone: String(data.get("phone") ?? "").trim() || "（未記入）",
-      category: CATEGORY_LABELS[category] ?? category,
+      phone: String(data.get("phone") ?? "").trim(),
+      category,
       message,
       botcheck: "",
     };
@@ -125,7 +99,7 @@ export default function ContactForm() {
     const controller = new AbortController();
     const timer = window.setTimeout(() => controller.abort(), 20000);
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
@@ -133,9 +107,15 @@ export default function ContactForm() {
       });
       const result = await res.json().catch(() => ({}));
 
-      if (res.ok && result.success) {
+      if (res.ok && result.ok) {
         setStatus("success");
         form.reset();
+      } else if (res.status === 400 || res.status === 429) {
+        setStatus("error");
+        setErrorMessage(result.error || "入力内容をご確認ください。");
+      } else if (res.status === 503) {
+        setStatus("error");
+        setErrorMessage("現在、フォームからの送信を準備中です。恐れ入りますが、下記の方法でご連絡ください。");
       } else {
         setStatus("error");
         setErrorMessage("送信に失敗しました。お手数ですが、時間をおいて再度お試しください。");
