@@ -43,7 +43,7 @@ export default function LegalPage({ content }: { content: LegalContent }) {
       </section>
 
       <section className="pb-24 bg-white">
-        <div className="max-w-[860px] mx-auto px-6">
+        <div className="max-w-[860px] mx-auto px-6" data-phrase-all>
           <p className="font-[Noto_Sans_JP] text-text-main text-[14px] leading-[2.1] mb-12">
             {content.intro}
           </p>
