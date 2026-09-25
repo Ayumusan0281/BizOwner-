@@ -327,3 +327,7 @@
 ## 公式ロゴ（2026-09-25確定）
 
 全国起業家協会の公式ロゴは新ロゴに確定。素材は `public/brand/`（`zenkoku-logo.png`＝横型、`zenkoku-mark.png`＝マーク）。ファビコン・ショートカットアイコン・OG画像は `src/app/` の `icon.png`・`apple-icon.png`・`favicon.ico`・`opengraph-image.png`・`manifest.ts` で設定済み。各LPの事業別ロゴ（`public/lp/*-logo.png`）とは別物。
+
+## 運用メモ
+
+- 本番の置き場所（2026-09-25〜）：オーナーのVercel Hobby `zenkokukigyoukakyoukai` のプロジェクト `zenkokukigyoukakyoukai`（GitHub `Ayumusan0281/BizOwner-` の `main` に自動デプロイ）。独自URL `https://zenkokukigyoukakyoukai.vercel.app`、旧 `biz-owner.vercel.app` は307でここへ転送。
