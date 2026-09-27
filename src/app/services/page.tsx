@@ -40,7 +40,7 @@ export default function ServicesPage() {
                 letterSpacing: "-0.2px",
               }}
             >
-              全国起業家協会が提供する3つの事業領域と、各サービスの詳細をご紹介します。
+              DeraBizが提供する3つの事業領域と、各サービスの詳細をご紹介します。
             </p>
           </FadeUp>
         </div>

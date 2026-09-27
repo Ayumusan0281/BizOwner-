@@ -42,7 +42,7 @@ function CtaBannerCard() {
         <div className="lp-gradient-border">
           <div className="bg-white py-8 px-6 md:px-10 text-center">
             <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2">貴社の採用状況をお伺いしたうえで、最適な導入プランをご提案します。</p>
-            <p className="text-text-light text-[13px] mb-6">お問い合わせは全国起業家協会の公式LINEからお気軽にご連絡ください。</p>
+            <p className="text-text-light text-[13px] mb-6">お問い合わせはDeraBizの公式LINEからお気軽にご連絡ください。</p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[15px] md:text-[16px] px-8 py-4">
               <LineIcon className="w-5 h-5" />
               公式LINEで無料相談する
@@ -56,7 +56,7 @@ function CtaBannerCard() {
 
 /* ── Marquee Banner ── */
 function MarqueeBanner() {
-  const items = ["「不採用」をコストで終わらせない", "採用代行", "不採用人材の再活用", "固定費は月額10,000円のみ", "初期費用0円", "成果報酬型", "全国起業家協会運営"];
+  const items = ["「不採用」をコストで終わらせない", "採用代行", "不採用人材の再活用", "固定費は月額10,000円のみ", "初期費用0円", "成果報酬型", "DeraBiz運営"];
   const doubled = [...items, ...items];
   return (
     <div className="bg-lp py-4 overflow-hidden">
@@ -250,7 +250,7 @@ export default function HitoHoshiPage() {
                 tag: "PILLAR 02",
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25M6.75 17.25L1.5 12l5.25-5.25M14 4l-4 16" />,
                 title: "不採用人材の再活用",
-                desc: "提携先を通じた他社への橋渡し、または協会が統括する起業支援プログラムへの接続で、次の選択肢につなぎます。",
+                desc: "提携先を通じた他社への橋渡し、または当社が統括する起業支援プログラムへの接続で、次の選択肢につなぎます。",
                 outcome: "→ 不採用人材もいずれかで成約した際に成果報酬発生。",
                 accent: "bg-orange-50",
               },
@@ -410,7 +410,7 @@ export default function HitoHoshiPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {[
                 { rt: "ROUTE A", cond: "他社就業が決定", amt: "10%", note: "※ 提携事業者から支払われる紹介手数料に連動" },
-                { rt: "ROUTE B", cond: "BizOwner／SARUDEMOで起業", amt: "協会規定", note: "※ 全国起業家協会が定める紹介料水準に準拠" },
+                { rt: "ROUTE B", cond: "BizOwner／SARUDEMOで起業", amt: "当社規定", note: "※ DeraBizが定める紹介料水準に準拠" },
               ].map((f) => (
                 <div key={f.rt} className="bg-bg-section rounded-2xl p-6 border border-gray-100">
                   <p className="text-[11px] font-bold text-lp-accent tracking-[0.1em] mb-2">{f.rt}</p>
@@ -467,12 +467,12 @@ export default function HitoHoshiPage() {
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">運営体制</h2>
             <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
-              HitoHoshiは、「一般社団法人 全国起業家協会」が展開する起業/経営支援事業の<span className="whitespace-nowrap">一つとして</span>運営されているサービスです。
+              HitoHoshiは、「株式会社DeraBiz」が展開する起業/経営支援事業の<span className="whitespace-nowrap">一つとして</span>運営されているサービスです。
             </p>
           </FadeSlide>
           <FadeSlide direction="up">
             <div className="text-center mb-2">
-              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括本部）</span>
+              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">株式会社DeraBiz（統括本部）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
@@ -517,7 +517,7 @@ export default function HitoHoshiPage() {
             <div className="absolute left-[27px] md:left-[41px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-lp-accent via-lp to-cta/20 rounded-full" />
             <div className="space-y-10">
               {[
-                { title: "お問い合わせ", desc: "全国起業家協会の公式LINEからご連絡下さい。案内に沿って進めて下さい。" },
+                { title: "お問い合わせ", desc: "DeraBizの公式LINEからご連絡下さい。案内に沿って進めて下さい。" },
                 { title: "ヒアリング", desc: "面談にて現在の採用状況・使用アカウント・課題感を確認致します。" },
                 { title: "ご契約", desc: "サービス範囲・料金体系をすり合わせのうえ、契約を締結します。" },
                 { title: "運用開始", desc: "アカウント運用・選考代行を順次開始。", last: true },
@@ -567,14 +567,14 @@ export default function HitoHoshiPage() {
             <p className="text-white/50 text-[15px] leading-[2] mb-12 max-w-lg mx-auto">
               貴社の採用状況をお伺いしたうえで、最適な導入プランをご提案致します。
               <br className="hidden md:block" />
-              お問い合わせは全国起業家協会の公式LINEからお気軽にご連絡ください。
+              お問い合わせはDeraBizの公式LINEからお気軽にご連絡ください。
             </p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn lp-shine text-[18px] px-12 py-6 shadow-[0_0_40px_rgba(232,93,47,0.4)] hover:shadow-[0_0_60px_rgba(232,93,47,0.6)] hover:-translate-y-1 transition-all">
               <LineIcon className="w-7 h-7" />
               公式LINEで相談する
             </a>
             <p className="text-white/30 text-[12px] mt-8 leading-[1.8]">
-              HitoHoshi運営事務局：一般社団法人 全国起業家協会<br />
+              HitoHoshi運営事務局：株式会社DeraBiz<br />
               Email：<a href="mailto:main@business-manabiya.com" className="underline hover:text-white/60">main@business-manabiya.com</a><span className="hidden md:inline">　</span><br className="md:hidden" />受付時間：平日 10:00-18:00
             </p>
           </FadeSlide>
@@ -594,7 +594,7 @@ export default function HitoHoshiPage() {
               <Link href="#contact" className="hover:text-white/70 transition-colors">お問い合わせ</Link>
             </div>
           </div>
-          <p className="text-white/25 text-[11px] text-center mt-8 leading-[1.8]">全国起業家協会は全国のスタートアップ・ベンチャー企業を心から応援しております。</p>
+          <p className="text-white/25 text-[11px] text-center mt-8 leading-[1.8]">DeraBizは全国のスタートアップ・ベンチャー企業を心から応援しております。</p>
           <p className="text-white/20 text-[11px] text-center mt-2 font-[Inter]">&copy; 2026 HitoHoshi. All Rights Reserved.</p>
         </div>
       </footer>

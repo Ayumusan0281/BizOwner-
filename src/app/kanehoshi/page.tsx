@@ -42,7 +42,7 @@ function CtaBannerCard() {
         <div className="lp-gradient-border">
           <div className="bg-white py-8 px-6 md:px-10 text-center">
             <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2">御社の状況をお伺いしたうえで、参加条件をご案内します。</p>
-            <p className="text-text-light text-[13px] mb-6">お問い合わせは全国起業家協会の公式LINEからお気軽にご連絡ください。</p>
+            <p className="text-text-light text-[13px] mb-6">お問い合わせはDeraBizの公式LINEからお気軽にご連絡ください。</p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[15px] md:text-[16px] px-8 py-4">
               <LineIcon className="w-5 h-5" />
               公式LINEで無料相談する
@@ -56,7 +56,7 @@ function CtaBannerCard() {
 
 /* ── Marquee Banner ── */
 function MarqueeBanner() {
-  const items = ["融資で勝てる決算書をつくる", "EC運用代行", "売上実績づくり", "月額10,000円のみ", "初期費用0円", "1年契約・自動更新", "全国起業家協会運営"];
+  const items = ["融資で勝てる決算書をつくる", "EC運用代行", "売上実績づくり", "月額10,000円のみ", "初期費用0円", "1年契約・自動更新", "DeraBiz運営"];
   const doubled = [...items, ...items];
   return (
     <div className="bg-lp py-4 overflow-hidden">
@@ -127,7 +127,7 @@ export default function KaneHoshiPage() {
               </FadeSlide>
               <FadeSlide direction="up" delay={500} className="order-4 md:order-none">
                 <p className="text-[16px] md:text-[18px] text-text-body leading-[1.9] max-w-lg">
-                  協会提携の運用事業者が、御社の法人でECショップを運営。
+                  当社提携の運用事業者が、御社の法人でECショップを運営。
                   <br className="hidden md:block" />
                   売上実績を積み上げ、次の融資・補助金申請に備えます。
                 </p>
@@ -233,7 +233,7 @@ export default function KaneHoshiPage() {
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">
               御社の「法人」で、
               <br />
-              <span className="text-lp-accent lp-marker">協会提携の運用事業者</span>がECショップを運営する。
+              <span className="text-lp-accent lp-marker">当社提携の運用事業者</span>がECショップを運営する。
             </h2>
             <p className="text-[14px] md:text-[15px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
               KaneHoshiは、御社と運用事業者の間に立ち、ECショップの共同運営を成立させます。御社は法人としての出店に協力するだけです。
@@ -256,7 +256,7 @@ export default function KaneHoshiPage() {
               },
               {
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 1.994-4.694 2.629-7.178.043-.106.043-.207.043-.322a1.125 1.125 0 00-1.125-1.125H5.397M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />,
-                title: "協会提携の運用事業者",
+                title: "当社提携の運用事業者",
                 desc: "出品・受注・在庫・問い合わせを実施",
                 dark: false,
               },
@@ -377,7 +377,7 @@ export default function KaneHoshiPage() {
               <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">05 — ROLES</span>
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">
-              運用は、協会提携の運用事業者が自走。
+              運用は、当社提携の運用事業者が自走。
               <br />
               御社の作業は最小限。
             </h2>
@@ -504,12 +504,12 @@ export default function KaneHoshiPage() {
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">運営体制</h2>
             <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
-              KaneHoshiは、「一般社団法人 全国起業家協会」が展開する事業ネットワークの<span className="whitespace-nowrap">一員として</span>運営されているサービスです。
+              KaneHoshiは、「株式会社DeraBiz」が展開する事業ネットワークの<span className="whitespace-nowrap">一員として</span>運営されているサービスです。
             </p>
           </FadeSlide>
           <FadeSlide direction="up">
             <div className="text-center mb-2">
-              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括本部）</span>
+              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">株式会社DeraBiz（統括本部）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
@@ -605,14 +605,14 @@ export default function KaneHoshiPage() {
             <p className="text-white/50 text-[15px] leading-[2] mb-12 max-w-lg mx-auto">
               御社の状況に合わせて、参加条件と進め方をご案内します。
               <br className="hidden md:block" />
-              お問い合わせは全国起業家協会の公式LINEからお気軽にご連絡ください。
+              お問い合わせはDeraBizの公式LINEからお気軽にご連絡ください。
             </p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn lp-shine text-[18px] px-12 py-6 shadow-[0_0_40px_rgba(232,93,47,0.4)] hover:shadow-[0_0_60px_rgba(232,93,47,0.6)] hover:-translate-y-1 transition-all">
               <LineIcon className="w-7 h-7" />
               公式LINEで相談する
             </a>
             <p className="text-white/30 text-[12px] mt-8 leading-[1.8]">
-              KaneHoshi運営事務局：一般社団法人 全国起業家協会<br />
+              KaneHoshi運営事務局：株式会社DeraBiz<br />
               Email：<a href="mailto:main@business-manabiya.com" className="underline hover:text-white/60">main@business-manabiya.com</a><span className="hidden md:inline">　</span><br className="md:hidden" />受付時間：平日 10:00-18:00
             </p>
           </FadeSlide>
@@ -632,7 +632,7 @@ export default function KaneHoshiPage() {
               <Link href="#contact" className="hover:text-white/70 transition-colors">お問い合わせ</Link>
             </div>
           </div>
-          <p className="text-white/25 text-[11px] text-center mt-8 leading-[1.8]">全国起業家協会は全国のスタートアップ・ベンチャー企業を心から応援しております。</p>
+          <p className="text-white/25 text-[11px] text-center mt-8 leading-[1.8]">DeraBizは全国のスタートアップ・ベンチャー企業を心から応援しております。</p>
           <p className="text-white/20 text-[11px] text-center mt-2 font-[Inter]">&copy; 2026 KaneHoshi. All Rights Reserved.</p>
         </div>
       </footer>

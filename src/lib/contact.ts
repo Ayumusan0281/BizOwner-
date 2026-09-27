@@ -9,7 +9,7 @@ export const CATEGORY_LABELS: Record<string, string> = {
   comons: "COMON'Sについて",
   hitohoshi: "HitoHoshiについて",
   kanehoshi: "KaneHoshiについて",
-  other: "全国起業家協会について・その他",
+  other: "DeraBizについて・その他",
 };
 
 export const MAX_MESSAGE = 3000;

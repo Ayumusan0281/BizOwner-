@@ -59,7 +59,7 @@ export default function Home() {
               letterSpacing: "0.16em",
             }}
           >
-            全国起業家協会
+            DeraBiz
           </h1>
           <p
             className="font-[Noto_Sans_JP] text-white text-lg md:text-[22px] font-medium mb-3 fv-fade"
@@ -125,7 +125,7 @@ export default function Home() {
                   className="font-[Noto_Sans_JP] text-text-main text-[14px] leading-[2.1] mb-5"
                   style={{ letterSpacing: "-0.2px" }}
                 >
-                  一般社団法人 全国起業家協会は、営業支援・コミュニティ運営・経営コンサルティングの3つの柱で企業の成長を多角的に支援するビジネスパートナーです。
+                  株式会社DeraBizは、営業支援・コミュニティ運営・経営コンサルティングの3つの柱で企業の成長を多角的に支援するビジネスパートナーです。
                 </p>
                 <p
                   className="font-[Noto_Sans_JP] text-text-main text-[14px] leading-[2.1]"

@@ -298,7 +298,7 @@ export default function ComonsPage() {
                 points: [
                   "初年度で年商1億円を達成した実体験に基づく経営指導",
                   "経営コンサルタントとして50社以上を指導した実績",
-                  "全国起業家協会代表理事\n資金繰り・営業戦略・採用まで伴走",
+                  "資金繰り・営業戦略・採用まで伴走",
                 ],
               },
               {
@@ -368,17 +368,17 @@ export default function ComonsPage() {
               <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">04 — SCREENING</span>
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">
-              顧問について：<span className="text-lp-accent lp-marker">協会の審査基準</span>
+              顧問について：<span className="text-lp-accent lp-marker">当社の審査基準</span>
             </h2>
             <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
-              COMON&apos;Sに登録されている顧問は、全員が協会規定の厳選なる審査を通過しています。誰でも自由に登録できるわけではありません。
+              COMON&apos;Sに登録されている顧問は、全員が当社規定の厳選なる審査を通過しています。誰でも自由に登録できるわけではありません。
             </p>
           </FadeSlide>
           <StaggerChildren staggerMs={100} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {[
               { title: "実務経験・実績", desc: "当該分野での実務経験と、具体的な実績があること。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /> },
               { title: "過去の実績・顧客の声", desc: "実際に支援した実績や、顧客からの評価・声を確認します。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25M6.75 17.25L1.5 12l5.25-5.25M14 4l-4 16" /> },
-              { title: "代表理事本人による面談", desc: "経営に役立つ分野であれば専門は問いません。最終的には必ず、代表理事本人が直接会って人柄・相性を見極めています。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" /> },
+              { title: "代表取締役本人による面談", desc: "経営に役立つ分野であれば専門は問いません。最終的には必ず、代表取締役本人が直接会って人柄・相性を見極めています。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" /> },
             ].map((item) => (
               <StaggerItem key={item.title}>
                 <TiltCard intensity={4} className="h-full">
@@ -397,9 +397,9 @@ export default function ComonsPage() {
             <p className="text-center font-bold text-lp text-[14px] tracking-[0.05em] mb-8">顧問登録の流れ</p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-6">
               {[
-                { step: "1", title: "エントリー", desc: "協会からの招待、又は信頼できる人物からの推薦のみで対応。" },
+                { step: "1", title: "エントリー", desc: "当社からの招待、又は信頼できる人物からの推薦のみで対応。" },
                 { step: "2", title: "実績確認", desc: "実務経験・過去の実績や評価を総合的に確認します。" },
-                { step: "3", title: "代表理事による面談", desc: "直接会って人柄・相性・信頼性を確認します。" },
+                { step: "3", title: "代表取締役による面談", desc: "直接会って人柄・相性・信頼性を確認します。" },
                 { step: "4", title: "登録開始", desc: "審査通過後、顧問プロフィールを公開します。" },
               ].map((s) => (
                 <div key={s.step} className="flex md:block items-center gap-4 text-left md:text-center bg-bg-section md:bg-transparent border border-gray-100 md:border-0 rounded-2xl md:rounded-none px-5 py-4 md:p-0">
@@ -519,12 +519,12 @@ export default function ComonsPage() {
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">運営体制</h2>
             <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
-              COMON&apos;Sは、一般社団法人 全国起業家協会が展開する事業ネットワークの<span className="whitespace-nowrap">一員として</span>運営されています。
+              COMON&apos;Sは、株式会社DeraBizが展開する事業ネットワークの<span className="whitespace-nowrap">一員として</span>運営されています。
             </p>
           </FadeSlide>
           <FadeSlide direction="up">
             <div className="text-center mb-2">
-              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括法人）</span>
+              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">株式会社DeraBiz（統括法人）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
@@ -606,7 +606,7 @@ export default function ComonsPage() {
               { q: "顧問は自由に選べますか？", a: "はい。COMON'Sには様々な分野のプロが顧問として登録されており、その中からご自身の会社に必要な顧問を自由にお選びいただけます。カテゴリーの縛りはありません。" },
               { q: "契約期間や解約条件は？", a: "ご契約は最低1年間です。契約満了の1ヶ月前までにお申し出がない場合は自動更新となります。詳細は個別面談にてご説明します。" },
               { q: "顧問の人数に上限はありますか？", a: "上限はありません。経営の成長フェーズに合わせて、必要な専門顧問を何人でも同一料金（1名30,000円/月）で追加していただけます。" },
-              { q: "自分も顧問として登録できますか？", a: "COMON'Sの顧問は、協会からの招待、又は信頼できる人物からの推薦のみで受け付けています。実務経験・実績の確認と、代表理事本人による面談を経て登録が決まります。誰でも自由に登録できるわけではありません。" },
+              { q: "自分も顧問として登録できますか？", a: "COMON'Sの顧問は、当社からの招待、又は信頼できる人物からの推薦のみで受け付けています。実務経験・実績の確認と、代表取締役本人による面談を経て登録が決まります。誰でも自由に登録できるわけではありません。" },
             ].map((faq, i) => (
               <StaggerItem key={i}>
                 <details className="group bg-white rounded-2xl border border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.03)] overflow-hidden">
@@ -659,7 +659,7 @@ export default function ComonsPage() {
               公式LINEで相談する
             </a>
             <p className="text-white/30 text-[12px] mt-8 leading-[1.8]">
-              COMON&apos;S運営事務局：一般社団法人 全国起業家協会<br />
+              COMON&apos;S運営事務局：株式会社DeraBiz<br />
               Email：<a href="mailto:main@business-manabiya.com" className="underline hover:text-white/60">main@business-manabiya.com</a><span className="hidden md:inline">　</span><br className="md:hidden" />受付時間：平日 10:00-18:00
             </p>
           </FadeSlide>

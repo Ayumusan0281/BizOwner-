@@ -431,12 +431,12 @@ export default function SarudemoPage() {
             </div>
             <h2 className="font-bold text-lp text-[26px] md:text-[36px] leading-[1.5]">運営体制</h2>
             <p className="text-[14px] text-text-body mt-6 max-w-lg mx-auto leading-[1.9]">
-              SARUDEMOは、「一般社団法人 全国起業家協会」が展開する起業/経営支援事業の<span className="whitespace-nowrap">一つとして</span>運営されているサービスです。
+              SARUDEMOは、「株式会社DeraBiz」が展開する起業/経営支援事業の<span className="whitespace-nowrap">一つとして</span>運営されているサービスです。
             </p>
           </FadeSlide>
           <FadeSlide direction="up">
             <div className="text-center mb-2">
-              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">一般社団法人 全国起業家協会（統括本部）</span>
+              <span className="inline-block bg-lp text-white font-bold text-[13px] md:text-[14px] px-7 py-3.5 rounded-2xl shadow-lg">株式会社DeraBiz（統括本部）</span>
             </div>
             <div className="text-center text-lp-accent text-[20px] my-2">▾</div>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
