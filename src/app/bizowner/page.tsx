@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 /* メインCV：公式LINE追加。全CTAの遷移先 */
-const LINE_URL = "https://lin.ee/woJeT8Q";
+const LINE_URL = "https://lin.ee/uO9SZPl";
 
 /* ── CTA Banner (variation A - full width) ── */
 function CtaBannerFull() {

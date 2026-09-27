@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 };
 
 /* メインCV：公式LINE追加。全CTAの遷移先 */
-/* 全国起業家協会 official（公式LINE）。全LPのCTA共通 */
-const LINE_URL = "https://lin.ee/woJeT8Q";
+/* DeraBiz official（公式LINE）。全LPのCTA共通 */
+const LINE_URL = "https://lin.ee/uO9SZPl";
 
 /* ── CTA Banner (variation A - full width) ── */
 function CtaBannerFull() {

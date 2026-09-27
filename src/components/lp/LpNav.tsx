@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import LineIcon from "@/components/LineIcon";
 
-const LINE_URL = "https://lin.ee/woJeT8Q";
+const LINE_URL = "https://lin.ee/uO9SZPl";
 
 export default function LpNav({
   brand,

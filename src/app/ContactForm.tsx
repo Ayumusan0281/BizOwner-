@@ -7,7 +7,7 @@ import { CATEGORY_LABELS, MAX_MESSAGE } from "@/lib/contact";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const CONTACT_EMAIL = "main@business-manabiya.com";
-const LINE_URL = "https://lin.ee/woJeT8Q";
+const LINE_URL = "https://lin.ee/uO9SZPl";
 
 const inputClass =
   "w-full px-4 py-3 border border-[#d0d0d0] bg-white focus:border-primary focus:outline-none transition-colors text-[16px] md:text-[14px]";

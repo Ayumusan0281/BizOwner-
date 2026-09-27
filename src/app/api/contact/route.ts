@@ -9,8 +9,8 @@ import { buildChatworkMessage, parseContact } from "../../../lib/contact";
  */
 export const runtime = "nodejs";
 
-/** 既定の投稿先：Chatworkルーム「全国起業家協会/業務/メイン」（ルームIDは秘密情報ではない） */
-const DEFAULT_ROOM_ID = "443131528";
+/** 既定の投稿先：Chatworkルーム「DeraBiz/業務/メイン」（ルームIDは秘密情報ではない） */
+const DEFAULT_ROOM_ID = "448199853";
 
 // 簡易レート制限（同一IPから10分に5回まで）。サーバーレスのため完全ではなく、あくまで補助。
 const hits = new Map<string, number[]>();
