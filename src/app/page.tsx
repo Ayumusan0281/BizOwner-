@@ -51,7 +51,7 @@ export default function Home() {
         />
         <div className="relative z-10 text-center px-6 max-w-[900px] -mt-[8vh]">
           <Image
-            src="/brand/derabiz-mark.png"
+            src="/brand/derabiz-mark-white.png"
             alt="DeraBiz"
             width={120}
             height={120}

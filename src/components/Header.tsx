@@ -16,7 +16,7 @@ export default function Header({
       <header className="fixed top-0 left-0 right-0 z-[200] bg-black/82 backdrop-blur-[20px] backdrop-saturate-[180%]">
         <div className="max-w-[1100px] mx-auto pl-2 pr-4 md:px-6 flex items-center justify-between h-[56px]">
           <Link href="/" className="flex items-center gap-2" aria-label="株式会社DeraBiz">
-            <Image src="/brand/derabiz-mark.png" alt="" width={36} height={36} className="w-9 h-9 " priority />
+            <Image src="/brand/derabiz-mark-white.png" alt="" width={36} height={36} className="w-9 h-9 " priority />
             <span className="font-[Noto_Serif_JP] font-medium text-white text-[16px] md:text-[20px] tracking-[0.08em] md:tracking-[0.12em] whitespace-nowrap">
               株式会社DeraBiz
             </span>
