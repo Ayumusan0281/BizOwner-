@@ -204,7 +204,7 @@ export default function ServicesPage() {
                   title: "COMON'S",
                   titleFont: "font-[Josefin_Sans]",
                   desc: "法人を、ひとりで背負わない。厳選な審査を通過した顧問チームで経営を伴走。",
-                  tags: ["月額30,000円〜", "顧問1名から", "分野不問"],
+                  tags: ["月額100,000円〜", "顧問1名から", "分野不問"],
                   bg: "linear-gradient(160deg,#3a0b14 0%,#8a2e3c 60%,#c4515e 100%)",
                 },
                 {

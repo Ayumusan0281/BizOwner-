@@ -50,6 +50,14 @@ export default function Home() {
           }}
         />
         <div className="relative z-10 text-center px-6 max-w-[900px] -mt-[8vh]">
+          <Image
+            src="/brand/derabiz-logo.png"
+            alt="DeraBiz"
+            width={120}
+            height={120}
+            priority
+            className="mx-auto mb-5 w-[88px] h-[88px] md:w-[120px] md:h-[120px] rounded-xl fv-fade"
+          />
           <h1
             className="font-semibold text-white mb-8 fv-title-anim"
             style={{
@@ -373,7 +381,7 @@ export default function Home() {
                   title: "COMON'S",
                   titleFont: "font-[Josefin_Sans]",
                   desc: "法人を、ひとりで背負わない。厳選な審査を通過した顧問チームで経営を伴走します。",
-                  tags: ["月額30,000円〜", "顧問1名から", "分野不問"],
+                  tags: ["月額100,000円〜", "顧問1名から", "分野不問"],
                   bg: "linear-gradient(120deg,#3a0b14 0%,#8a2e3c 60%,#c4515e 100%)",
                 },
                 {

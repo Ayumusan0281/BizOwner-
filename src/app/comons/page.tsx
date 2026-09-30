@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FadeSlide from "@/components/manabiya/FadeSlide";
 import StaggerChildren, { StaggerItem } from "@/components/manabiya/StaggerChildren";
+import CountUp from "@/components/manabiya/CountUp";
 import TiltCard from "@/components/manabiya/TiltCard";
 import ImageReveal from "@/components/lp/ImageReveal";
 import LineDivider from "@/components/lp/LineDivider";
@@ -56,7 +57,7 @@ function CtaBannerCard() {
 
 /* ── Marquee Banner ── */
 function MarqueeBanner() {
-  const items = ["法人を、ひとりで背負わない。", "顧問1名から月額30,000円", "分野を問わず自由に選べる", "経営目線でつながる顧問チーム", "人数の上限なく後から追加可能", "厳選なる審査を通過した顧問陣"];
+  const items = ["法人を、ひとりで背負わない。", "顧問1名から月額100,000円", "分野を問わず自由に選べる", "経営目線でつながる顧問チーム", "人数の上限なく後から追加可能", "厳選なる審査を通過した顧問陣"];
   const doubled = [...items, ...items];
   return (
     <div className="bg-lp py-4 overflow-hidden">
@@ -112,7 +113,7 @@ export default function ComonsPage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cta opacity-75" />
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-cta" />
                   </span>
-                  <span className="text-lp font-bold text-[13px]">初期費用0円・顧問1名から月額30,000円</span>
+                  <span className="text-lp font-bold text-[13px]">初期費用0円・顧問1名から月額100,000円</span>
                 </div>
               </FadeSlide>
               <FadeSlide direction="up" delay={300} className="order-2 md:order-none">
@@ -150,7 +151,7 @@ export default function ComonsPage() {
                 {/* Floating stats */}
                 <div className="absolute -bottom-4 right-3 md:right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">顧問1名あたり</p>
-                  <p className="whitespace-nowrap font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥30,000<span className="text-[11px] text-text-light font-normal">/月〜</span></p>
+                  <p className="whitespace-nowrap font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥<CountUp end={100000} /><span className="text-[11px] text-text-light font-normal">/月〜</span></p>
                 </div>
                 <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">人数上限</p>
@@ -251,8 +252,8 @@ export default function ComonsPage() {
               },
               {
                 icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />,
-                title: "月額30,000円から",
-                desc: "1顧問 月額30,000円（税別）から。必要な顧問を、必要なだけ。",
+                title: "月額100,000円から",
+                desc: "1顧問 月額100,000円（税別）から。必要な顧問を、必要なだけ。",
                 accent: "bg-orange-50",
               },
             ].map((item) => (
@@ -427,7 +428,7 @@ export default function ComonsPage() {
               <span className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em]">05 — PRICING</span>
             </div>
             <h2 className="font-bold text-text-dark text-[26px] md:text-[36px] leading-[1.5]">
-              料金は、シンプルに「顧問1人＝<span className="text-cta lp-marker-orange">30,000円</span>」。
+              料金は、シンプルに「顧問1人＝<span className="text-cta lp-marker-orange">100,000円</span>」。
             </h2>
           </FadeSlide>
           <FadeSlide direction="up">
@@ -448,7 +449,7 @@ export default function ComonsPage() {
                   <div className="bg-white rounded-2xl p-4 md:p-5 text-center border border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
                     <p className="text-[12px] font-bold text-text-dark mb-1">{p.name}</p>
                     <p className="text-[10px] max-[359px]:text-[9.5px] text-text-light mb-3 min-h-[28px]">{p.field}</p>
-                    <p className="whitespace-nowrap text-text-dark font-bold text-[17px] min-[360px]:text-[20px] leading-none">30,000<span className="text-[11px] text-text-light font-normal">円/月</span></p>
+                    <p className="whitespace-nowrap text-text-dark font-bold text-[17px] min-[360px]:text-[20px] leading-none"><CountUp end={100000} /><span className="text-[11px] text-text-light font-normal">円/月</span></p>
                   </div>
                 </TiltCard>
               </StaggerItem>
@@ -458,14 +459,14 @@ export default function ComonsPage() {
             <p className="text-center font-bold text-lp text-[14px] tracking-[0.05em] mb-6">顧問人数ごとの料金イメージ</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
               {[
-                { label: "1名なら", price: "30,000", accent: false },
-                { label: "3名なら", price: "90,000", accent: true },
-                { label: "5名なら", price: "150,000", accent: false },
+                { label: "1名なら", price: 100000, accent: false },
+                { label: "3名なら", price: 300000, accent: true },
+                { label: "5名なら", price: 500000, accent: false },
               ].map((b) => (
                 <div key={b.label} className={`relative rounded-2xl px-5 py-4 md:p-6 flex md:block items-center justify-between md:text-center ${b.accent ? "bg-white border-2 border-lp-accent shadow-[0_14px_34px_-14px_rgba(74,155,217,0.35)]" : "bg-bg-section border border-gray-100"}`}>
                   {b.accent && <div className="absolute -top-3 right-4 md:right-auto md:left-1/2 md:-translate-x-1/2 bg-lp-accent text-white text-[10px] font-bold px-3 py-1 rounded-full">人気</div>}
                   <p className="text-[13px] md:text-[12px] font-bold text-text-light mb-0 md:mb-2">{b.label}</p>
-                  <p className="whitespace-nowrap text-text-dark font-bold text-[22px] md:text-[26px]">{b.price}<span className="text-[12px] text-text-light font-normal">円/月</span></p>
+                  <p className="whitespace-nowrap text-text-dark font-bold text-[22px] md:text-[26px]"><CountUp end={b.price} /><span className="text-[12px] text-text-light font-normal">円/月</span></p>
                 </div>
               ))}
             </div>
@@ -489,7 +490,7 @@ export default function ComonsPage() {
           <StaggerChildren staggerMs={120} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { title: "経営目線でつながる顧問チーム", desc: "分野ごとに窓口が分かれる士業と違い、経営全体を見ながら顧問同士が連携します。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" /> },
-              { title: "必要な分だけ、無理なく", desc: "まとめて契約させられることなく、今困っている領域だけを月30,000円から始められます。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /> },
+              { title: "必要な分だけ、無理なく", desc: "まとめて契約させられることなく、今困っている領域だけを月100,000円から始められます。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /> },
               { title: "実務のプロが、実務で伴走する", desc: "経営もシステムも、“言うだけ”で終わらせず、手を動かして一緒に進めます。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /> },
               { title: "人数の上限なく、後から追加可能", desc: "経営の成長フェーズに合わせて、必要な専門顧問を何人でも同一料金で追加できます。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 4v16m8-8H4" /> },
             ].map((item) => (
@@ -602,10 +603,10 @@ export default function ComonsPage() {
           </FadeSlide>
           <StaggerChildren staggerMs={100} className="space-y-4 lp-accordion">
             {[
-              { q: "顧問は1名からでも契約できますか？", a: "はい、可能です。まとめて契約する必要はなく、今困っている分野の顧問1名から始められます。月額30,000円（税別）から、必要に応じて後から追加できます。" },
+              { q: "顧問は1名からでも契約できますか？", a: "はい、可能です。まとめて契約する必要はなく、今困っている分野の顧問1名から始められます。月額100,000円（税別）から、必要に応じて後から追加できます。" },
               { q: "顧問は自由に選べますか？", a: "はい。COMON'Sには様々な分野のプロが顧問として登録されており、その中からご自身の会社に必要な顧問を自由にお選びいただけます。カテゴリーの縛りはありません。" },
               { q: "契約期間や解約条件は？", a: "ご契約は最低1年間です。契約満了の1ヶ月前までにお申し出がない場合は自動更新となります。詳細は個別面談にてご説明します。" },
-              { q: "顧問の人数に上限はありますか？", a: "上限はありません。経営の成長フェーズに合わせて、必要な専門顧問を何人でも同一料金（1名30,000円/月）で追加していただけます。" },
+              { q: "顧問の人数に上限はありますか？", a: "上限はありません。経営の成長フェーズに合わせて、必要な専門顧問を何人でも同一料金（1名100,000円/月）で追加していただけます。" },
               { q: "自分も顧問として登録できますか？", a: "COMON'Sの顧問は、当社からの招待、又は信頼できる人物からの推薦のみで受け付けています。実務経験・実績の確認と、代表取締役本人による面談を経て登録が決まります。誰でも自由に登録できるわけではありません。" },
             ].map((faq, i) => (
               <StaggerItem key={i}>
