@@ -51,12 +51,12 @@ export default function Home() {
         />
         <div className="relative z-10 text-center px-6 max-w-[900px] -mt-[8vh]">
           <Image
-            src="/brand/derabiz-logo.png"
+            src="/brand/derabiz-mark.png"
             alt="DeraBiz"
             width={120}
             height={120}
             priority
-            className="mx-auto mb-5 w-[88px] h-[88px] md:w-[120px] md:h-[120px] rounded-xl fv-fade"
+            className="mx-auto mb-5 w-[88px] h-[88px] md:w-[120px] md:h-[120px] fv-fade"
           />
           <h1
             className="font-semibold text-white mb-8 fv-title-anim"

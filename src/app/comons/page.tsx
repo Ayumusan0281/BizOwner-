@@ -151,7 +151,7 @@ export default function ComonsPage() {
                 {/* Floating stats */}
                 <div className="absolute -bottom-4 right-3 md:right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-slow border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">顧問1名あたり</p>
-                  <p className="whitespace-nowrap font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥<CountUp end={100000} /><span className="text-[11px] text-text-light font-normal">/月〜</span></p>
+                  <p className="whitespace-nowrap font-[Inter] font-bold text-lp text-[18px] md:text-[22px]">¥100,000<span className="text-[11px] text-text-light font-normal">/月〜</span></p>
                 </div>
                 <div className="absolute -top-2 -right-2 md:-right-6 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20 lp-float-medium border border-gray-100">
                   <p className="text-[10px] text-text-light font-medium">人数上限</p>
