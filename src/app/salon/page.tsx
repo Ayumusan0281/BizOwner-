@@ -257,7 +257,7 @@ export default function SalonPage() {
                 <p className="text-[16px] md:text-[18px] text-text-body leading-[1.9] max-w-lg">
                   起業や仕事に挑戦したい人が、実業家から学び、仲間と行動に変えるオンラインサロンです。
                 </p>
-                <p className="text-[13px] text-text-light mt-3">名古屋のビジネスマン・学生（他地域も大歓迎）</p>
+                <p className="text-[13px] text-text-light mt-3">対象：名古屋のビジネスマン・学生（他地域も大歓迎）</p>
               </FadeSlide>
               <FadeSlide direction="up" delay={700} className="order-5 md:order-none">
                 <div className="flex flex-col gap-3">
@@ -318,7 +318,7 @@ export default function SalonPage() {
           <FadeSlide direction="up" className="text-center mt-14">
             <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-8 py-6">
               <p className="text-white font-bold text-[20px] md:text-[24px] leading-[1.6]">
-                その悩み、<span className="text-cta lp-marker-orange">DeraBiz</span>が解決します
+                その悩み、<span className="text-cta lp-marker-orange">DeraBiz</span>が解決します！
               </p>
               <p className="text-white/60 text-[13px] mt-2">学ぶだけで終わらず、次の行動まで進める場所です。</p>
             </div>
@@ -592,7 +592,7 @@ export default function SalonPage() {
             </div>
             <p className="font-[Inter] font-bold text-lp-accent text-[12px] tracking-[0.3em] mb-6 uppercase">Your next chapter</p>
             <h2 className="font-bold text-white mb-6 text-balance" style={{ fontSize: "clamp(28px,5vw,46px)", lineHeight: 1.4 }}>
-              次の一歩は、ここから
+              次の一歩を、ここから。
             </h2>
             <p className="text-white/50 text-[15px] leading-[2] mb-12 text-balance">
               「ちょっと気になる」その気持ちを、名古屋で行動に。まずは無料イベントから。本格的に参加するなら公式LINEから。
