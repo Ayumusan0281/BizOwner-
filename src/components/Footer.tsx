@@ -63,6 +63,14 @@ export default function Footer() {
                     KaneHoshi
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/salon"
+                    className="hover:text-primary transition-colors whitespace-nowrap"
+                  >
+                    DeraBiz サロン
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>

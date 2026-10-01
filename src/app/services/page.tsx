@@ -231,6 +231,18 @@ export default function ServicesPage() {
                   tags: ["ECアカウント運用代行", "融資・補助金対策"],
                   bg: "linear-gradient(160deg,#3a2a0b 0%,#8a5f2e 60%,#d4a94a 100%)",
                 },
+                {
+                  href: "/salon",
+                  logo: "/brand/derabiz-mark.png",
+                  alt: "DeraBiz ロゴ",
+                  eyebrow: "ONLINE SALON",
+                  badge: "ビジネスマン・学生向け",
+                  title: "DeraBiz",
+                  titleFont: "font-[Josefin_Sans]",
+                  desc: "名古屋で、学ぶ。試す。つながる。毎週のイベントとビジネススクールで、学生の挑戦を後押しするオンラインサロン。",
+                  tags: ["月額3,000円〜", "高校生は無料", "名古屋市内で毎週開催"],
+                  bg: "linear-gradient(160deg,#000000 0%,#1c1408 55%,#8a5a00 100%)",
+                },
               ].map((s) => (
                 <Link
                   key={s.href}
