@@ -299,8 +299,7 @@ export default function ComonsPage() {
                 points: [
                   "初年度で年商1億円を達成した実体験に基づく経営指導",
                   "経営コンサルタントとして50社以上を指導した実績",
-                  "弊社メンター",
-                  "資金繰り・営業戦略・採用まで伴走",
+                  "弊社メンター　資金繰り・営業戦略・採用まで伴走",
                 ],
               },
               {
@@ -380,7 +379,7 @@ export default function ComonsPage() {
             {[
               { title: "実務経験・実績", desc: "当該分野での実務経験と、具体的な実績があること。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /> },
               { title: "過去の実績・顧客の声", desc: "実際に支援した実績や、顧客からの評価・声を確認します。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25M6.75 17.25L1.5 12l5.25-5.25M14 4l-4 16" /> },
-              { title: "メンター本人による面談", desc: "経営に役立つ分野であれば専門は問いません。最終的には必ず、メンター本人が直接会って人柄・相性を見極めています。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" /> },
+              { title: "メンター本人による面談", desc: "経営に役立つ分野であれば専門は問いません。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" /> },
             ].map((item) => (
               <StaggerItem key={item.title}>
                 <TiltCard intensity={4} className="h-full">
@@ -404,8 +403,8 @@ export default function ComonsPage() {
                 { step: "3", title: "メンター本人による面談", desc: "直接会って人柄・相性・信頼性を確認します。" },
                 { step: "4", title: "登録開始", desc: "審査通過後、顧問プロフィールを公開します。" },
               ].map((s) => (
-                <div key={s.step} className="flex md:block items-center gap-4 text-left md:text-center bg-bg-section border border-gray-100 rounded-2xl px-5 py-4 md:p-5">
-                  <div className="w-10 h-10 shrink-0 rounded-full bg-white border-2 border-lp-accent text-lp-accent font-bold flex items-center justify-center mx-0 md:mx-auto mb-0 md:mb-3 text-[14px]">{s.step}</div>
+                <div key={s.step} className="flex md:block items-center gap-4 text-left bg-bg-section border border-gray-100 rounded-2xl px-5 py-4 md:p-5">
+                  <div className="w-10 h-10 shrink-0 rounded-full bg-white border-2 border-lp-accent text-lp-accent font-bold flex items-center justify-center mx-0 mb-0 md:mb-3 text-[14px]">{s.step}</div>
                   <div className="min-w-0">
                     <h4 className="font-bold text-text-dark text-[14px] md:text-[13px] mb-1">{s.title}</h4>
                     <p className="text-[12px] md:text-[11px] text-text-light leading-[1.7]">{s.desc}</p>
