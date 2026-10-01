@@ -299,6 +299,7 @@ export default function ComonsPage() {
                 points: [
                   "初年度で年商1億円を達成した実体験に基づく経営指導",
                   "経営コンサルタントとして50社以上を指導した実績",
+                  "弊社メンター",
                   "資金繰り・営業戦略・採用まで伴走",
                 ],
               },
@@ -379,7 +380,7 @@ export default function ComonsPage() {
             {[
               { title: "実務経験・実績", desc: "当該分野での実務経験と、具体的な実績があること。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /> },
               { title: "過去の実績・顧客の声", desc: "実際に支援した実績や、顧客からの評価・声を確認します。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25M6.75 17.25L1.5 12l5.25-5.25M14 4l-4 16" /> },
-              { title: "代表取締役本人による面談", desc: "経営に役立つ分野であれば専門は問いません。最終的には必ず、代表取締役本人が直接会って人柄・相性を見極めています。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" /> },
+              { title: "メンター本人による面談", desc: "経営に役立つ分野であれば専門は問いません。最終的には必ず、メンター本人が直接会って人柄・相性を見極めています。", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 0a4 4 0 11-8 0 4 4 0 018 0z" /> },
             ].map((item) => (
               <StaggerItem key={item.title}>
                 <TiltCard intensity={4} className="h-full">
@@ -400,10 +401,10 @@ export default function ComonsPage() {
               {[
                 { step: "1", title: "エントリー", desc: "当社からの招待、又は信頼できる人物からの推薦のみで対応。" },
                 { step: "2", title: "実績確認", desc: "実務経験・過去の実績や評価を総合的に確認します。" },
-                { step: "3", title: "代表取締役による面談", desc: "直接会って人柄・相性・信頼性を確認します。" },
+                { step: "3", title: "メンター本人による面談", desc: "直接会って人柄・相性・信頼性を確認します。" },
                 { step: "4", title: "登録開始", desc: "審査通過後、顧問プロフィールを公開します。" },
               ].map((s) => (
-                <div key={s.step} className="flex md:block items-center gap-4 text-left md:text-center bg-bg-section md:bg-transparent border border-gray-100 md:border-0 rounded-2xl md:rounded-none px-5 py-4 md:p-0">
+                <div key={s.step} className="flex md:block items-center gap-4 text-left md:text-center bg-bg-section border border-gray-100 rounded-2xl px-5 py-4 md:p-5">
                   <div className="w-10 h-10 shrink-0 rounded-full bg-white border-2 border-lp-accent text-lp-accent font-bold flex items-center justify-center mx-0 md:mx-auto mb-0 md:mb-3 text-[14px]">{s.step}</div>
                   <div className="min-w-0">
                     <h4 className="font-bold text-text-dark text-[14px] md:text-[13px] mb-1">{s.title}</h4>
@@ -608,7 +609,7 @@ export default function ComonsPage() {
               { q: "顧問は自由に選べますか？", a: "はい。COMON'Sには様々な分野のプロが顧問として登録されており、その中からご自身の会社に必要な顧問を自由にお選びいただけます。カテゴリーの縛りはありません。" },
               { q: "契約期間や解約条件は？", a: "ご契約は最低1年間です。契約満了の1ヶ月前までにお申し出がない場合は自動更新となります。詳細は個別面談にてご説明します。" },
               { q: "顧問の人数に上限はありますか？", a: "上限はありません。経営の成長フェーズに合わせて、必要な専門顧問を何人でも同一料金（1名100,000円/月）で追加していただけます。" },
-              { q: "自分も顧問として登録できますか？", a: "COMON'Sの顧問は、当社からの招待、又は信頼できる人物からの推薦のみで受け付けています。実務経験・実績の確認と、代表取締役本人による面談を経て登録が決まります。誰でも自由に登録できるわけではありません。" },
+              { q: "自分も顧問として登録できますか？", a: "COMON'Sの顧問は、当社からの招待、又は信頼できる人物からの推薦のみで受け付けています。実務経験・実績の確認と、メンター本人による面談を経て登録が決まります。誰でも自由に登録できるわけではありません。" },
             ].map((faq, i) => (
               <StaggerItem key={i}>
                 <details className="group bg-white rounded-2xl border border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.03)] overflow-hidden">
