@@ -68,7 +68,7 @@ export default function Footer() {
                     href="/salon"
                     className="hover:text-primary transition-colors whitespace-nowrap"
                   >
-                    DeraBiz サロン
+                    DeraBiz
                   </Link>
                 </li>
               </ul>

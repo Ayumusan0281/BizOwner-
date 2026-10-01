@@ -416,7 +416,7 @@ export default function Home() {
                   badge: "ビジネスマン・学生向け",
                   title: "DeraBiz",
                   titleFont: "font-[Josefin_Sans]",
-                  desc: "名古屋で、学ぶ。試す。つながる。毎週のイベントとビジネススクールで、学生の挑戦を後押しします。",
+                  desc: "名古屋で学ぶ・挑戦・つながる。毎週のイベントとビジネススクールで、起業家の挑戦を後押しします。",
                   tags: ["月額3,000円〜", "高校生は無料", "名古屋市内で毎週開催"],
                   bg: "linear-gradient(120deg,#000000 0%,#1c1408 55%,#8a5a00 100%)",
                 },

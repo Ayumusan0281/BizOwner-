@@ -10,9 +10,9 @@ import LineIcon from "@/components/LineIcon";
 import { OFFICIAL_LINE_URL as LINE_URL, OPEN_CHAT_URL, upcomingEvents } from "@/content/events";
 
 export const metadata: Metadata = {
-  title: "DeraBiz オンラインサロン｜名古屋で学ぶ・試す・つながる",
+  title: "DeraBiz オンラインサロン｜名古屋で学ぶ・挑戦・つながる",
   description:
-    "名古屋のビジネスマン・学生がメインのオンラインサロン。毎週イベント、ビジネススクール、エンジェル投資家とのコネクション。月額3,000円（税別）、高校生は無料。",
+    "名古屋のビジネスマン・学生向けのオンラインサロン。毎週イベント・ビジネススクール・エンジェル投資家とのコネクション。月額3,000円（税別）、高校生は無料。",
 };
 
 const MARK = "/brand/derabiz-mark.png";
@@ -75,7 +75,7 @@ function CtaBannerCard() {
         <div className="lp-gradient-border">
           <div className="bg-white py-8 px-6 md:px-10 text-center">
             <p className="text-lp font-bold text-[18px] md:text-[22px] mb-2 text-balance">まずは話を聞いてみませんか</p>
-            <p className="text-text-light text-[13px] mb-6">活動内容や参加については、公式LINEの無料相談でお話しできます</p>
+            <p className="text-text-light text-[13px] mb-6">活動内容や参加については、公式LINEの無料相談でお話しできます。</p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn cta-glow lp-shine text-[15px] md:text-[16px] px-8 py-4">
               <LineIcon className="w-5 h-5" />
               公式LINEで無料相談する
@@ -89,7 +89,7 @@ function CtaBannerCard() {
 
 /* ── Marquee ── */
 function MarqueeBanner() {
-  const items = ["名古屋で学ぶ・試す・つながる", "毎週イベント開催", "ビジネススクール", "エンジェル投資家とのコネクション", "月額3,000円（税別）", "高校生は無料"];
+  const items = ["名古屋で学ぶ・挑戦・つながる", "毎週イベント開催", "ビジネススクール", "エンジェル投資家とのコネクション", "月額3,000円（税別）", "高校生は無料"];
   const doubled = [...items, ...items];
   return (
     <div className="bg-lp py-4 overflow-hidden">
@@ -138,49 +138,49 @@ function ItemCard({ icon, tag, title, desc }: { icon: string; tag?: string; titl
 const worries = [
   "起業に興味はあるが、何から始めればいいか分からない",
   "セミナーで学んでも、行動に移せず忘れてしまう",
-  "学校や職場の外に、相談できる仲間や大人がいない",
+  "学校や職場の外に相談できる仲間や大人がいない",
   "名古屋の経営者や専門家と出会う機会がない",
-  "自分のスキルを試せる場がない",
+  "自分のスキルを活かせる場がない",
 ];
 
 const ways = [
-  { en: "LEARN", label: "学びたい", title: "実業家から学ぶ", desc: "一流の経営者や専門家の話を聞いて、次の一歩を決める" },
-  { en: "TRY", label: "試したい", title: "作って、試す", desc: "企画書や商品案を作ってレビューを受ける。地元の事業者と小さな実践にも挑戦できる" },
-  { en: "CONNECT", label: "つながりたい", title: "仲間と進む", desc: "同じ段階の仲間と進捗を共有して、行動を続けやすくする" },
+  { en: "LEARN", label: "学びたい", title: "実業家から学ぶ", desc: "一流の経営者や専門家の話を聞いて次の一歩を決める。" },
+  { en: "TRY", label: "挑戦したい", title: "作って挑戦する", desc: "企画書や商品案を作ってレビューを受ける。地元の事業者との小さな実践にも挑戦できる。" },
+  { en: "CONNECT", label: "つながりたい", title: "仲間と進む", desc: "同じ段階の仲間と進捗を共有して行動を続けやすくする。" },
 ];
 
 const services = [
-  { icon: ICON.calendar, tag: "SERVICE 01", title: "名古屋市内で毎週イベントを開催", desc: "実業家や仲間と会える場を、毎週つくります" },
-  { icon: ICON.school, tag: "SERVICE 02", title: "ビジネススクール", desc: "顧問が監修。起業や仕事に必要な考え方を体系的に学べます" },
-  { icon: ICON.link, tag: "SERVICE 03", title: "エンジェル投資家とのコネクション", desc: "エンジェル投資家とつながる機会を提供します（出資の成立を保証するものではありません）" },
+  { icon: ICON.calendar, tag: "SERVICE 01", title: "名古屋市内で毎週イベントを開催", desc: "実業家や仲間と会える場を毎週つくります。" },
+  { icon: ICON.school, tag: "SERVICE 02", title: "ビジネススクール", desc: "顧問が監修。起業や仕事に必要な考え方を体系的に学べます。" },
+  { icon: ICON.link, tag: "SERVICE 03", title: "エンジェル投資家とのコネクション", desc: "エンジェル投資家とつながる機会を提供します。出資の成立を保証するものではありません。" },
 ];
 
 const eventKinds = [
-  { tag: "CONTEST", title: "ビジネスコンテスト", desc: "事業アイデアを形にして発表し、講評を受けて次の一手を見つける", img: "/lp/manabiya-bizcon.png" },
-  { tag: "TALK", title: "経営者講演会", desc: "一流の経営者、専門家、挑戦者の実例を聞く", img: "/lp/manabiya-seminar.png" },
-  { tag: "MEETUP", title: "ビジネス交流会", desc: "目的や段階が近い人と、少人数で話して仲間をつくる", img: "/lp/manabiya-party.png" },
+  { tag: "CONTEST", title: "ビジネスコンテスト", desc: "事業アイデアを形にして発表し、講評を受けて次の一手を見つける。", img: "/lp/manabiya-bizcon.png" },
+  { tag: "TALK", title: "経営者講演会", desc: "一流の経営者・専門家・挑戦者の実例を聞く。", img: "/lp/manabiya-seminar.png" },
+  { tag: "MEETUP", title: "ビジネス交流会", desc: "目的や段階が近い人と少人数で話して仲間をつくる。", img: "/lp/manabiya-party.png" },
 ];
 
 const growth = [
-  { icon: ICON.search, verb: "知る", title: "イベントを探す", desc: "気になるテーマを見つける" },
-  { icon: ICON.book, verb: "学ぶ", title: "参加する", desc: "実業家の考え方に触れる" },
-  { icon: ICON.doc, verb: "作る", title: "課題・成果物", desc: "学びを企画や資料にする" },
-  { icon: ICON.bolt, verb: "試す", title: "プロジェクトに参加", desc: "小さく実践してみる" },
-  { icon: ICON.chart, verb: "振り返る", title: "進捗会・活動レポート", desc: "結果と次の一手を共有する" },
-  { icon: ICON.star, verb: "主催する", title: "主催者になる", desc: "自分の企画を立ち上げる" },
+  { icon: ICON.search, verb: "知る", title: "イベントを探す", desc: "気になるテーマを見つける。" },
+  { icon: ICON.book, verb: "学ぶ", title: "参加する", desc: "実業家の考え方に触れる。" },
+  { icon: ICON.doc, verb: "作る", title: "課題・成果物", desc: "学びを企画や資料にする。" },
+  { icon: ICON.bolt, verb: "挑戦", title: "プロジェクトに参加", desc: "小さく実践してみる。" },
+  { icon: ICON.chart, verb: "振り返る", title: "進捗会・活動レポート", desc: "結果と次の一手を共有する。" },
+  { icon: ICON.star, verb: "主催する", title: "主催者になる", desc: "自分の企画を立ち上げる。" },
 ];
 
 const overview = [
   { label: "名称", value: "DeraBiz メンバーシップ" },
-  { label: "対象", value: "名古屋のビジネスマン・学生がメイン（他地域も大歓迎）" },
+  { label: "対象", value: "名古屋のビジネスマン・学生（他地域も大歓迎）" },
   { label: "備考", value: "高校生は無料（オープンチャットから無料イベントに参加できます）" },
   { label: "決済", value: "クレジットカード／キャリア決済" },
 ];
 
 const tools = [
-  { tag: "OPEN CHAT", title: "オープンチャット", badge: "無料・高校生はここのみ", desc: "無料イベントを宣伝します。ニックネームで参加でき、審査はありません" },
-  { tag: "OFFICIAL LINE", title: "公式LINE", badge: "申込・面談・決済", desc: "メンバーシップの申込、オンライン面談の日程調整、お支払いのご案内を行います" },
-  { tag: "SLACK", title: "Slack", badge: "有料会員限定", desc: "有料会員限定イベントとビジネススクールのご案内を行う、メンバー専用の場です" },
+  { tag: "OPEN CHAT", title: "オープンチャット", badge: "無料・高校生はここのみ", desc: "無料イベントを宣伝します。ニックネームで参加でき、審査はありません。" },
+  { tag: "OFFICIAL LINE", title: "公式LINE", badge: "申込・面談・決済", desc: "メンバーシップの申込・オンライン面談の日程調整・お支払いのご案内を行います。" },
+  { tag: "SLACK", title: "Slack", badge: "有料会員限定", desc: "有料会員限定イベントとビジネススクールのご案内を行う、メンバー専用の場です。" },
 ];
 
 const freeSteps = [
@@ -198,23 +198,21 @@ const memberSteps = [
 ];
 
 const promises = [
-  { title: "勧誘は禁止です", desc: "マルチ商法、投資・情報商材・副業、宗教・政治の勧誘を禁止しています" },
-  { title: "高校生も参加しやすい場", desc: "18歳未満が参加するイベントは無料・運営2名以上で実施します。大人との1対1の非公開のやり取りや、個人の連絡先の交換は求めません" },
-  { title: "参加条件は事前にお伝えします", desc: "メンバーシップは面談あり・会費制です。金額や解約条件はお支払い前に確認できます" },
-  { title: "困ったときは運営へ", desc: `${EMAIL} までご連絡ください` },
+  { title: "高校生も参加しやすい場", desc: "18歳未満が参加するイベントは無料で、運営2名以上で実施します。大人との1対1の非公開のやり取りや個人の連絡先の交換は求めません。" },
+  { title: "参加条件は事前にお伝えします", desc: "メンバーシップは面談あり・会費制です。金額や解約条件はお支払い前に確認できます。" },
+  { title: "困ったときは運営へ", desc: "公式LINEからご連絡ください。" },
 ];
 
 const faqs = [
-  { q: "起業を決めていなくても参加できますか？", a: "はい。「興味がある」「話を聞いてみたい」から大丈夫です" },
-  { q: "どんな人が対象ですか？", a: "名古屋のビジネスマン・学生がメインです。他地域の方も大歓迎です。高校生は無料イベントに参加できます" },
-  { q: "イベントはオンラインでもありますか？", a: "イベントは名古屋市内の会場で開催します。オンライン開催はありません。会場はイベントごとにご案内します" },
-  { q: "高校生でも参加できますか？", a: "はい。高校生は無料で、匿名で入れるオープンチャットから無料イベントに参加できます。有料会員限定のSlackには参加できません" },
-  { q: "参加費はかかりますか？", a: "メンバーシップは月額3,000円（税別）です。オープンチャットと無料イベントは無料で、高校生も無料です。お支払いはクレジットカードまたはキャリア決済です" },
-  { q: "オープンチャットでは何をしますか？", a: "無料イベントの情報をお知らせします。ニックネームで参加でき、本名や連絡先は不要です。勧誘や個別の連絡、連絡先の交換は禁止です" },
-  { q: "面談は何をするのですか？", a: "メンバーシップに参加する方に、内容・参加ルール・会費をお伝えし、参加の目的を確認します。ルールに合わない場合は参加をお断りすることがあります。承認後にお支払いをご案内します" },
-  { q: "どんなイベントがありますか？", a: "ビジネスコンテスト、経営者講演会、ビジネス交流会を名古屋市内で毎週開催します。無料イベントの日程はオープンチャットでご案内します" },
-  { q: "勧誘されませんか？", a: "マルチ商法・投資・情報商材・副業・宗教・政治の勧誘は禁止しています。困ったときは運営にご連絡ください" },
-  { q: "やめたくなったら？", a: "いつでも解約できます。解約方法と受付期限はお支払い前にご案内します。原則として返金はありません" },
+  { q: "起業を決めていなくても参加できますか？", a: "はい。「興味がある」「話を聞いてみたい」からで大丈夫です。" },
+  { q: "どんな人が対象ですか？", a: "名古屋のビジネスマン・学生の方が対象です。他地域の方も大歓迎です。高校生は無料イベントに参加できます。" },
+  { q: "イベントはオンラインでもありますか？", a: "イベントは名古屋市内の会場で開催します。オンライン開催はありません。会場はイベントごとにご案内します。" },
+  { q: "高校生でも参加できますか？", a: "はい。高校生は無料で、匿名で入れるオープンチャットから無料イベントに参加できます。有料会員限定のSlackには参加できません。" },
+  { q: "参加費はかかりますか？", a: "メンバーシップは月額3,000円（税別）です。オープンチャットと無料イベントは無料で、高校生も無料です。お支払いはクレジットカードまたはキャリア決済です。" },
+  { q: "オープンチャットでは何をしますか？", a: "無料イベントの情報をお知らせします。ニックネームで参加でき、本名や連絡先は不要です。個別の連絡や連絡先の交換は禁止です。" },
+  { q: "面談は何をするのですか？", a: "メンバーシップに参加する方に、内容・参加ルール・会費をお伝えし、参加の目的を確認します。ルールに合わない場合は参加をお断りすることがあります。承認後にお支払いをご案内します。" },
+  { q: "どんなイベントがありますか？", a: "ビジネスコンテスト・経営者講演会・ビジネス交流会を名古屋市内で毎週開催します。無料イベントの日程はオープンチャットでご案内します。" },
+  { q: "やめたくなったら？", a: "いつでも解約できます。解約方法と受付期限はお支払い前にご案内します。原則として返金はありません。" },
 ];
 
 export default function SalonPage() {
@@ -252,14 +250,14 @@ export default function SalonPage() {
                 <h1 className="font-bold text-text-dark" style={{ fontSize: "clamp(26px,4.6vw,50px)", lineHeight: 1.35, letterSpacing: "0.02em" }}>
                   名古屋で
                   <br />
-                  <span className="text-lp-accent lp-marker whitespace-nowrap">学ぶ・試す・つながる</span>
+                  <span className="text-lp-accent lp-marker whitespace-nowrap">学ぶ・挑戦・つながる</span>
                 </h1>
               </FadeSlide>
               <FadeSlide direction="up" delay={500} className="order-4 md:order-none">
                 <p className="text-[16px] md:text-[18px] text-text-body leading-[1.9] max-w-lg">
-                  起業や仕事に挑戦したい人が、実業家から学び、仲間と行動に変えるオンラインサロンです
+                  起業や仕事に挑戦したい人が、実業家から学び、仲間と行動に変えるオンラインサロンです。
                 </p>
-                <p className="text-[13px] text-text-light mt-3">名古屋のビジネスマン・学生がメイン（他地域も大歓迎）</p>
+                <p className="text-[13px] text-text-light mt-3">名古屋のビジネスマン・学生（他地域も大歓迎）</p>
               </FadeSlide>
               <FadeSlide direction="up" delay={700} className="order-5 md:order-none">
                 <div className="flex flex-col gap-3">
@@ -304,7 +302,7 @@ export default function SalonPage() {
       <section className="relative py-24 md:py-32 overflow-hidden" style={{ background: "linear-gradient(180deg, #0b2a4a 0%, #132d4a 100%)" }}>
         <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
         <div className={COL}>
-          <SectionHead num="01" en="YOUR FIRST STEP" dark title={<>やりたいことが決まっていなくても<span className="text-lp-accent lp-marker">大丈夫</span></>} lead="こんな気持ちから始めて大丈夫です" />
+          <SectionHead num="01" en="YOUR FIRST STEP" dark title={<>やりたいことが決まっていなくても<span className="text-lp-accent lp-marker">大丈夫</span></>} lead="こんな気持ちから始めて大丈夫です。" />
           <StaggerChildren staggerMs={100} className="space-y-4">
             {worries.map((w, i) => (
               <StaggerItem key={w}>
@@ -322,7 +320,7 @@ export default function SalonPage() {
               <p className="text-white font-bold text-[20px] md:text-[24px] leading-[1.6]">
                 その悩み、<span className="text-cta lp-marker-orange">DeraBiz</span>が解決します
               </p>
-              <p className="text-white/60 text-[13px] mt-2">学ぶだけで終わらず、次の行動まで進める場所です</p>
+              <p className="text-white/60 text-[13px] mt-2">学ぶだけで終わらず、次の行動まで進める場所です。</p>
             </div>
           </FadeSlide>
         </div>
@@ -335,7 +333,7 @@ export default function SalonPage() {
         <div className="absolute inset-0 lp-lines-pattern" />
         <span className="lp-bg-number top-24 left-0">02</span>
         <div className={COL}>
-          <SectionHead num="02" en="THREE WAYS TO BEGIN" title={<>あなたの<span className="text-lp-accent lp-marker">「やってみたい」</span>から</>} lead="入口はひとつではありません。今の自分に合う一歩を選べます" />
+          <SectionHead num="02" en="THREE WAYS TO BEGIN" title={<>あなたの<span className="text-lp-accent lp-marker">「やってみたい」</span>から</>} lead="入口はひとつではありません。今の自分に合う一歩を選べます。" />
           <StaggerChildren staggerMs={120} className="space-y-4">
             {ways.map((w, i) => (
               <StaggerItem key={w.en}>
@@ -364,7 +362,7 @@ export default function SalonPage() {
         <div className="absolute inset-0 lp-dots-pattern opacity-50" />
         <span className="lp-bg-number top-12 right-12">03</span>
         <div className={COL}>
-          <SectionHead num="03" en="SERVICE" title={<>オンラインサロンの<span className="text-lp-accent lp-marker">サービス内容</span></>} lead="聞いて終わりにせず、学びを使える経験に変えていきます" />
+          <SectionHead num="03" en="SERVICE" title={<>オンラインサロンの<span className="text-lp-accent lp-marker">サービス内容</span></>} lead="聞いて終わりにせず、学びを使える経験に変えていきます。" />
           <StaggerChildren staggerMs={120} className="space-y-4">
             {services.map((s) => (
               <StaggerItem key={s.tag}>
@@ -381,7 +379,7 @@ export default function SalonPage() {
       <section className="py-24 md:py-32 bg-white relative">
         <span className="lp-bg-number top-0 left-0">04</span>
         <div className="max-w-[1000px] mx-auto px-6 relative z-10">
-          <SectionHead num="04" en="EVENT" title="開催するイベント" lead="開催内容はイベントごとにご案内します" />
+          <SectionHead num="04" en="EVENT" title="開催するイベント" lead="開催内容はイベントごとにご案内します。" />
           <StaggerChildren staggerMs={150} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
             {eventKinds.map((e) => (
               <StaggerItem key={e.tag}>
@@ -431,7 +429,7 @@ export default function SalonPage() {
       <section className="py-24 md:py-32 bg-bg-section relative">
         <span className="lp-bg-number top-48 left-12">05</span>
         <div className={COL}>
-          <SectionHead num="05" en="GROW AT YOUR OWN PACE" title={<>最初は見るだけでOK、慣れたら<span className="text-lp-accent lp-marker">実践</span>へ</>} lead="すべてを一度にやらなくて大丈夫。自分のペースで関わり方を深められます" />
+          <SectionHead num="05" en="GROW AT YOUR OWN PACE" title={<>最初は見るだけでOK、慣れたら<span className="text-lp-accent lp-marker">実践</span>へ</>} lead="すべてを一度にやらなくて大丈夫。自分のペースで関わり方を深められます。" />
           <StaggerChildren staggerMs={110} className="space-y-4">
             {growth.map((g, i) => (
               <StaggerItem key={g.title}>
@@ -448,7 +446,7 @@ export default function SalonPage() {
       <section className="py-24 md:py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0 lp-lines-pattern opacity-30" />
         <div className={COL}>
-          <SectionHead num="06" en="MEMBERSHIP" title="メンバーシップの概要" lead="まずは無料イベントから。本格的に取り組みたくなったら、メンバーシップへ" />
+          <SectionHead num="06" en="MEMBERSHIP" title="メンバーシップの概要" lead="まずは無料イベントから。本格的に取り組みたくなったら、メンバーシップへ。" />
           <FadeSlide direction="up">
             <div className="relative p-[2px] rounded-3xl overflow-hidden mb-8" style={{ background: "linear-gradient(135deg, #4a9bd9, #1a4f7a, #4a9bd9)" }}>
               <div className="p-10 md:p-12 rounded-[22px] text-center relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0b2a4a 0%, #061729 100%)" }}>
@@ -460,7 +458,7 @@ export default function SalonPage() {
                   </span>
                   <span className="text-white/80 font-bold text-[16px] md:text-[18px]">円 / 月</span>
                 </div>
-                <p className="text-white/60 text-[12px] md:text-[13px] relative z-10 text-balance">税別・毎週のイベント、ビジネススクール、Slackを含みます</p>
+                <p className="text-white/60 text-[12px] md:text-[13px] relative z-10 text-balance">税別。毎週のイベント・ビジネススクール・Slackを含みます。</p>
               </div>
             </div>
           </FadeSlide>
@@ -501,7 +499,7 @@ export default function SalonPage() {
       {/* ===== 07 HOW TO JOIN（2パターンを横並び） ===== */}
       <section className="py-24 md:py-32 bg-bg-section relative">
         <div className="max-w-[1000px] mx-auto px-6">
-          <SectionHead num="07" en="HOW TO JOIN" title={<>今のあなたに合う<span className="text-lp-accent lp-marker">参加のしかた</span></>} lead="まずは無料イベントから。本格的に取り組みたくなったら、オンラインサロンへ" />
+          <SectionHead num="07" en="HOW TO JOIN" title={<>今のあなたに合う<span className="text-lp-accent lp-marker">参加のしかた</span></>} lead="まずは無料イベントから。本格的に取り組みたくなったら、オンラインサロンへ。" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 items-start">
             {[
               { label: "OPEN CHAT → EVENT", title: "まずは無料で参加", sub: "どなたでも・高校生もOK", steps: freeSteps, href: OPEN_CHAT_URL, cta: "無料イベントを見る ↗", line: false },
@@ -542,7 +540,7 @@ export default function SalonPage() {
       {/* ===== PROMISE ===== */}
       <section className="py-24 md:py-32 bg-white relative">
         <div className={COL}>
-          <SectionHead num="" en="OUR PROMISE" title="安心して挑戦できる場に" lead="一緒に学ぶ人の時間と気持ちを大切にするためのルールです" />
+          <SectionHead num="" en="OUR PROMISE" title="安心して挑戦できる場に" lead="一緒に学ぶ人の時間と気持ちを大切にするためのルールです。" />
           <StaggerChildren staggerMs={100} className="space-y-4">
             {promises.map((p) => (
               <StaggerItem key={p.title}>
@@ -597,7 +595,7 @@ export default function SalonPage() {
               次の一歩は、ここから
             </h2>
             <p className="text-white/50 text-[15px] leading-[2] mb-12 text-balance">
-              「ちょっと気になる」その気持ちを、名古屋で行動に。まずは無料イベントから、本格的に参加するなら公式LINEから
+              「ちょっと気になる」その気持ちを、名古屋で行動に。まずは無料イベントから。本格的に参加するなら公式LINEから。
             </p>
             <div className="flex flex-col items-center gap-5">
               <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="cta-btn lp-shine text-[18px] px-12 py-6 shadow-[0_0_40px_rgba(232,93,47,0.4)] hover:shadow-[0_0_60px_rgba(232,93,47,0.6)] hover:-translate-y-1 transition-all">
