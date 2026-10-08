@@ -11,8 +11,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "営業支援・コミュニティ構築・経営支援で、事業成長を加速します。",
     start_url: "/",
     display: "standalone",
-    background_color: "#000000",
-    theme_color: "#000000",
+    background_color: "#ffffff",
+    theme_color: "#ffffff",
     lang: "ja",
     icons: [
       { src: "/brand/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },

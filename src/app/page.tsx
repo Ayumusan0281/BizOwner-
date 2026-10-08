@@ -56,7 +56,7 @@ export default function Home() {
             width={120}
             height={120}
             priority
-            className="mx-auto mb-5 w-[88px] h-[88px] md:w-[120px] md:h-[120px] fv-fade"
+            className="mx-auto mb-5 h-[72px] md:h-[100px] w-auto fv-fade"
           />
           <h1
             className="font-semibold text-white mb-8 fv-title-anim"
