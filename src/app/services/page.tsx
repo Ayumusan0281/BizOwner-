@@ -233,7 +233,7 @@ export default function ServicesPage() {
                 },
                 {
                   href: "/salon",
-                  logo: "/brand/derabiz-mark.png",
+                  logo: "/brand/derabiz-card.png",
                   alt: "DeraBiz ロゴ",
                   eyebrow: "ONLINE SALON",
                   badge: "ビジネスマン・学生向け",
