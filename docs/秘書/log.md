@@ -556,3 +556,9 @@
 - 
 
 -->
+
+### 2026-10-12 DeraBiz本番反映結果
+- 2d17ea0をmainへpush、本番HTML・manifestの新URLと6画像のHTTP 200／SHA-256一致を確認。
+- 黒いDB＋金色の曲線をオーナー指定の正本としてREADME・contextへ記録。
+- PC実表示はComputer UseのURL判定停止により未確認。
+- 最終更新：2026-10-12
