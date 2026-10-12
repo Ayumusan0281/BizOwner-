@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 /**
  * ホーム画面／デスクトップにショートカットを作成したときの名称とアイコン。
- * DeraBizの公式ロゴのエンブレムを使用。素材は public/brand/ にある。
+ * DeraBizのDB＋ゴールドの公式モノグラムを使用。素材は public/brand/ にある。
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -15,9 +15,9 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#ffffff",
     lang: "ja",
     icons: [
-      { src: "/brand/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
-      { src: "/brand/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
-      { src: "/brand/icon-maskable-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+      { src: "/brand/derabiz-db-20261012-icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
+      { src: "/brand/derabiz-db-20261012-icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
+      { src: "/brand/derabiz-db-20261012-icon-maskable-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
     ],
   };
 }
