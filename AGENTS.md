@@ -309,6 +309,10 @@
 
 ---
 
-## 公式ロゴ（2026-09-25確定）
+## DeraBiz公式ロゴの正本（2026-10-12オーナー確定）
 
-全国起業家協会の公式ロゴは新ロゴに確定。素材は `public/brand/`（`zenkoku-logo.png`＝横型、`zenkoku-mark.png`＝マーク）。ファビコン・ショートカットアイコン・OG画像は `src/app/` の `icon.png`・`apple-icon.png`・`favicon.ico`・`opengraph-image.png`・`manifest.ts` で設定済み。各LPの事業別ロゴ（`public/lp/*-logo.png`）とは別物。
+DeraBizの正本は黒いDB＋金色の曲線。原本は public/brand/derabiz-logo.png、マークは derabiz-mark.png、白抜きは derabiz-mark-white.png。黒地に金色の八角形と旧協会ロゴをDeraBizへ再使用しない。
+
+インストール用は白地のDB＋ゴールド。manifest・HTMLのアイコンは /brand/derabiz-db-20261012* の版付きURLを参照する。既存URLの互換画像も新DBを維持する。正本画像と参照先を npm run check:logo で検証し、prebuildで不一致時の公開を止める。新たなオーナー承認なしに official-logo-lock.json のハッシュを更新してチェックを通してはならない。
+
+Windowsの表示不具合はREADMEの実デスクトップ復旧記録を参照。フォルダ内で新ロゴが見えるだけでは実デスクトップ表示の確認とはしない。

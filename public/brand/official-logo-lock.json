@@ -1,0 +1,21 @@
+{
+  "approved": "2026-10-12",
+  "description": "DeraBiz: black DB monogram with gold curve. Never restore the old gold octagon.",
+  "sha256": {
+    "public/brand/derabiz-logo.png": "85bbdb5dc0c60e97b0a937a05b6307b5b85390cb0ccde30a5b40ef8ce5b38ebf",
+    "public/brand/derabiz-mark.png": "e63755453efc6c819124533f709093df4a69ff138197fc8834c99376f5ddf777",
+    "public/brand/derabiz-mark-white.png": "76dd95dec442a6a747cfc93fb3d08e5547b8ac8eb7b5fae3421a4acef32f1789",
+    "public/brand/derabiz-db-20261012-icon-192.png": "86070128325695d15b16faee60afed8941d113319b8d3cc4f221ac686fd2492e",
+    "public/brand/derabiz-db-20261012-icon-512.png": "1f231bdfa44b44156408bcfa24f04188217ea8f18fd507d97117d3b66c1f50aa",
+    "public/brand/derabiz-db-20261012-icon-maskable-512.png": "c87053b34b9081e53768198819bb41abd6bf144344c4ac13aee4becdda37aaad",
+    "public/brand/derabiz-db-20261012.png": "1f231bdfa44b44156408bcfa24f04188217ea8f18fd507d97117d3b66c1f50aa",
+    "public/brand/derabiz-db-20261012-apple.png": "7a259c0fb8e195a7868e02edc0589082f7d6134c4d314e13ef09fb907586af78",
+    "public/brand/derabiz-db-20261012.ico": "f7ae1d7f2d4c43c38b4fd9b40f7de55d35d02950e33b8a4fbe33f9378d97365d",
+    "src/app/favicon.ico": "f7ae1d7f2d4c43c38b4fd9b40f7de55d35d02950e33b8a4fbe33f9378d97365d",
+    "public/brand/icon-192.png": "86070128325695d15b16faee60afed8941d113319b8d3cc4f221ac686fd2492e",
+    "public/brand/icon-512.png": "1f231bdfa44b44156408bcfa24f04188217ea8f18fd507d97117d3b66c1f50aa",
+    "public/brand/icon-maskable-512.png": "c87053b34b9081e53768198819bb41abd6bf144344c4ac13aee4becdda37aaad",
+    "public/icon.png": "1f231bdfa44b44156408bcfa24f04188217ea8f18fd507d97117d3b66c1f50aa",
+    "public/apple-icon.png": "7a259c0fb8e195a7868e02edc0589082f7d6134c4d314e13ef09fb907586af78"
+  }
+}
