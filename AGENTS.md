@@ -316,3 +316,5 @@ DeraBizの正本は黒いDB＋金色の曲線。原本は public/brand/derabiz-l
 インストール用は白地のDB＋ゴールド。manifest・HTMLのアイコンは /brand/derabiz-db-20261012* の版付きURLを参照する。既存URLの互換画像も新DBを維持する。正本画像と参照先を npm run check:logo で検証し、prebuildで不一致時の公開を止める。新たなオーナー承認なしに official-logo-lock.json のハッシュを更新してチェックを通してはならない。
 
 Windowsの表示不具合はREADMEの実デスクトップ復旧記録を参照。フォルダ内で新ロゴが見えるだけでは実デスクトップ表示の確認とはしない。
+
+ローンチ前のインストール検証：Windows向けICOは derabiz-windows-20261013.ico（16〜256px）。npm run buildのpostbuildで生成HTML・manifest・画像形式と寸法・正本一致を確認する。npm run check:installは独立したブラウザプロファイルでトップ／サロン／BizOwnerを初回・ブラウザ再起動後に検証。本番公開後も npm run check:install -- https://derabiz-nagoya.vercel.app を実行。OSへの実インストール／PC再起動検証とは区別し、Windowsキャッシュ故障の完全防止を保証しない。

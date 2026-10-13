@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "check:logo": "node scripts/check-official-logo.mjs",
-    "prebuild": "npm run check:logo"
+    "prebuild": "npm run check:logo",
+    "postbuild": "node scripts/check-install-output.mjs",
+    "check:install": "node scripts/check-install-browser.mjs"
   },
   "dependencies": {
     "budoux": "^0.9.2",

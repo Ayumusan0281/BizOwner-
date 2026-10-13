@@ -9,6 +9,9 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "株式会社DeraBiz",
     short_name: "DeraBiz",
     description: "営業支援・コミュニティ構築・経営支援で、事業成長を加速します。",
+    // Keep the existing identity (previously inferred from start_url).
+    id: "/",
+    scope: "/",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

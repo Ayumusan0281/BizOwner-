@@ -62,10 +62,10 @@ export const metadata: Metadata = {
   // ロゴ更新時はURLも更新し、インストール時の古い画像キャッシュを避ける。
   icons: {
     icon: [
-      { url: "/brand/derabiz-db-20261012.ico", sizes: "64x64", type: "image/x-icon" },
+      { url: "/brand/derabiz-windows-20261013.ico", sizes: "16x16 20x20 24x24 32x32 40x40 48x48 64x64 256x256", type: "image/x-icon" },
       { url: "/brand/derabiz-db-20261012.png", sizes: "512x512", type: "image/png" },
     ],
-    shortcut: "/brand/derabiz-db-20261012.ico",
+    shortcut: "/brand/derabiz-windows-20261013.ico",
     apple: { url: "/brand/derabiz-db-20261012-apple.png", sizes: "180x180", type: "image/png" },
   },
   appleWebApp: { title: "DeraBiz", capable: true, statusBarStyle: "default" },

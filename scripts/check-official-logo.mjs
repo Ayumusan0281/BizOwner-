@@ -11,7 +11,7 @@ for (const [file, expected] of Object.entries(lock.sha256)) {
 const manifestIcons = [...manifest.matchAll(/src:\s*["']([^"']+)["']/g)].map(m => m[1]);
 const approvedIcons = ['icon-192', 'icon-512', 'icon-maskable-512'].map(n => '/brand/derabiz-db-20261012-' + n + '.png');
 if (JSON.stringify(manifestIcons) !== JSON.stringify(approvedIcons)) errors.push('Installation icons must reference the approved versioned DB logo.');
-for (const url of ['/brand/derabiz-db-20261012.ico', '/brand/derabiz-db-20261012.png', '/brand/derabiz-db-20261012-apple.png']) {
+for (const url of ['/brand/derabiz-windows-20261013.ico', '/brand/derabiz-db-20261012.png', '/brand/derabiz-db-20261012-apple.png']) {
   if (!layout.includes(url)) errors.push('Missing approved HTML icon: ' + url);
 }
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }

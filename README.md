@@ -26,3 +26,19 @@ Computer Useでエクスプローラーのデスクトップフォルダを大�
 本番manifestは新DBロゴの版付きURLを参照し、Cache-Controlはmax-age=0・must-revalidate。公式画像15点とmanifest/HTMLの参照をnpm run check:logoで検証し、prebuildで自動実行。旧素材への差し戻しを公開前に検出する。AGENTS.mdの旧協会ロゴ指示もDeraBiz正本へ更新。Windowsの保存キャッシュはサイトとは別管理で、再インストール自体の実行は今回不要。
 
 検証結果：正本チェック成功。隔離コピーで画像差し替えと旧URLへの変更を行い、どちらもチェックが終了コード1で拒否することを確認。対象ESLint成功。ローカルTurbopackは既存のnext/font内部解決で失敗したため、Webpackで型チェック・静的生成を確認。
+
+### PC再起動後の再発対応（2026-10-13 11:25 JST）
+翌日再発を報告。ICO実体59,880 bytesと参照は存続していた。Edge由来のSystem.AppUserModel.ID等を複製しない新規WScriptショートカットへ置換（起動先・引数・ICO維持）。元lnkはAppData/Local/DeraBiz/Icons/DeraBiz-before-clean-20261013.lnkへ保存。Windowsの永続アイコンキャッシュ16ファイルをExplorer停止中にAppData/Local/DeraBiz/IconCacheBackup-20261013へ退避し再構築。デスクトップ壁紙上（ShibuBiz右隣）でDBロゴ復旧を確認。さらにキャッシュ削除なしでExplorerを再起動し、表示維持を直接確認。PC全体の再起動は未実施のため次回ログイン後の維持は未検証。サイト変更はなし。
+
+## ローンチ前のインストールアイコン対策（2026-10-13）
+
+- Windows用ICOは承認済みDBロゴの16/20/24/32/40/48/64/256pxを内包する `public/brand/derabiz-windows-20261013.ico`。faviconも同一。旧URLは互換性のため残すが、新規HTMLは新URLを参照する。
+- manifestの `id` / `scope` / `start_url` は `/`。従来の暗黙IDと同じ値を明示し、入口ページがサロン・各LPでも同じDeraBizアプリとして扱う。
+- `npm run build` はprebuildで公式画像・ソース参照を、postbuildで実際に生成された公開10ページ・manifest・PNG寸法・ICOディレクトリ／複数サイズ・正本ハッシュを検査する。不一致ならbuild失敗。
+- `npm run check:install` はビルド済みNextを一時ポートで起動し、独立した一時ブラウザプロファイルで `/`・`/salon`・`/bizowner` を確認する。初回とブラウザを終了・再起動した後の計6ケースで、ブラウザのmanifest解析、アイコン全件のHTTP 200・MIME・実画像デコード・正本ハッシュ・寸法、manifest再検証キャッシュ指定を確認する。実ユーザーのプロファイルやWindowsアプリ登録を変更しない。
+- 公開後の確認: `npm run check:install -- https://derabiz-nagoya.vercel.app`。GitHub Actionsでもpush/PR時にbuildとブラウザ検証を実行する。
+- 検証: 対象ESLint、Webpack本番build、postbuild 10ページ、Edge独立プロファイルの初回／再起動後6ケースが成功。隔離コピーで旧manifest URL・不明な追加HTMLアイコンがbuild検査に拒否されることも確認。
+
+### OS固有の再発への対応範囲
+
+上記はサイトの画像不備・参照切れ・古い配信・ブラウザ再読み込みの問題を予防する。Windowsへの実インストール／OS再起動のE2Eとは別の検証であり、OSアイコンキャッシュ破損の完全防止は保証しない。ローンチ確認時はWindows Edge・Android Chrome・iOS Safariそれぞれで実インストール、端末再起動後の表示を別途確認する。端末全体のキャッシュ削除やショートカット修正を一般ユーザー向けサイトから自動実行しない。表示の問い合わせは対象OS・ブラウザ・表示箇所とスクリーンショットで切り分け、画像配信正常なら端末別対応とする。
